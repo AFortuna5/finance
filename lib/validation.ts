@@ -4,3 +4,7 @@ export function validObservation(row:any,now=new Date()){
   const date=new Date(Date.UTC(year,month-1,day));
   return date.getUTCDate()===day&&date.getUTCMonth()===month-1&&date.getUTCFullYear()===year&&+date<=+now&&Number.isFinite(Number(row.valor));
 }
+export function cleanFeedText(value=''){
+  const decode=(s:string)=>s.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g,'$1').replace(/&#(\d+);/g,(_,n)=>{const code=Number(n);return code<=0x10ffff?String.fromCodePoint(code):'';}).replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#39;|&apos;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&nbsp;/g,' ');
+  return decode(decode(value)).replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim();
+}

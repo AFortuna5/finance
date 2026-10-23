@@ -1,7 +1,7 @@
 import { env } from 'cloudflare:workers';
 import seed from '../public/news.json';
 import verifiedEvents from './calendar-verified.json';
-import {validObservation} from './validation';
+import {validObservation,cleanFeedText} from './validation';
 
 function database(){if(!env.DB)throw Error('Banco indisponível');return env.DB;}
 const FEEDS = [
@@ -24,7 +24,7 @@ const topics = [
   {name:'Empresas e mercados',pattern:/earnings|stock|market|bank|merger|tesla|bolsa|empresa|banco|lucro|finance|crédito/i,context:'Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.',question:'O que mudou nos resultados ou nas expectativas, e em qual horizonte?'},
 ];
 export function topicFor(text:string){return topics.find(t=>t.pattern.test(text)) || topics[3];}
-function plain(text=''){return text.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g,'$1').replace(/<[^>]+>/g,' ').replace(/&#(\d+);/g,(_,n)=>String.fromCodePoint(Number(n))).replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#39;|&apos;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/\s+/g,' ').trim();}
+const plain=cleanFeedText;
 function field(item:string,tag:string){return plain(item.match(new RegExp(`<${tag}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${tag}>`,'i'))?.[1]||'');}
 async function request(url:string){const r=await fetch(url,{headers:{'User-Agent':'Meridiano personal news reader'},signal:AbortSignal.timeout(12000)});if(!r.ok)throw Error(`HTTP ${r.status}`);return r;}
 async function pool<T,R>(items:T[],fn:(a:T)=>Promise<R>,width=4){const result:R[]=new Array(items.length);let index=0;await Promise.all(Array.from({length:Math.min(width,items.length)},async()=>{while(index<items.length){const i=index++;result[i]=await fn(items[i]);}}));return result;}
