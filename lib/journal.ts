@@ -2,6 +2,7 @@ import { env } from 'cloudflare:workers';
 import seed from '../public/news.json';
 import verifiedEvents from './calendar-verified.json';
 import {validObservation,cleanFeedText} from './validation';
+import {cleanEdition} from '../public/feed-text.js';
 
 function database(){if(!env.DB)throw Error('Banco indisponível');return env.DB;}
 const FEEDS = [
@@ -58,15 +59,15 @@ async function calendar(previous:any[]=[]){const events:any[]=verifiedEvents.fil
   try{const page=await(await request('https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm')).text();const months=['January','February','March','April','May','June','July','August','September','October','November','December'];for(const section of page.split(/<h4[^>]*>/).slice(1)){const year=Number(section.match(/(20\d{2}) FOMC Meetings/)?.[1]);if(!year)continue;for(const m of section.matchAll(/fomc-meeting__month[^>]*>([\s\S]*?)<\/div>[\s\S]*?fomc-meeting__date[^>]*>([\s\S]*?)<\/div>/g)){const month=months.indexOf(plain(m[1]).split('/').at(-1)!);const day=Number(plain(m[2]).replace(/\*/g,'').split('-').at(-1));if(month<0||!day)continue;const at=`${year}-${String(month+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;if(at>=new Date().toISOString().slice(0,10)&&Date.parse(at)<Date.now()+180*86400000)events.push({title:'Decisão de juros · Federal Reserve',at,source:'Federal Reserve',url:calendarSources[2].url,kind:'date'});}}}catch{warnings.push('Federal Reserve');events.push(...previous.filter(e=>e.source==='Federal Reserve'&&Date.parse(e.at)>Date.now()));}
   return {events:events.sort((a,b)=>a.at.localeCompare(b.at)).slice(0,14),warnings,sources:calendarSources,checkedAt:new Date().toISOString()};
 }
-export async function latest(){const row=await database().prepare('SELECT payload FROM editions ORDER BY collected_at DESC LIMIT 1').first<{payload:string}>();return row?JSON.parse(row.payload):seed;}
+export async function latest(){const row=await database().prepare('SELECT payload FROM editions ORDER BY collected_at DESC LIMIT 1').first<{payload:string}>();return cleanEdition(row?JSON.parse(row.payload):seed);}
 export async function update(){const old=await latest();const failures:string[]=[];const sources=await Promise.all(FEEDS.map(async f=>{try{const rows=await feed(f);if(!rows.length)throw Error('Feed vazio');return rows;}catch{failures.push(f[0]);return(old.articles||[]).filter((a:any)=>a.category===f[0]);}}));if(failures.length===FEEDS.length)throw Error('Todos os feeds falharam; edição anterior preservada.');
   const selected=curate(sources.flat());if(!selected.length)throw Error('Nenhuma notícia recente após curadoria.');
   const [rows,values,agenda]=await Promise.all([pool(selected,async a=>{const translated=await translate(a,old.articles?.find((b:any)=>b.url===a.url));const topic=topicFor(a.titleOriginal);return {...translated,topic:topic.name,context:topic.context,question:topic.question};}),indicators(old.indicators),calendar(old.calendar?.events)]);
   const top:any[]=[];const seen=new Set();for(const a of rows){if(!seen.has(a.topic)){top.push(a);seen.add(a.topic);if(top.length===5)break;}}for(const a of rows){if(top.length===5)break;if(!top.includes(a))top.push(a);}
   const collectedAt=new Date().toISOString();const id=new Intl.DateTimeFormat('en-CA',{timeZone:'America/Sao_Paulo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
-  const payload={updatedAt:collectedAt,editionId:id,failedFeeds:failures,translationFailures:rows.filter(a=>a.translationStatus==='unavailable').length,articles:rows,briefing:top.map(a=>a.url),indicators:values,calendar:agenda,method:'Seleção automática por atualidade, relevância temática e diversidade; resumo extraído da descrição RSS, com tradução automática quando disponível. Contexto educativo por tema, sem previsão de preços.'};
+  const payload=cleanEdition({updatedAt:collectedAt,editionId:id,failedFeeds:failures,translationFailures:rows.filter(a=>a.translationStatus==='unavailable').length,articles:rows,briefing:top.map(a=>a.url),indicators:values,calendar:agenda,method:'Seleção automática por atualidade, relevância temática e diversidade; resumo extraído da descrição RSS, com tradução automática quando disponível. Contexto educativo por tema, sem previsão de preços.'});
   await database().prepare('INSERT INTO editions (id,collected_at,payload) VALUES (?,?,?) ON CONFLICT(id) DO UPDATE SET collected_at=excluded.collected_at,payload=excluded.payload').bind(id,collectedAt,JSON.stringify(payload)).run();
   return {editionId:id,updatedAt:collectedAt,articles:rows.length,translationFailures:payload.translationFailures,failedFeeds:failures};
 }
 export async function history(){return(await database().prepare('SELECT id,collected_at FROM editions ORDER BY id DESC LIMIT 366').all()).results;}
-export async function edition(id:string){const row=await database().prepare('SELECT payload FROM editions WHERE id=?').bind(id).first<{payload:string}>();return row?JSON.parse(row.payload):null;}
+export async function edition(id:string){const row=await database().prepare('SELECT payload FROM editions WHERE id=?').bind(id).first<{payload:string}>();return row?cleanEdition(JSON.parse(row.payload)):null;}

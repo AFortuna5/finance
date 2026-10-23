@@ -1,3 +1,4 @@
+import {cleanEdition} from './feed-text.js';
 const $ = s => document.querySelector(s);
 let saved = new Set(), articles = [], category = 'Todas', limit = 12, currentEdition = null;
 try { saved = new Set(JSON.parse(localStorage.getItem('meridiano-saved') || '[]')); if (localStorage.getItem('meridiano-theme') === 'dark') document.body.classList.add('dark'); } catch {}
@@ -38,6 +39,7 @@ $('#more').onclick=()=>{limit+=12;render();};
 $('#theme').onclick=()=>{document.body.classList.toggle('dark');try{localStorage.setItem('meridiano-theme',document.body.classList.contains('dark')?'dark':'light');}catch{}};
 document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)){e.preventDefault();$('#search').focus();}});
 function showEdition(data){
+  data=cleanEdition(data);
   currentEdition=data;
   articles=data.articles.filter(a=>{try{return new URL(a.url).protocol==='https:';}catch{return false;}});
   $('#article-count').textContent=articles.length;
