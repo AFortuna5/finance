@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26T12:46:27.962396+00:00",
+  "updatedAt": "2026-10-26T12:47:35.814279+00:00",
   "editionId": "2026-10-26",
   "failedFeeds": [],
   "translationFailures": 0,
@@ -18,7 +18,7 @@
       "topic": "Empresas e mercados",
       "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
       "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
-      "score": 41.97
+      "score": 41.96
     },
     {
       "title": "Ibovespa Ao Vivo: Ibovespa futuro cai 19% e dólar sobe 10% após reeleição de Lula",
@@ -34,7 +34,7 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 48.96
+      "score": 48.94
     },
     {
       "title": "Musk diz que os rivais de IA da SpaceX estão com problemas, fazendo com que seus estoques caiam",
@@ -50,7 +50,7 @@
       "topic": "Empresas e mercados",
       "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
       "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
-      "score": 41.94
+      "score": 41.93
     },
     {
       "title": "Ibovespa Futuro desaba quase 20% após vitória de Lula frustrar expectativa do mercado",
@@ -66,7 +66,7 @@
       "topic": "Empresas e mercados",
       "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
       "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
-      "score": 48.94
+      "score": 48.93
     },
     {
       "title": "Dólar hoje dispara 10% e ultrapassa R$ 5,50 com reeleição de Lula",
@@ -82,7 +82,7 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 48.93
+      "score": 48.92
     },
     {
       "title": "Fundo imobiliário desembolsa R$ 10,3 milhões por terreno e mira VGV de R$ 32,2 milhões",
@@ -98,7 +98,7 @@
       "topic": "Empresas e mercados",
       "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
       "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
-      "score": 48.91
+      "score": 48.9
     },
     {
       "title": "China e líderes globais reconhecem vitória de Lula; Trump e Milei não se manifestam",
@@ -114,7 +114,7 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 48.9
+      "score": 48.89
     },
     {
       "title": "Será que o deputado republicano Brian Fitzpatrick, um moderado que resistiu a Trump, conseguirá manter sua cadeira oscilante na Pensilvânia?",
@@ -130,7 +130,23 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 41.89
+      "score": 41.88
+    },
+    {
+      "title": "Presidente da Audi é acusado de violar regras da empresa ao aparecer com Trump em comício eleitoral",
+      "titleOriginal": "Presidente da Audi é acusado de violar regras da empresa ao aparecer com Trump em comício eleitoral",
+      "url": "https://g1.globo.com/carros/noticia/2026/10/26/audi-trump.ghtml",
+      "category": "Brasil",
+      "source": "G1 Economia",
+      "publishedAt": "2026-10-26T12:30:44+00:00",
+      "language": "pt",
+      "description": "Trump cumprimenta Gernot Döllner, CEO da Audi. Mike Stewart/ AP Photo O presidente da Audi, Gernot Doellner, foi duramente criticado nesta segunda-feira (26) após aparecer ao lado do presidente dos",
+      "translationStatus": "original",
+      "summary": "Trump cumprimenta Gernot Döllner, CEO da Audi. Mike Stewart/ AP Photo O presidente da Audi, Gernot Doellner, foi duramente criticado nesta segunda-feira (26) após aparecer ao lado do presidente dos",
+      "topic": "Eleições e política",
+      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
+      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
+      "score": 48.86
     },
     {
       "title": "Meta (META) fará oferta de ações no valor de US$ 35 bilhões para financiar expansão de inteligência artificial",
@@ -146,23 +162,7 @@
       "topic": "Empresas e mercados",
       "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
       "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
-      "score": 48.84
-    },
-    {
-      "title": "Mapa da virada: onde Lula avançou e como mudou a votação de Flávio Bolsonaro entre o 1º e o 2º turno",
-      "titleOriginal": "Mapa da virada: onde Lula avançou e como mudou a votação de Flávio Bolsonaro entre o 1º e o 2º turno",
-      "url": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/10/26/mapa-virada-lula-flavio-bolsonaro-votos-primeiro-segundo-turno.ghtml",
-      "category": "Eleições",
-      "source": "G1 Política",
-      "publishedAt": "2026-10-26T12:27:09+00:00",
-      "language": "pt",
-      "description": "Lula (PT) é reeleito presidente do Brasil Lula (PT) ampliou sua votação nos 26 estados e no Distrito Federal entre o primeiro e o segundo turnos da eleição presidencial. O",
-      "translationStatus": "original",
-      "summary": "Lula (PT) é reeleito presidente do Brasil Lula (PT) ampliou sua votação nos 26 estados e no Distrito Federal entre o primeiro e o segundo turnos da eleição presidencial. O",
-      "topic": "Eleições e política",
-      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
-      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 41.84
+      "score": 48.83
     },
     {
       "title": "Pesquisas não conseguiram captar virada de Lula",
@@ -178,7 +178,7 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 41.81
+      "score": 41.8
     },
     {
       "title": "Os mercados do Brasil devem cair à medida que os investidores apostam que Lula aumentará os problemas fiscais",
@@ -194,7 +194,7 @@
       "topic": "Fiscal e atividade",
       "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
       "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
-      "score": 41.8
+      "score": 41.79
     },
     {
       "title": "B3 amplia limite de queda dos contratos futuros do Ibovespa para 20% após eleição",
@@ -210,7 +210,7 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 48.78
+      "score": 48.77
     },
     {
       "title": "Dólar dispara 8% e abre próximo a R$ 5,50 com reeleição de Lula",
@@ -226,7 +226,7 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 48.75
+      "score": 48.74
     },
     {
       "title": "Cuidar de parentes adultos pode custar milhares. Pesquisa AARP descobre que o apoio pode ser importante para os eleitores intermediários",
@@ -242,7 +242,7 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 41.74
+      "score": 41.73
     },
     {
       "title": "As ações brasileiras balançaram quando Lula venceu as eleições presidenciais, Bolsonaro supostamente se recusa a conceder",
@@ -258,7 +258,7 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 41.74
+      "score": 41.73
     },
     {
       "title": "TSE diz não ter retirado fiscais do PL da sala cofre durante eleição",
@@ -274,23 +274,7 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 48.74
-    },
-    {
-      "title": "B3 amplia limite de queda do Ibovespa futuro de 10% para 15% após vitória de Lula",
-      "titleOriginal": "B3 amplia limite de queda do Ibovespa futuro de 10% para 15% após vitória de Lula",
-      "url": "https://www.infomoney.com.br/mercados/b3-altera-limite-inferior-de-negociacao-de-contratos-futuros-de-ibovespa-para-15/",
-      "category": "Brasil",
-      "source": "InfoMoney",
-      "publishedAt": "2026-10-26T12:11:18+00:00",
-      "language": "pt",
-      "description": "A decisão inclui também os mini contratos futuros do Ibovespa, segundo o comunicado da bolsa",
-      "translationStatus": "original",
-      "summary": "A decisão inclui também os mini contratos futuros do Ibovespa, segundo o comunicado da bolsa",
-      "topic": "Empresas e mercados",
-      "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
-      "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
-      "score": 48.71
+      "score": 48.73
     },
     {
       "title": "As ações da Neocloud caem enquanto Elon Musk diz que mais de 200 delas enfrentam ‘morte no nível de guppy’",
@@ -306,7 +290,7 @@
       "topic": "Empresas e mercados",
       "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
       "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
-      "score": 41.7
+      "score": 41.69
     },
     {
       "title": "Quebrar o comércio de IA fez Wall Street procurar uma proteção. Um quant ex-Citadel pode ter a resposta",
@@ -322,7 +306,7 @@
       "topic": "Comércio e geopolítica",
       "context": "Conflitos e barreiras comerciais podem alterar cadeias de suprimentos, fretes e fluxos de capital. Um risco político só se traduz em efeito econômico conforme sua duração, escala e exposição dos países.",
       "question": "Qual é o canal econômico concreto: energia, comércio, moeda ou financiamento?",
-      "score": 41.68
+      "score": 41.67
     },
     {
       "title": "Nvidia, AMD e Broadcom poderiam comprar ações da Meta como parte de uma oferta de ações de US$ 35 bilhões",
@@ -338,7 +322,7 @@
       "topic": "Empresas e mercados",
       "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
       "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
-      "score": 41.68
+      "score": 41.67
     },
     {
       "title": "Vitória de Lula é contra o autoritarismo, afirma ministro aposentado do STF",
@@ -354,7 +338,7 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 41.66
+      "score": 41.65
     },
     {
       "title": "Conselheiro de Trump divulga discurso de Flávio em inglês",
@@ -370,7 +354,7 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 41.62
+      "score": 41.61
     },
     {
       "title": "Meta planeja oferta de ações de US$ 95 bilhões para financiar expansão de IA",
@@ -386,7 +370,7 @@
       "topic": "Empresas e mercados",
       "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
       "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
-      "score": 41.6
+      "score": 41.59
     },
     {
       "title": "Mercado reduz projeção da inflação para 5,19%",
@@ -402,7 +386,39 @@
       "topic": "Juros e inflação",
       "context": "Juros alteram o custo do crédito e a taxa usada para avaliar investimentos. Inflação e expectativas influenciam decisões dos bancos centrais; a reação dos ativos depende do que já estava nos preços.",
       "question": "O dado mudou a expectativa para os próximos juros ou apenas confirmou o esperado?",
-      "score": 41.49
+      "score": 41.48
+    },
+    {
+      "title": "Lula x Flávio Bolsonaro: veja no mapa quem venceu por local de votação e urna no 2º turno",
+      "titleOriginal": "Lula x Flávio Bolsonaro: veja no mapa quem venceu por local de votação e urna no 2º turno",
+      "url": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/10/26/lula-flavio-bolsonaro-2o-turno-eleicoes-presidencia-mapa-quem-venceu-secao-eleitoral.ghtml",
+      "category": "Eleições",
+      "source": "G1 Política",
+      "publishedAt": "2026-10-26T11:39:48+00:00",
+      "language": "pt",
+      "description": "O Mapa da Apuração do g1 mostra de forma interativa os resultados do 2º turno para presidente em todas as cidades do país e para governador onde houve disputa: cinco",
+      "translationStatus": "original",
+      "summary": "O Mapa da Apuração do g1 mostra de forma interativa os resultados do 2º turno para presidente em todas as cidades do país e para governador onde houve disputa: cinco",
+      "topic": "Eleições e política",
+      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
+      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
+      "score": 41.44
+    },
+    {
+      "title": "Eleições 2026: Caiado, Zema e Renan Santos repercutem vitória de Lula; Cury não se manifestou",
+      "titleOriginal": "Eleições 2026: Caiado, Zema e Renan Santos repercutem vitória de Lula; Cury não se manifestou",
+      "url": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/10/26/caiado-zema-e-renan-santos-repercutem-vitoria-de-lula.ghtml",
+      "category": "Eleições",
+      "source": "G1 Política",
+      "publishedAt": "2026-10-26T11:38:07+00:00",
+      "language": "pt",
+      "description": "Cury, Renan Santos, Caiado, Zema Érico Andrade/g1, Carlos Henrique Dias/g1, Divulgação e Caio Ranieri/TV Integração A vitória de Luiz Inácio Lula da Silva (PT) na eleição presidencial deste domingo (25),",
+      "translationStatus": "original",
+      "summary": "Cury, Renan Santos, Caiado, Zema Érico Andrade/g1, Carlos Henrique Dias/g1, Divulgação e Caio Ranieri/TV Integração A vitória de Luiz Inácio Lula da Silva (PT) na eleição presidencial deste domingo (25),",
+      "topic": "Eleições e política",
+      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
+      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
+      "score": 41.42
     },
     {
       "title": "Eduardo Bolsonaro pede que estrangeiros não reconheçam eleição",
@@ -418,7 +434,7 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 41.35
+      "score": 41.33
     },
     {
       "title": "Comemorações na Sérvia depois que o governante veterano Vučić perdeu a eleição para um movimento de protesto liderado por estudantes",
@@ -434,7 +450,23 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 41.14
+      "score": 41.12
+    },
+    {
+      "title": "‘O líder político mais influente da América Latina freia avanço da direita’: imprensa mundial repercute reeleição de Lula",
+      "titleOriginal": "‘O líder político mais influente da América Latina freia avanço da direita’: imprensa mundial repercute reeleição de Lula",
+      "url": "https://g1.globo.com/mundo/noticia/2026/10/26/repercute-imprensa-internacional-reeleicao-lula-dia-seguinte.ghtml",
+      "category": "Eleições",
+      "source": "G1 Política",
+      "publishedAt": "2026-10-26T10:59:34+00:00",
+      "language": "pt",
+      "description": "Lula na avenida Paulista. Reprodução/X A imprensa mundial deu amplo destaque à reeleição do presidente Lula (PT) nesta segunda-feira (26), no dia seguinte ao pleito. Os jornais destacaram o aspecto",
+      "translationStatus": "original",
+      "summary": "Lula na avenida Paulista. Reprodução/X A imprensa mundial deu amplo destaque à reeleição do presidente Lula (PT) nesta segunda-feira (26), no dia seguinte ao pleito. Os jornais destacaram o aspecto",
+      "topic": "Eleições e política",
+      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
+      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
+      "score": 41.1
     },
     {
       "title": "Proprietários de salões de beleza pedem redução do IVA no orçamento à medida que aumentam as pressões sobre o pessoal",
@@ -450,7 +482,23 @@
       "topic": "Fiscal e atividade",
       "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
       "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
-      "score": 41.02
+      "score": 41.01
+    },
+    {
+      "title": "Reeleito, Lula pode indicar mais 4 ministros para o STF no próximo mandato",
+      "titleOriginal": "Reeleito, Lula pode indicar mais 4 ministros para o STF no próximo mandato",
+      "url": "https://g1.globo.com/politica/noticia/2026/10/26/reeleito-lula-pode-indicar-mais-4-ministros-para-o-stf-no-proximo-mandato.ghtml",
+      "category": "Eleições",
+      "source": "G1 Política",
+      "publishedAt": "2026-10-26T10:32:15+00:00",
+      "language": "pt",
+      "description": "Em virada histórica, Lula derrota Flávio Bolsonaro e chega ao 4º mandato como presidente O presidente Luiz Inácio Lula da Silva (PT), reeleito neste domingo (25), poderá indicar até quatro",
+      "translationStatus": "original",
+      "summary": "Em virada histórica, Lula derrota Flávio Bolsonaro e chega ao 4º mandato como presidente O presidente Luiz Inácio Lula da Silva (PT), reeleito neste domingo (25), poderá indicar até quatro",
+      "topic": "Eleições e política",
+      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
+      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
+      "score": 40.87
     },
     {
       "title": "Healey protegerá os pensionistas de baixa renda do imposto de renda no orçamento",
@@ -466,7 +514,7 @@
       "topic": "Fiscal e atividade",
       "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
       "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
-      "score": 40.85
+      "score": 40.84
     },
     {
       "title": "Gilmar Mendes diz que “é tempo de união” após reeleição de Lula",
@@ -482,23 +530,7 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 40.74
-    },
-    {
-      "title": "Motta e Alcolumbre, líderes do Congresso Nacional, parabenizam Lula",
-      "titleOriginal": "Motta e Alcolumbre, líderes do Congresso Nacional, parabenizam Lula",
-      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/motta-e-alcolumbre-lideres-do-congresso-nacional-parabenizam-lula",
-      "category": "Eleições",
-      "source": "Agência Brasil",
-      "publishedAt": "2026-10-26T02:31:00+00:00",
-      "language": "pt",
-      "description": "Os líderes do Congresso Nacional fizeram um pronunciamento conjunto à imprensa, na noite deste domingo (25), em Brasília, para saudar a reeleição do presidente Luiz Inácio Lula da Silva .",
-      "translationStatus": "original",
-      "summary": "Os líderes do Congresso Nacional fizeram um pronunciamento conjunto à imprensa, na noite deste domingo (25), em Brasília, para saudar a reeleição do presidente Luiz Inácio Lula da Silva .",
-      "topic": "Eleições e política",
-      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
-      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 36.87
+      "score": 40.73
     },
     {
       "title": "O que é o Orçamento e o que poderia conter?",
@@ -514,39 +546,7 @@
       "topic": "Fiscal e atividade",
       "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
       "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
-      "score": 36.75
-    },
-    {
-      "title": "Presidente do TSE liga para Lula para parabenizar reeleição",
-      "titleOriginal": "Presidente do TSE liga para Lula para parabenizar reeleição",
-      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/presidente-do-tse-liga-para-lula-para-parabenizar-reeleicao",
-      "category": "Eleições",
-      "source": "Agência Brasil",
-      "publishedAt": "2026-10-26T01:39:00+00:00",
-      "language": "pt",
-      "description": "O presidente do Tribunal Superior Eleitoral (TSE), ministro Kassio Nunes Marques, ligou neste domingo (25) para o presidente Luiz Inácio Lula da Silva para parabenizá-lo pela reeleição no segundo turno",
-      "translationStatus": "original",
-      "summary": "O presidente do Tribunal Superior Eleitoral (TSE), ministro Kassio Nunes Marques, ligou neste domingo (25) para o presidente Luiz Inácio Lula da Silva para parabenizá-lo pela reeleição no segundo turno",
-      "topic": "Eleições e política",
-      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
-      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 36.44
-    },
-    {
-      "title": "Prorrogação da votação teve baixa procura e frustração de eleitores",
-      "titleOriginal": "Prorrogação da votação teve baixa procura e frustração de eleitores",
-      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-10/prorrogacao-da-votacao-teve-baixa-procura-e-frustracao-de-eleitores",
-      "category": "Eleições",
-      "source": "Agência Brasil",
-      "publishedAt": "2026-10-26T00:38:00+00:00",
-      "language": "pt",
-      "description": "Após a decisão do Supremo Tribunal Federal (STF) pela prorrogação das votações até as 19h , quem não tinha conseguido votar, viu na medida a possibilidade de garantir o voto.",
-      "translationStatus": "original",
-      "summary": "Após a decisão do Supremo Tribunal Federal (STF) pela prorrogação das votações até as 19h , quem não tinha conseguido votar, viu na medida a possibilidade de garantir o voto.",
-      "topic": "Eleições e política",
-      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
-      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 35.93
+      "score": 36.74
     },
     {
       "title": "O orçamento de Healey precisa sustentar a economia mais forte através da acumulação de nuvens",
@@ -562,7 +562,7 @@
       "topic": "Fiscal e atividade",
       "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
       "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
-      "score": 35.84
+      "score": 35.83
     },
     {
       "title": "Israel profundamente dividido se prepara para eleições cruciais",
@@ -578,7 +578,7 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 34.71
+      "score": 34.7
     },
     {
       "title": "Rússia sediará primeiro evento mundial da federação olímpica desde invasão da Ucrânia",
@@ -594,7 +594,7 @@
       "topic": "Comércio e geopolítica",
       "context": "Conflitos e barreiras comerciais podem alterar cadeias de suprimentos, fretes e fluxos de capital. Um risco político só se traduz em efeito econômico conforme sua duração, escala e exposição dos países.",
       "question": "Qual é o canal econômico concreto: energia, comércio, moeda ou financiamento?",
-      "score": 30.9
+      "score": 30.89
     },
     {
       "title": "Orçamento incluirá £ 1 bilhão para habitação social e acessível",
@@ -670,8 +670,8 @@
       "referenceDate": "23/10/2026",
       "source": "Banco Central · SGS",
       "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados/ultimos/10?formato=json",
-      "checkedAt": "2026-10-26T12:45:11.213396+00:00",
-      "status": "cached"
+      "checkedAt": "2026-10-26T12:47:47.960724+00:00",
+      "status": "ok"
     },
     {
       "name": "IPCA · mensal",
@@ -690,8 +690,8 @@
       "referenceDate": "01/09/2026",
       "source": "Banco Central · SGS",
       "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.13522/dados/ultimos/10?formato=json",
-      "checkedAt": "2026-10-26T12:45:11.616956+00:00",
-      "status": "cached"
+      "checkedAt": "2026-10-26T12:47:47.345496+00:00",
+      "status": "ok"
     }
   ],
   "calendar": {
@@ -764,7 +764,7 @@
         "url": "https://www.bls.gov/schedule/"
       }
     ],
-    "checkedAt": "2026-10-26T12:46:43.492167+00:00"
+    "checkedAt": "2026-10-26T12:47:51.057939+00:00"
   },
   "method": "Seleção automática por atualidade, relevância temática e diversidade; resumo extraído da descrição RSS, com tradução automática quando disponível. Contexto educativo por tema, sem previsão de preços."
 }
