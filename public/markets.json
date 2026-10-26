@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26T13:21:27.788578+00:00",
+  "updatedAt": "2026-10-26T13:50:20.388907+00:00",
   "elections": [
     {
       "date": "2026-10-04",
@@ -276,7 +276,17 @@
       "changeSecondRound": 0.0,
       "change30d": 11.78,
       "source": "Yahoo Finance",
-      "status": "ok"
+      "status": "ok",
+      "signals": {
+        "rating": 0.275974025974026,
+        "ratingMA": 0.6428571428571429,
+        "ratingOsc": -0.09090909090909091,
+        "rsi": 63.61199094782277,
+        "ema50": 191676.93040560724,
+        "ema200": 177834.82978461473,
+        "volatility": 1.144896474428303,
+        "source": "TradingView"
+      }
     },
     {
       "symbol": "BRL=X",
@@ -546,16 +556,26 @@
         },
         {
           "date": "2026-10-26",
-          "value": 5.5933
+          "value": 5.5178
         }
       ],
-      "last": 5.5933,
+      "last": 5.5178,
       "lastDate": "2026-10-26",
-      "changeFirstRound": 7.09,
-      "changeSecondRound": 10.76,
-      "change30d": 7.76,
+      "changeFirstRound": 5.64,
+      "changeSecondRound": 9.27,
+      "change30d": 6.31,
       "source": "Yahoo Finance",
-      "status": "ok"
+      "status": "ok",
+      "signals": {
+        "rating": 0.6006493506493507,
+        "ratingMA": 0.9285714285714286,
+        "ratingOsc": 0.2727272727272727,
+        "rsi": 72.87479789590306,
+        "ema50": 5.109408831315824,
+        "ema200": 5.1639787844664236,
+        "volatility": 12.891726415854334,
+        "source": "TradingView"
+      }
     },
     {
       "symbol": "EURBRL=X",
@@ -834,7 +854,17 @@
       "changeSecondRound": -1.15,
       "change30d": -5.12,
       "source": "Yahoo Finance",
-      "status": "ok"
+      "status": "ok",
+      "signals": {
+        "rating": -0.30194805194805197,
+        "ratingMA": -0.7857142857142857,
+        "ratingOsc": 0.18181818181818182,
+        "rsi": 37.925980532312686,
+        "ema50": 5.781173616120072,
+        "ema200": 5.935340884942363,
+        "volatility": 0.9567917855924771,
+        "source": "TradingView"
+      }
     },
     {
       "symbol": "^GSPC",
@@ -842,10 +872,6 @@
       "unit": "pts",
       "board": "Wall Street · EUA",
       "series": [
-        {
-          "date": "2026-07-24",
-          "value": 7411.98
-        },
         {
           "date": "2026-07-27",
           "value": 7413.1802
@@ -1101,15 +1127,29 @@
         {
           "date": "2026-10-23",
           "value": 7623.6802
+        },
+        {
+          "date": "2026-10-26",
+          "value": 7657.4902
         }
       ],
-      "last": 7623.6802,
-      "lastDate": "2026-10-23",
-      "changeFirstRound": -1.28,
-      "changeSecondRound": 0.0,
-      "change30d": -1.55,
+      "last": 7657.4902,
+      "lastDate": "2026-10-26",
+      "changeFirstRound": -0.84,
+      "changeSecondRound": 0.44,
+      "change30d": -1.11,
       "source": "Yahoo Finance",
-      "status": "ok"
+      "status": "ok",
+      "signals": {
+        "rating": -0.13333333333333333,
+        "ratingMA": -0.26666666666666666,
+        "ratingOsc": 0,
+        "rsi": 45.4489395028013,
+        "ema50": 7680.809744142783,
+        "ema200": 7334.4725739997275,
+        "volatility": 0.5358849169469954,
+        "source": "TradingView"
+      }
     },
     {
       "symbol": "^IXIC",
@@ -1117,10 +1157,6 @@
       "unit": "pts",
       "board": "Tecnologia · EUA",
       "series": [
-        {
-          "date": "2026-07-24",
-          "value": 24975.8203
-        },
         {
           "date": "2026-07-27",
           "value": 24932.0801
@@ -1376,15 +1412,29 @@
         {
           "date": "2026-10-23",
           "value": 25955.3398
+        },
+        {
+          "date": "2026-10-26",
+          "value": 26050.4922
         }
       ],
-      "last": 25955.3398,
-      "lastDate": "2026-10-23",
-      "changeFirstRound": -4.54,
-      "changeSecondRound": 0.0,
-      "change30d": -4.11,
+      "last": 26050.4922,
+      "lastDate": "2026-10-26",
+      "changeFirstRound": -4.19,
+      "changeSecondRound": 0.37,
+      "change30d": -3.76,
       "source": "Yahoo Finance",
-      "status": "ok"
+      "status": "ok",
+      "signals": {
+        "rating": -0.2212121212121212,
+        "ratingMA": -0.5333333333333333,
+        "ratingOsc": 0.09090909090909091,
+        "rsi": 38.604905714628025,
+        "ema50": 29784.580454330502,
+        "ema200": 28103.998232504433,
+        "volatility": 0.4917000633198394,
+        "source": "TradingView"
+      }
     },
     {
       "symbol": "BTC-USD",
@@ -1762,16 +1812,26 @@
         },
         {
           "date": "2026-10-25",
-          "value": 80013.8594
+          "value": 79571.9219
         }
       ],
-      "last": 80013.8594,
+      "last": 79571.9219,
       "lastDate": "2026-10-25",
-      "changeFirstRound": -6.73,
+      "changeFirstRound": -7.24,
       "changeSecondRound": 0.0,
-      "change30d": -5.26,
+      "change30d": -5.79,
       "source": "Yahoo Finance",
-      "status": "ok"
+      "status": "ok",
+      "signals": {
+        "rating": -0.2,
+        "ratingMA": -0.4,
+        "ratingOsc": 0,
+        "rsi": 39.886029237075164,
+        "ema50": 80712.71804330991,
+        "ema200": 76294.07434972562,
+        "volatility": 1.5239164721468663,
+        "source": "TradingView"
+      }
     },
     {
       "symbol": "GC=F",
@@ -2037,16 +2097,26 @@
         },
         {
           "date": "2026-10-26",
-          "value": 4026.8999
+          "value": 4016.0
         }
       ],
-      "last": 4026.8999,
+      "last": 4016.0,
       "lastDate": "2026-10-26",
-      "changeFirstRound": -3.25,
-      "changeSecondRound": 0.47,
-      "change30d": -6.81,
+      "changeFirstRound": -3.51,
+      "changeSecondRound": 0.2,
+      "change30d": -7.06,
       "source": "Yahoo Finance",
-      "status": "ok"
+      "status": "ok",
+      "signals": {
+        "rating": -0.3474025974025974,
+        "ratingMA": -0.7857142857142857,
+        "ratingOsc": 0.09090909090909091,
+        "rsi": 33.35571736995409,
+        "ema50": 4214.2577298083,
+        "ema200": 4278.826718991764,
+        "volatility": 1.193887273028942,
+        "source": "TradingView"
+      }
     },
     {
       "symbol": "CL=F",
@@ -2312,17 +2382,61 @@
         },
         {
           "date": "2026-10-26",
-          "value": 101.88
+          "value": 101.32
         }
       ],
-      "last": 101.88,
+      "last": 101.32,
       "lastDate": "2026-10-26",
-      "changeFirstRound": 11.82,
-      "changeSecondRound": -1.35,
-      "change30d": 10.25,
+      "changeFirstRound": 11.21,
+      "changeSecondRound": -1.89,
+      "change30d": 9.64,
       "source": "Yahoo Finance",
-      "status": "ok"
+      "status": "ok",
+      "signals": {
+        "rating": 0.35454545454545455,
+        "ratingMA": 0.8,
+        "ratingOsc": -0.09090909090909091,
+        "rsi": 62.76764485962885,
+        "ema50": 92.86313270679305,
+        "ema200": 84.65730513912153,
+        "volatility": 2.654075546719684,
+        "source": "TradingView"
+      }
     }
   ],
-  "method": "Fechamentos diários via Yahoo Finance (3 meses). Variações comparam o último fechamento com o último pregão anterior a cada turno. A projeção tracejada é apenas a tendência linear dos últimos 10 fechamentos — ilustrativa, não é recomendação de investimento."
+  "focus": {
+    "items": [
+      {
+        "indicator": "Câmbio",
+        "year": 2026,
+        "median": 5.0495,
+        "date": "2026-10-23",
+        "respondents": 112
+      },
+      {
+        "indicator": "Selic",
+        "year": 2026,
+        "median": 13.25,
+        "date": "2026-10-23",
+        "respondents": 137
+      },
+      {
+        "indicator": "IPCA",
+        "year": 2026,
+        "median": 5.1891,
+        "date": "2026-10-23",
+        "respondents": 142
+      },
+      {
+        "indicator": "PIB Total",
+        "year": 2026,
+        "median": 1.8,
+        "date": "2026-10-23",
+        "respondents": 113
+      }
+    ],
+    "source": "Banco Central · Boletim Focus",
+    "url": "https://www.bcb.gov.br/publicacoes/focus"
+  },
+  "method": "Fechamentos diários via Yahoo Finance (3 meses). Variações comparam o último fechamento com o último pregão anterior a cada turno. Termômetro técnico e médias: scanner público TradingView. Expectativas de analistas: Boletim Focus do Banco Central. A projeção tracejada é apenas a tendência linear dos últimos 10 fechamentos — ilustrativa, não é recomendação de investimento."
 }

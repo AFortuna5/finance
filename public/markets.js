@@ -7,6 +7,21 @@ const SVGNS = 'http://www.w3.org/2000/svg';
 const W = 560, H = 210, PAD = {l: 6, r: 6, t: 30, b: 24};
 const DAY = 86400000;
 
+const LINKS = {
+  '^BVSP': [['TradingView','https://br.tradingview.com/symbols/BMFBOVESPA-IBOV/'],['Investing.com','https://br.investing.com/indices/bovespa'],['B3','https://www.b3.com.br/pt_br/market-data-e-indices/indices/indices-amplos/ibovespa.htm']],
+  'BRL=X': [['TradingView','https://br.tradingview.com/symbols/USDBRL/'],['Investing.com','https://br.investing.com/currencies/usd-brl'],['Banco Central','https://www.bcb.gov.br/estabilidadefinanceira/fechamentodolar']],
+  'EURBRL=X': [['TradingView','https://br.tradingview.com/symbols/EURBRL/'],['Investing.com','https://br.investing.com/currencies/eur-brl']],
+  '^GSPC': [['TradingView','https://br.tradingview.com/symbols/SPX/'],['Investing.com','https://br.investing.com/indices/us-spx-500']],
+  '^IXIC': [['TradingView','https://br.tradingview.com/symbols/NASDAQ-NDX/'],['Investing.com','https://br.investing.com/indices/nasdaq-100']],
+  'BTC-USD': [['TradingView','https://br.tradingview.com/symbols/BTCUSD/'],['Investing.com','https://br.investing.com/crypto/bitcoin/btc-usd']],
+  'GC=F': [['TradingView','https://br.tradingview.com/symbols/GOLD/'],['Investing.com','https://br.investing.com/commodities/gold']],
+  'CL=F': [['TradingView','https://br.tradingview.com/symbols/NYMEX-CL1!/'],['Investing.com','https://br.investing.com/commodities/crude-oil']],
+};
+const FOCUS_LABELS = {'Câmbio': ['DÓLAR', v => 'R$\u00a0' + v.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})],
+  'Selic': ['SELIC', v => v.toLocaleString('pt-BR', {maximumFractionDigits: 2}) + '%'],
+  'IPCA': ['IPCA', v => v.toLocaleString('pt-BR', {maximumFractionDigits: 2}) + '%'],
+  'PIB Total': ['PIB', v => v.toLocaleString('pt-BR', {maximumFractionDigits: 2}) + '%']};
+
 function el(tag, attrs, parent) {
   const node = document.createElementNS(SVGNS, tag);
   for (const [k, v] of Object.entries(attrs)) node.setAttribute(k, v);
@@ -55,8 +70,8 @@ function chart(asset, elections) {
   const svg = el('svg', {viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': `Gráfico de ${asset.name}`});
   el('line', {class: 'grid', x1: PAD.l, x2: W - PAD.r, y1: y(hi - pad), y2: y(hi - pad)}, svg);
   el('line', {class: 'grid', x1: PAD.l, x2: W - PAD.r, y1: y(lo + pad), y2: y(lo + pad)}, svg);
-  const hiLabel = el('text', {class: 'axis', x: W - PAD.r, y: y(hi - pad) - 4, 'text-anchor': 'end'}, svg); hiLabel.textContent = fmt(hi - pad, asset.unit);
-  const loLabel = el('text', {class: 'axis', x: W - PAD.r, y: y(lo + pad) + 12, 'text-anchor': 'end'}, svg); loLabel.textContent = fmt(lo + pad, asset.unit);
+  const hiLabel = el('text', {class: 'axis', x: PAD.l + 3, y: y(hi - pad) - 4}, svg); hiLabel.textContent = fmt(hi - pad, asset.unit);
+  const loLabel = el('text', {class: 'axis', x: PAD.l + 3, y: y(lo + pad) + 12}, svg); loLabel.textContent = fmt(lo + pad, asset.unit);
 
   for (const m of elections) {
     const mt = ts(m.date);
@@ -72,9 +87,12 @@ function chart(asset, elections) {
   el('polyline', {class: 'projection', points: `${x(lastT)},${y(series.at(-1).value)} ` + projection.map(p => `${x(p.t)},${y(p.v)}`).join(' ')}, svg);
   el('circle', {class: 'last-dot', cx: x(lastT), cy: y(series.at(-1).value), r: 3}, svg);
 
+  const projEnd = projection.at(-1);
+  const projLabel = el('text', {class: 'proj-label', x: W - PAD.r, y: Math.max(PAD.t + 4, y(projEnd.v) - 8), 'text-anchor': 'end'}, svg);
+  projLabel.textContent = 'TENDÊNCIA →';
+
   const firstLabel = el('text', {class: 'axis', x: PAD.l, y: H - 8}, svg); firstLabel.textContent = fmtDate(series[0].date);
-  const lastLabel = el('text', {class: 'axis', x: x(lastT), y: H - 8, 'text-anchor': 'middle'}, svg); lastLabel.textContent = fmtDate(series.at(-1).date);
-  const projLabel = el('text', {class: 'axis', x: W - PAD.r, y: H - 8, 'text-anchor': 'end', fill: 'var(--accent)'}, svg); projLabel.textContent = 'tendência →';
+  const lastLabel = el('text', {class: 'axis', x: Math.min(x(lastT), W - PAD.r - 22), y: H - 8, 'text-anchor': 'middle'}, svg); lastLabel.textContent = fmtDate(series.at(-1).date);
   return svg;
 }
 
@@ -84,7 +102,56 @@ function delta(label, value) {
   return chip;
 }
 
-function card(asset, elections) {
+const ratingLabel = r => r >= .5 ? 'COMPRA FORTE' : r >= .1 ? 'COMPRA' : r > -.1 ? 'NEUTRO' : r > -.5 ? 'VENDA' : 'VENDA FORTE';
+const ratingClass = r => r >= .1 ? 'sig-buy' : r > -.1 ? 'sig-neutral' : 'sig-sell';
+
+function signalBlock(asset) {
+  const s = asset.signals;
+  if (!s || s.rating == null) return null;
+  const box = node('div', null, 'mkt-sig');
+  const head = node('div', null, 'sig-head');
+  head.append(node('span', 'TERMÔMETRO TÉCNICO · TRADINGVIEW' + (s.stale ? ' (ÚLTIMA LEITURA)' : '')),
+              node('b', ratingLabel(s.rating), ratingClass(s.rating)));
+  const gauge = node('div', null, 'gauge');
+  const tick = node('i');
+  tick.style.left = Math.max(2, Math.min(98, (s.rating + 1) / 2 * 100)) + '%';
+  gauge.append(tick);
+  const parts = [];
+  if (s.rsi != null) parts.push('RSI ' + s.rsi.toLocaleString('pt-BR', {maximumFractionDigits: 0}) + (s.rsi >= 70 ? ' (sobrecomprado)' : s.rsi <= 30 ? ' (sobrevendido)' : ''));
+  if (s.ema200 != null && asset.last != null) {
+    const diff = (asset.last / s.ema200 - 1) * 100;
+    parts.push(Math.abs(diff).toLocaleString('pt-BR', {maximumFractionDigits: 1}) + '% ' + (diff >= 0 ? 'acima' : 'abaixo') + ' da média de 200d');
+  }
+  if (s.volatility != null && s.volatility < 8) parts.push('volatilidade ' + s.volatility.toLocaleString('pt-BR', {maximumFractionDigits: 1}) + '%/dia');
+  box.append(head, gauge, node('div', parts.join(' · '), 'sig-sub'));
+  return box;
+}
+
+function statsBlock(asset) {
+  const values = asset.series.map(p => p.value);
+  const lo = Math.min(...values), hi = Math.max(...values);
+  const last = values.at(-1);
+  const fromTop = (last / hi - 1) * 100;
+  const box = node('div', null, 'mkt-stats');
+  box.append(node('span', 'MÍN ' + fmt(lo, asset.unit)), node('span', 'MÁX ' + fmt(hi, asset.unit)),
+             node('span', fromTop < -0.05 ? Math.abs(fromTop).toLocaleString('pt-BR', {maximumFractionDigits: 1}) + '% ABAIXO DO TOPO' : 'NO TOPO DO PERÍODO'));
+  return box;
+}
+
+function linksBlock(asset) {
+  const links = LINKS[asset.symbol];
+  if (!links) return null;
+  const box = node('div', null, 'mkt-links');
+  box.append(node('span', 'ACOMPANHAR EM '));
+  for (const [name, url] of links) {
+    const a = node('a', name + ' ↗');
+    a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer';
+    box.append(a);
+  }
+  return box;
+}
+
+function card(asset, elections, focus) {
   const box = node('article', null, 'mkt' + (asset.status === 'cached' ? ' stale' : ''));
   const top = node('div', null, 'mkt-top');
   const left = node('div');
@@ -96,9 +163,41 @@ function card(asset, elections) {
   const deltas = node('div', null, 'mkt-deltas');
   deltas.append(delta('1º TURNO', asset.changeFirstRound), delta('2º TURNO', asset.changeSecondRound), delta('30 DIAS', asset.change30d));
   box.append(deltas);
-  if (asset.series?.length >= 5) box.append(chart(asset, elections));
+  if (asset.series?.length >= 5) box.append(chart(asset, elections), statsBlock(asset));
+  const sig = signalBlock(asset);
+  if (sig) box.append(sig);
+  const fx = focus?.items?.find(i => i.indicator === 'Câmbio');
+  if (asset.symbol === 'BRL=X' && fx) {
+    const note = node('p', `Consenso Focus (${fx.respondents || '~110'} instituições): dólar a ` +
+      'R$\u00a0' + fx.median.toLocaleString('pt-BR', {minimumFractionDigits: 2}) + ` no fim de ${fx.year} — mediana das projeções do Banco Central.`, 'mkt-focus-note');
+    box.append(note);
+  }
   box.append(node('p', 'Traço vermelho: tendência linear dos últimos 10 fechamentos, por uma semana — ilustrativo.', 'mkt-note'));
+  const links = linksBlock(asset);
+  if (links) box.append(links);
   return box;
+}
+
+function focusStrip(focus) {
+  const items = focus?.items || [];
+  if (!items.length) return;
+  const strip = node('div', null, 'focus-strip');
+  const head = node('div', null, 'focus-head');
+  head.append(node('span', 'CONSENSO FOCUS · BANCO CENTRAL'),
+              node('small', `mediana de ${items[0].respondents || '~110'} instituições · ${new Date(items[0].date + 'T12:00:00Z').toLocaleDateString('pt-BR', {timeZone: 'UTC'})}`));
+  const chips = node('div', null, 'focus-chips');
+  for (const item of items) {
+    const conf = FOCUS_LABELS[item.indicator];
+    if (!conf) continue;
+    const chip = node('span', null, 'chip');
+    chip.append(node('span', `${conf[0]} ${item.year} `), node('b', conf[1](item.median)));
+    chips.append(chip);
+  }
+  const link = node('a', 'Focus · BCB ↗');
+  link.href = focus.url || 'https://www.bcb.gov.br/publicacoes/focus';
+  link.target = '_blank'; link.rel = 'noopener noreferrer';
+  strip.append(head, chips, link);
+  $('#focus').append(strip);
 }
 
 async function load() {
@@ -115,7 +214,8 @@ async function load() {
     $('#movers').append(chip);
   }
   if (movers.length) $('#movers').prepend(node('span', 'desde o 2º turno ·', 'chip'));
+  focusStrip(data.focus);
   if (!assets.length) { $('#charts').append(node('p', 'Painel temporariamente indisponível. Recarregue em instantes.', 'charts-empty')); return; }
-  for (const asset of assets) $('#charts').append(card(asset, data.elections || []));
+  for (const asset of assets) $('#charts').append(card(asset, data.elections || [], data.focus));
 }
 load().catch(() => { $('#updated').textContent = 'Não foi possível carregar o painel.'; });

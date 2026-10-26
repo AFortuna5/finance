@@ -73,6 +73,19 @@ MARKET_ASSETS = [
     ('GC=F', 'Ouro', 'US$/oz', 'Commodity · global'),
     ('CL=F', 'Petróleo WTI', 'US$/barril', 'Commodity · global'),
 ]
+# symbol -> (mercado no scanner TradingView, ticker)
+TV_SYMBOLS = {
+    '^BVSP': ('brazil', 'BMFBOVESPA:IBOV'),
+    'BRL=X': ('forex', 'FX_IDC:USDBRL'),
+    'EURBRL=X': ('forex', 'FX_IDC:EURBRL'),
+    '^GSPC': ('cfd', 'SP:SPX'),
+    '^IXIC': ('america', 'NASDAQ:NDX'),
+    'BTC-USD': ('crypto', 'COINBASE:BTCUSD'),
+    'GC=F': ('cfd', 'TVC:GOLD'),
+    'CL=F': ('futures', 'NYMEX:CL1!'),
+}
+TV_COLUMNS = ['Recommend.All', 'Recommend.MA', 'Recommend.Other', 'RSI', 'EMA50', 'EMA200', 'Volatility.D']
+FOCUS_INDICATORS = ['Câmbio', 'Selic', 'IPCA', 'PIB Total']
 ELECTION_MARKERS = [
     {'date': '2026-10-04', 'label': '1º turno'},
     {'date': '2026-10-25', 'label': '2º turno'},
@@ -316,7 +329,56 @@ def market_series(asset):
             'source': 'Yahoo Finance', 'status': 'ok'}
 
 
-def markets(previous):
+def tv_signals():
+    """Termômetro técnico do scanner público do TradingView, por mercado."""
+    grouped = {}
+    for symbol, (market, ticker) in TV_SYMBOLS.items():
+        grouped.setdefault(market, []).append((symbol, ticker))
+    signals = {}
+    def scan(item):
+        market, pairs = item
+        payload = json.dumps({'symbols': {'tickers': [t for _, t in pairs], 'query': {'types': []}},
+                              'columns': TV_COLUMNS}).encode()
+        req = urllib.request.Request(f'https://scanner.tradingview.com/{market}/scan', data=payload,
+                                     headers={'Content-Type': 'application/json', 'User-Agent': 'Mozilla/5.0'})
+        with urllib.request.urlopen(req, timeout=15) as response:
+            data = json.loads(response.read())
+        result = {}
+        for row in data.get('data', []):
+            symbol = next((s for s, t in pairs if row['s'] == t), None)
+            if symbol:
+                d = row['d']
+                result[symbol] = {'rating': d[0], 'ratingMA': d[1], 'ratingOsc': d[2], 'rsi': d[3],
+                                  'ema50': d[4], 'ema200': d[5], 'volatility': d[6], 'source': 'TradingView'}
+        return result
+    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
+        for result in pool.map(scan, grouped.items()):
+            signals.update(result)
+    return signals
+
+
+def focus_expectations():
+    """Consenso do Boletim Focus (Banco Central): mediana das instituições para o ano corrente."""
+    year = str(dt.datetime.now(TIMEZONE).year)
+    base = 'https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoAnuais'
+    rows = []
+    for indicator in FOCUS_INDICATORS:
+        query = urllib.parse.urlencode({'$filter': f"Indicador eq '{indicator}'", '$top': '20',
+                                        '$orderby': 'Data desc', '$format': 'json'}, quote_via=urllib.parse.quote)
+        try:
+            data = json.loads(request(base + '?' + query, timeout=15).decode('utf-8'))
+            latest = next((r for r in data.get('value', []) if r.get('DataReferencia') == year), None)
+            if latest:
+                rows.append({'indicator': indicator, 'year': int(latest['DataReferencia']),
+                             'median': latest['Mediana'], 'date': latest['Data'],
+                             'respondents': latest.get('numeroRespondentes')})
+        except Exception as error:
+            print(f'Focus indisponível: {indicator}: {type(error).__name__}')
+    return {'items': rows, 'source': 'Banco Central · Boletim Focus',
+            'url': 'https://www.bcb.gov.br/publicacoes/focus'}
+
+
+def markets(previous, previous_focus):
     def fetch(asset):
         try:
             return market_series(asset)
@@ -326,9 +388,26 @@ def markets(previous):
             return {**old, 'status': 'cached'} if old else {'symbol': asset[0], 'name': asset[1], 'unit': asset[2], 'board': asset[3], 'series': [], 'status': 'unavailable', 'source': 'Yahoo Finance'}
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         assets = list(pool.map(fetch, MARKET_ASSETS))
+    try:
+        signals = tv_signals()
+    except Exception:
+        signals = {}
+    for asset in assets:
+        if asset['symbol'] in signals:
+            asset['signals'] = signals[asset['symbol']]
+        else:
+            old = next((a for a in previous if a.get('symbol') == asset['symbol']), None)
+            if old and old.get('signals'):
+                asset['signals'] = {**old['signals'], 'stale': True}
+    try:
+        focus = focus_expectations()
+        if not focus['items']:
+            raise ValueError('Focus vazio')
+    except Exception:
+        focus = previous_focus or {'items': [], 'source': 'Banco Central · Boletim Focus', 'url': 'https://www.bcb.gov.br/publicacoes/focus'}
     return {'updatedAt': dt.datetime.now(dt.timezone.utc).isoformat(), 'elections': ELECTION_MARKERS,
-            'assets': assets,
-            'method': 'Fechamentos diários via Yahoo Finance (3 meses). Variações comparam o último fechamento com o último pregão anterior a cada turno. A projeção tracejada é apenas a tendência linear dos últimos 10 fechamentos — ilustrativa, não é recomendação de investimento.'}
+            'assets': assets, 'focus': focus,
+            'method': 'Fechamentos diários via Yahoo Finance (3 meses). Variações comparam o último fechamento com o último pregão anterior a cada turno. Termômetro técnico e médias: scanner público TradingView. Expectativas de analistas: Boletim Focus do Banco Central. A projeção tracejada é apenas a tendência linear dos últimos 10 fechamentos — ilustrativa, não é recomendação de investimento.'}
 
 
 def event_ts(value):
@@ -450,11 +529,13 @@ def main():
               'calendar': calendar(previous.get('calendar', {}).get('events', [])),
               'method': 'Seleção automática por atualidade, relevância temática e diversidade; resumo extraído da descrição RSS, com tradução automática quando disponível. Contexto educativo por tema, sem previsão de preços.'}
     editions_dir.mkdir(parents=True, exist_ok=True)
-    previous_markets = []
+    previous_markets, previous_focus = [], None
     markets_file = ROOT / 'public/markets.json'
     if markets_file.exists():
-        previous_markets = json.loads(markets_file.read_text(encoding='utf-8')).get('assets', [])
-    markets_file.write_text(json.dumps(markets(previous_markets), ensure_ascii=False, indent=2), encoding='utf-8')
+        previous_data = json.loads(markets_file.read_text(encoding='utf-8'))
+        previous_markets = previous_data.get('assets', [])
+        previous_focus = previous_data.get('focus')
+    markets_file.write_text(json.dumps(markets(previous_markets, previous_focus), ensure_ascii=False, indent=2), encoding='utf-8')
     payload = json.dumps(output, ensure_ascii=False, indent=2)
     target.write_text(payload, encoding='utf-8')
     (editions_dir / f'{edition_id}.json').write_text(payload, encoding='utf-8')
