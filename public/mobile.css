@@ -7,7 +7,7 @@ header{position:relative;justify-content:center;padding:20px 0 16px;border-botto
 .masthead{font-size:46px;letter-spacing:-2px}
 .masthead span{margin-left:9px}
 #theme{position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:19px;padding:8px 4px;margin-left:0}
-.intro{margin-top:18px;padding:24px 20px;background:var(--card);border-left:3px solid var(--green);display:block}
+.intro{margin-top:18px;padding:24px 20px;background:var(--card);border-left:3px solid var(--wine);display:block}
 .intro h1{font-size:34px;margin-top:9px}
 .intro>p{font-size:12px;line-height:1.8;margin:15px 0 0}
 .intro>p br{display:none}
@@ -17,7 +17,7 @@ header{position:relative;justify-content:center;padding:20px 0 16px;border-botto
 nav.news-filter{position:sticky;top:0;z-index:40;background:var(--paper);margin:0 -20px;padding:0 20px}
 #categories{gap:9px;padding:9px 0}
 nav.news-filter button{border:1px solid var(--line);padding:9px 13px;font-size:10px}
-nav.news-filter button.active{box-shadow:none;border-color:var(--accent);color:var(--paper);background:var(--accent)}
+nav.news-filter button.active{box-shadow:none;border-color:var(--wine);color:var(--paper);background:var(--wine)}
 .search kbd{display:none}
 #news article{border:1px solid var(--line);padding:18px;margin-bottom:14px}
 .headline{font-size:25px;margin-right:26px}
@@ -44,5 +44,5 @@ footer{padding-bottom:10px}
 .tabbar{position:fixed;left:0;right:0;bottom:0;top:auto;margin:0;z-index:60;display:grid;grid-template-columns:repeat(4,1fr);background:var(--paper);border:0;border-top:3px double var(--ink);padding:0 0 env(safe-area-inset-bottom)}
 .tabbar a{display:block;text-align:center;padding:15px 0 14px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);border-left:1px solid var(--line)}
 .tabbar a:first-child{border-left:0}
-.tabbar a.active{color:var(--ink);font-weight:700;box-shadow:inset 0 3px var(--accent)}
+.tabbar a.active{color:var(--ink);font-weight:700;box-shadow:inset 0 3px var(--wine)}
 }

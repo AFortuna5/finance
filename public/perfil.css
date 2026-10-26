@@ -1,12 +1,12 @@
 .back-link{color:var(--accent);font-weight:600}
-.status-link{font:inherit;letter-spacing:.8px;color:var(--green);font-weight:600}
+.status-link{font:inherit;letter-spacing:.8px;color:var(--wine);font-weight:600}
 .chat{max-width:680px;margin:36px auto 0;display:flex;flex-direction:column;gap:16px}
 .msg{max-width:85%;line-height:1.65;font-size:13px;padding:14px 18px;opacity:0;transform:translateY(6px);animation:rise .3s forwards}
 @keyframes rise{to{opacity:1;transform:none}}
-.msg.bot{align-self:flex-start;background:var(--card);border-left:2px solid var(--green)}
+.msg.bot{align-self:flex-start;background:var(--card);border-left:2px solid var(--wine)}
 .msg.user{align-self:flex-end;border:1px solid var(--line);border-right:2px solid var(--accent)}
 .msg.bot strong{font-weight:700}
-.msg .lede{font-family:'Libre Caslon Display',Georgia,serif;font-size:19px;display:block;margin-bottom:6px}
+.msg .lede{font-family:var(--display);font-size:20px;font-weight:500;display:block;margin-bottom:6px}
 .msg .figures{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 2px}
 .msg .figures span{border:1px solid var(--line);font-size:9px;letter-spacing:.5px;padding:3px 8px}
 .msg .figures b{font-weight:700}
@@ -19,5 +19,5 @@
 .typing{align-self:flex-start;color:var(--muted);font-size:11px;letter-spacing:1px}
 .chat-input{max-width:680px;margin:22px auto 0;display:flex;border:1px solid var(--line)}
 .chat-input input{flex:1;border:0;background:none;padding:14px;font-size:12px;outline:none}
-.chat-input button{border:0;background:var(--green);color:var(--paper);padding:0 22px;font-size:16px}
+.chat-input button{border:0;background:var(--wine);color:var(--paper);padding:0 22px;font-size:16px}
 .chat-input button:hover{background:var(--accent)}
