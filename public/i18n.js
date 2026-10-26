@@ -6,6 +6,7 @@
   const DICT = {
     // --- faixa de edição / cabeçalho (todas as páginas) ---
     'ed.look': {pt: 'UM OLHAR SOBRE O MUNDO', en: 'A LOOK AT THE WORLD'},
+    'ed.archive': {pt: 'ARQUIVO ↓︎', en: 'ARCHIVE ↓︎'},
     'ed.markets': {pt: 'UM OLHAR SOBRE OS MERCADOS', en: 'A LOOK AT THE MARKETS'},
     'ed.gov': {pt: 'UM OLHAR SOBRE AS CONTAS PÚBLICAS', en: 'A LOOK AT PUBLIC ACCOUNTS'},
     'ed.perfil': {pt: 'UMA CONVERSA SOBRE O SEU DINHEIRO', en: 'A CONVERSATION ABOUT YOUR MONEY'},
@@ -42,6 +43,8 @@
     'brief.time': {pt: '◷ Cerca de 5 minutos', en: '◷ About 5 minutes'},
     'hist.label': {pt: 'Edições anteriores', en: 'Past editions'},
     'hist.recent': {pt: 'Mais recente', en: 'Latest'},
+    'hist.prev': {pt: '‹ Anterior', en: '‹ Prev'},
+    'hist.next': {pt: 'Seguinte ›', en: 'Next ›'},
     'cat.all': {pt: 'A primeira página', en: 'Front page'},
     'cat.br': {pt: 'Brasil', en: 'Brazil'},
     'cat.world': {pt: 'Mundo', en: 'World'},

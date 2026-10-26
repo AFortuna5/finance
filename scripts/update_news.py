@@ -754,7 +754,7 @@ def main():
     (editions_dir / f'{edition_id}.json').write_text(payload, encoding='utf-8')
     previous_history = json.loads(history_file.read_text(encoding='utf-8')) if history_file.exists() else []
     history = [{'id': edition_id, 'updatedAt': output['updatedAt']}] + [row for row in previous_history if row.get('id') != edition_id]
-    history_file.write_text(json.dumps(history[:30], ensure_ascii=False, indent=2), encoding='utf-8')
+    history_file.write_text(json.dumps(history[:370], ensure_ascii=False, indent=2), encoding='utf-8')
     print(f"{len(translated)} notícias; {output['translationFailures']} traduções indisponíveis; fontes falhas: {sorted(set(failures)) or 'nenhuma'}.")
 
 

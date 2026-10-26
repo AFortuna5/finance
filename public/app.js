@@ -84,5 +84,10 @@ async function loadEdition(id=''){
 }
 loadEdition().catch(()=>{$('#updated').textContent=pick('Não foi possível carregar a edição.','Could not load the edition.');$('#news').textContent=pick('Recarregue a página para tentar novamente.','Reload the page to try again.');});
 window.addEventListener('mer-lang',()=>{setToday();if(currentEdition){setUpdated(currentEdition);render();renderDashboard(currentEdition);}});
-fetchEdition('/api/news?history=1').catch(()=>fetchEdition('history.json')).then(rows=>{if(rows.length){const en=$('#edition-no');if(en)en.textContent='Nº '+rows.length;}for(const row of rows){const option=node('option',row.id.split('-').reverse().join('/'));option.value=row.id;$('#history').append(option);}}).catch(()=>{});
-$('#history').onchange=async()=>{try{await loadEdition($('#history').value);}catch{$('#edition-note').textContent=pick('Não foi possível abrir esta edição. Tente novamente.','Could not open this edition. Try again.');}};
+let histIds=[];
+function histNav(){const cur=$('#history').value;const p=cur===''?0:histIds.indexOf(cur);$('#hist-prev').disabled=p<0||p>=histIds.length-1;$('#hist-next').disabled=p<=0;}
+async function histGo(d){const cur=$('#history').value;const p=cur===''?0:histIds.indexOf(cur);const id=p+d<=0?'':(histIds[p+d]||'');$('#history').value=id;histNav();try{await loadEdition(id);}catch{$('#edition-note').textContent=pick('Não foi possível abrir esta edição. Tente novamente.','Could not open this edition. Try again.');}}
+fetchEdition('/api/news?history=1').catch(()=>fetchEdition('history.json')).then(rows=>{histIds=rows.map(r=>r.id);if(rows.length){const en=$('#edition-no');if(en)en.textContent='Nº '+rows.length;}for(const row of rows){const option=node('option',row.id.split('-').reverse().join('/'));option.value=row.id;$('#history').append(option);}histNav();}).catch(()=>{});
+$('#hist-prev').onclick=()=>histGo(1);
+$('#hist-next').onclick=()=>histGo(-1);
+$('#history').onchange=async()=>{histNav();try{await loadEdition($('#history').value);}catch{$('#edition-note').textContent=pick('Não foi possível abrir esta edição. Tente novamente.','Could not open this edition. Try again.');}};

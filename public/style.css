@@ -15,6 +15,8 @@ button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{o
 .edition,header,nav,main,footer{max-width:1320px;margin:auto}
 .edition{display:flex;justify-content:space-between;padding:16px 0 11px;font-size:10px;letter-spacing:2.2px;border-bottom:1px solid var(--line);color:var(--muted)}
 .edition b{color:var(--accent);font-weight:700}
+.ed-archive{color:var(--accent);font-weight:700}
+.ed-archive:hover{text-decoration:underline}
 header{display:flex;justify-content:space-between;align-items:center;padding:28px 0 24px;border-bottom:1px solid var(--ink)}
 .masthead{font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:clamp(52px,9.6vw,132px);letter-spacing:-.015em;line-height:.92;display:flex;align-items:flex-end}
 .masthead .mark{width:.52em;height:.52em;border-radius:.12em;margin-left:.16em;margin-bottom:.06em}
