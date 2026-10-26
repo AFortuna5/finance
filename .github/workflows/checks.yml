@@ -1,4 +1,4 @@
-name: Verificar código do jornal privado
+name: Verificar código do Meridiano
 on:
   push:
     branches: [main]
