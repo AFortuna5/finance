@@ -1,40 +1,248 @@
 {
-  "updatedAt": "2026-10-26T15:26:28.212117+00:00",
+  "updatedAt": "2026-10-26T16:09:02.379252+00:00",
   "editionId": "2026-10-26",
   "failedFeeds": [],
   "translationFailures": 0,
   "articles": [
     {
-      "title": "Lula 4 terá desafio de unir agenda social e estabilidade fiscal com Congresso adverso",
-      "titleOriginal": "Lula 4 terá desafio de unir agenda social e estabilidade fiscal com Congresso adverso",
-      "url": "https://www.infomoney.com.br/economia/reeleicao-lula-mercado-financeiro-risco-fiscal/",
-      "category": "Brasil",
-      "source": "InfoMoney",
-      "publishedAt": "2026-10-26T15:23:59+00:00",
-      "language": "pt",
-      "description": "",
-      "translationStatus": "original",
-      "summary": "Lula 4 terá desafio de unir agenda social e estabilidade fiscal com Congresso adverso",
+      "title": "Trump DOJ demitiu ilegalmente a promotora de Epstein, Maurene Comey, decide o juiz",
+      "titleOriginal": "Trump DOJ unlawfully fired Epstein prosecutor Maurene Comey, judge rules",
+      "url": "https://www.cnbc.com/2026/10/26/maurene-comey-firing-unlawful-trump.html",
+      "category": "Mercados",
+      "source": "CNBC",
+      "publishedAt": "2026-10-26T16:08:18+00:00",
+      "language": "en",
+      "description": "The judge ordered that Comey, the daughter of ex-FBI director James Comey, be retroactively reinstated to her job as an assistant United States attorney.",
+      "summary": "O juiz ordenou que Comey, filha do ex-diretor do FBI James Comey, fosse reintegrada retroativamente ao seu cargo como procuradora assistente dos Estados Unidos.",
+      "translationStatus": "translated",
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 48.98
+      "score": 41.99
     },
     {
-      "title": "Ibovespa Ao Vivo: Ibovespa desaba 15% após reeleição de Lula e circuit breaker",
-      "titleOriginal": "Ibovespa Ao Vivo: Ibovespa desaba 15% após reeleição de Lula e circuit breaker",
-      "url": "https://www.infomoney.com.br/mercados/ibovespa-hoje-bolsa-de-valores-ao-vivo-26102026/",
+      "title": "Taxas do Tesouro superam 2020 e têm maior alta da série histórica após eleição",
+      "titleOriginal": "Taxas do Tesouro superam 2020 e têm maior alta da série histórica após eleição",
+      "url": "https://www.infomoney.com.br/onde-investir/tesouro-direto-abertura-fechamento-26102026/",
       "category": "Brasil",
       "source": "InfoMoney",
-      "publishedAt": "2026-10-26T15:22:13+00:00",
+      "publishedAt": "2026-10-26T16:05:16+00:00",
       "language": "pt",
-      "description": "B3 acionou mecanismo de circuit breaker pela primeira vez desde março de 2020, durante a pandemia",
+      "description": "Tesouro Prefixado 2032 vai a 15,78% e supera o salto de março de 2020, mesmo após intervenção do Tesouro Nacional; IPCA+ tem a segunda maior alta da série",
       "translationStatus": "original",
-      "summary": "B3 acionou mecanismo de circuit breaker pela primeira vez desde março de 2020, durante a pandemia",
+      "summary": "Tesouro Prefixado 2032 vai a 15,78% e supera o salto de março de 2020, mesmo após intervenção do Tesouro Nacional; IPCA+ tem a segunda maior alta da série",
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
+      "score": 48.97
+    },
+    {
+      "title": "Bolsa tomba 15% após vitória de Lula e registra uma das maiores quedas da história",
+      "titleOriginal": "Bolsa tomba 15% após vitória de Lula e registra uma das maiores quedas da história",
+      "url": "https://www.infomoney.com.br/mercados/bolsa-tomba-15-apos-vitoria-de-lula-e-registra-uma-das-maiores-quedas-da-historia/",
+      "category": "Brasil",
+      "source": "InfoMoney",
+      "publishedAt": "2026-10-26T16:03:57+00:00",
+      "language": "pt",
+      "description": "Maior queda da série ocorreu em 10 de setembro de 1998, quando o índice recuou 15,83%, em meio à crise financeira russa",
+      "translationStatus": "original",
+      "summary": "Maior queda da série ocorreu em 10 de setembro de 1998, quando o índice recuou 15,83%, em meio à crise financeira russa",
+      "topic": "Empresas e mercados",
+      "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
+      "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
       "score": 48.96
+    },
+    {
+      "title": "Durigan promete mudança na lei para buscar o centro da meta fiscal ainda este ano",
+      "titleOriginal": "Durigan promete mudança na lei para buscar o centro da meta fiscal ainda este ano",
+      "url": "https://www.moneytimes.com.br/durigan-vamos-fazer-alteracoes-para-buscar-o-centro-da-meta-fiscal-ainda-este-ano/",
+      "category": "Brasil",
+      "source": "MoneyTimes",
+      "publishedAt": "2026-10-26T16:03:52+00:00",
+      "language": "pt",
+      "description": "O ministro da Fazenda, Dario Durigan, disse nesta segunda-feira, 26, em entrevista ao Broadcast (sistema de notícias em tempo real do Grupo Estado), que ainda este ano deve promover uma",
+      "translationStatus": "original",
+      "summary": "O ministro da Fazenda, Dario Durigan, disse nesta segunda-feira, 26, em entrevista ao Broadcast (sistema de notícias em tempo real do Grupo Estado), que ainda este ano deve promover uma",
+      "topic": "Fiscal e atividade",
+      "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
+      "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
+      "score": 48.96
+    },
+    {
+      "title": "Alguns republicanos opõem-se a Trump nas tarifas. Susan Collins, do Maine, acabou de fazê-lo recuar nos impostos canadenses.",
+      "titleOriginal": "Some Republicans are opposing Trump on tariffs. Maine’s Susan Collins just got him to back down on Canadian levies.",
+      "url": "https://www.marketwatch.com/story/some-republicans-are-opposing-trump-on-tariffs-maines-susan-collins-just-got-him-to-back-down-on-canadian-levies-02b202ae?mod=mw_rss_topstories",
+      "category": "Mercados",
+      "source": "MarketWatch",
+      "publishedAt": "2026-10-26T16:01:00+00:00",
+      "language": "en",
+      "description": "As she faces a tough midterm race, the five-term GOP senator is touting her successful lobbying effort against certain tariffs on Canada",
+      "summary": "Enquanto enfrenta uma difícil corrida no meio do mandato, a senadora republicana com cinco mandatos está elogiando seu bem-sucedido esforço de lobby contra certas tarifas sobre o Canadá",
+      "translationStatus": "translated",
+      "topic": "Eleições e política",
+      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
+      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
+      "score": 41.93
+    },
+    {
+      "title": "NBA entra nos mercados de previsão com parcerias Kalshi e Polymarket",
+      "titleOriginal": "NBA enters prediction markets with Kalshi, Polymarket partnerships",
+      "url": "https://www.cnbc.com/2026/10/26/nba-kalshi-polymarket-prediction-markets.html",
+      "category": "Mercados",
+      "source": "CNBC",
+      "publishedAt": "2026-10-26T16:00:59+00:00",
+      "language": "en",
+      "description": "The league also inked a memorandum of understanding with the CFTC, the federal regulator of prediction markets.",
+      "summary": "A liga também assinou um memorando de entendimento com a CFTC, o regulador federal dos mercados de previsão.",
+      "translationStatus": "translated",
+      "topic": "Empresas e mercados",
+      "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
+      "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
+      "score": 41.93
+    },
+    {
+      "title": "Vale (VALE3) acompanha dólar e dispara após resultado das eleições",
+      "titleOriginal": "Vale (VALE3) acompanha dólar e dispara após resultado das eleições",
+      "url": "https://www.infomoney.com.br/mercados/vale-vale3-desempenho-eleicoes-segundo-turno-262102026/",
+      "category": "Brasil",
+      "source": "InfoMoney",
+      "publishedAt": "2026-10-26T15:58:22+00:00",
+      "language": "pt",
+      "description": "Enquanto isso, vitória de Lula derruba a Bolsa no pregão desta segunda-feira",
+      "translationStatus": "original",
+      "summary": "Enquanto isso, vitória de Lula derruba a Bolsa no pregão desta segunda-feira",
+      "topic": "Eleições e política",
+      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
+      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
+      "score": 48.91
+    },
+    {
+      "title": "Senado do Alasca: Peltola busca rejeição rápida do processo eleitoral do DOJ antes do meio do mandato",
+      "titleOriginal": "Alaska Senate: Peltola seeks quick dismissal of DOJ election lawsuit before midterm",
+      "url": "https://www.cnbc.com/2026/10/26/alaska-senate-peltola-doj-lawsuit-election-sullivan.html",
+      "category": "Mercados",
+      "source": "CNBC",
+      "publishedAt": "2026-10-26T15:55:37+00:00",
+      "language": "en",
+      "description": "The winner of the Alaska Senate election could determine whether Republicans or Democrats have a majority in the Senate in the next Congress.",
+      "summary": "O vencedor da eleição para o Senado do Alasca poderá determinar se os republicanos ou os democratas terão maioria no Senado no próximo Congresso.",
+      "translationStatus": "translated",
+      "topic": "Eleições e política",
+      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
+      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
+      "score": 41.89
+    },
+    {
+      "title": "Eleições 2026: PF registrou 86 ocorrências de possíveis crimes eleitorais em 20 estados e no DF",
+      "titleOriginal": "Eleições 2026: PF registrou 86 ocorrências de possíveis crimes eleitorais em 20 estados e no DF",
+      "url": "https://g1.globo.com/politica/eleicoes/2026/noticia/2026/10/26/eleicoes-2026-pf-registrou-86-ocorrencias-de-possiveis-crimes-eleitorais-em-20-estados-e-no-df.ghtml",
+      "category": "Eleições",
+      "source": "G1 Política",
+      "publishedAt": "2026-10-26T15:51:57+00:00",
+      "language": "pt",
+      "description": "A Polícia Federal registrou 86 ocorrências relacionadas a possíveis crimes eleitorais durante o segundo turno das Eleições 2026, realizado neste domingo (25). Os dados constam do balanço final divulgado pela",
+      "translationStatus": "original",
+      "summary": "A Polícia Federal registrou 86 ocorrências relacionadas a possíveis crimes eleitorais durante o segundo turno das Eleições 2026, realizado neste domingo (25). Os dados constam do balanço final divulgado pela",
+      "topic": "Eleições e política",
+      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
+      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
+      "score": 41.86
+    },
+    {
+      "title": "Após eleição, UBS vê risco de correção em Hapvida e Dasa",
+      "titleOriginal": "Após eleição, UBS vê risco de correção em Hapvida e Dasa",
+      "url": "https://www.infomoney.com.br/mercados/ubs-hapvida-dasa-risco-correcao-eleicao-juros/",
+      "category": "Brasil",
+      "source": "InfoMoney",
+      "publishedAt": "2026-10-26T15:42:20+00:00",
+      "language": "pt",
+      "description": "Banco avalia que uma reversão da curva de juros pode pressionar principalmente os papéis que mais subiram após o primeiro turno; Bradesco Saúde aparece como posição defensiva",
+      "translationStatus": "original",
+      "summary": "Banco avalia que uma reversão da curva de juros pode pressionar principalmente os papéis que mais subiram após o primeiro turno; Bradesco Saúde aparece como posição defensiva",
+      "topic": "Eleições e política",
+      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
+      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
+      "score": 48.78
+    },
+    {
+      "title": "Os investidores também estão se saindo bem este ano ao evitar a IA. Como investir se o comércio de tecnologia continuar fracassando",
+      "titleOriginal": "Investors are doing just as well this year by shunning AI. How to invest if the tech trade keeps fizzling",
+      "url": "https://www.cnbc.com/2026/10/26/sp-500-ex-ai-index-tech-selloff.html",
+      "category": "Mercados",
+      "source": "CNBC",
+      "publishedAt": "2026-10-26T15:39:55+00:00",
+      "language": "en",
+      "description": "An S&P 500 index without AI stocks is beating the traditional index. These sectors and stocks could be winners if the AI trade keeps fraying.",
+      "summary": "Um índice S&P 500 sem ações de IA está superando o índice tradicional. Estes setores e ações poderão ser vencedores se o comércio de IA continuar a desgastar-se.",
+      "translationStatus": "translated",
+      "topic": "Comércio e geopolítica",
+      "context": "Conflitos e barreiras comerciais podem alterar cadeias de suprimentos, fretes e fluxos de capital. Um risco político só se traduz em efeito econômico conforme sua duração, escala e exposição dos países.",
+      "question": "Qual é o canal econômico concreto: energia, comércio, moeda ou financiamento?",
+      "score": 41.76
+    },
+    {
+      "title": "Como o bate-papo do WhatsApp do ‘Exército de Lula’ ajudou a virar as eleições no Brasil",
+      "titleOriginal": "How 'Lula's Army' WhatsApp chat helped turn Brazil election around",
+      "url": "https://www.bbc.co.uk/news/articles/cwz0vg4v3ndeo",
+      "category": "Geopolítica",
+      "source": "BBC News",
+      "publishedAt": "2026-10-26T15:37:33+00:00",
+      "language": "en",
+      "description": "As polls pointed to defeat, millions joined a 'Lula's Army' channel that is credited with helping transform online enthusiasm into real-world mobilisation.",
+      "summary": "Enquanto as sondagens apontavam para a derrota, milhões de pessoas aderiram ao canal “Exército de Lula”, que é creditado por ajudar a transformar o entusiasmo online em mobilização no mundo real.",
+      "translationStatus": "translated",
+      "topic": "Eleições e política",
+      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
+      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
+      "score": 41.74
+    },
+    {
+      "title": "Eleições 2026: Flávio vira sobre Lula na Venezuela no 2º turno",
+      "titleOriginal": "Eleições 2026: Flávio vira sobre Lula na Venezuela no 2º turno",
+      "url": "https://g1.globo.com/mundo/noticia/2026/10/26/eleicoes-2026-no-exterior-flavio-bolsonaro-superou-lula-na-venezuela.ghtml",
+      "category": "Eleições",
+      "source": "G1 Política",
+      "publishedAt": "2026-10-26T15:36:31+00:00",
+      "language": "pt",
+      "description": "Lula venceu em 64 países; Flávio Bolsonaro, em 36 Flávio Bolsonaro (PL) superou o presidente reeleito Luiz Inácio Lula da Silva (PT) entre os brasileiros que votaram na Venezuela no",
+      "translationStatus": "original",
+      "summary": "Lula venceu em 64 países; Flávio Bolsonaro, em 36 Flávio Bolsonaro (PL) superou o presidente reeleito Luiz Inácio Lula da Silva (PT) entre os brasileiros que votaram na Venezuela no",
+      "topic": "Eleições e política",
+      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
+      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
+      "score": 41.73
+    },
+    {
+      "title": "Lula enfrentará Congresso à direita, crise no STF e precisará conciliar promessas com economia no 4º mandato",
+      "titleOriginal": "Lula enfrentará Congresso à direita, crise no STF e precisará conciliar promessas com economia no 4º mandato",
+      "url": "https://g1.globo.com/politica/noticia/2026/10/26/lula-enfrentara-congresso-a-direita-crise-no-stf-e-precisara-conciliar-promessas-com-economia-no-4o-mandato.ghtml",
+      "category": "Eleições",
+      "source": "G1 Política",
+      "publishedAt": "2026-10-26T15:27:32+00:00",
+      "language": "pt",
+      "description": "Entenda os desafios de Lula em seu 4º mandato Reeleito para um quarto mandato, Luiz Inácio Lula da Silva (PT) terá pela frente o desafio de governar com um Congresso",
+      "translationStatus": "original",
+      "summary": "Entenda os desafios de Lula em seu 4º mandato Reeleito para um quarto mandato, Luiz Inácio Lula da Silva (PT) terá pela frente o desafio de governar com um Congresso",
+      "topic": "Eleições e política",
+      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
+      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
+      "score": 41.65
+    },
+    {
+      "title": "Sinalização de ajuste fiscal será determinante para recuperação de ativos brasileiros, avalia economista-chefe da Nomos",
+      "titleOriginal": "Sinalização de ajuste fiscal será determinante para recuperação de ativos brasileiros, avalia economista-chefe da Nomos",
+      "url": "https://www.moneytimes.com.br/sinalizacao-ajuste-fiscal-sera-determinante-para-recuperacao-ativos-brasileiros-avalia-economista-chefe-nomos-apsa/",
+      "category": "Brasil",
+      "source": "MoneyTimes",
+      "publishedAt": "2026-10-26T15:24:54+00:00",
+      "language": "pt",
+      "description": "O circuit breaker da Nolsa brasileira acaba de ser acionado pela 24ª vez desde sua criação, em 1997. O gatilho do acionamento foi a reeleição do presidente Luiz Inácio Lula",
+      "translationStatus": "original",
+      "summary": "O circuit breaker da Nolsa brasileira acaba de ser acionado pela 24ª vez desde sua criação, em 1997. O gatilho do acionamento foi a reeleição do presidente Luiz Inácio Lula",
+      "topic": "Fiscal e atividade",
+      "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
+      "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
+      "score": 48.63
     },
     {
       "title": "Eleições 2026: onde Lula e Flávio viraram votos no exterior?",
@@ -50,23 +258,7 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 41.91
-    },
-    {
-      "title": "Suzano, Embraer e mais: quais ações sobem após as eleições presidenciais?",
-      "titleOriginal": "Suzano, Embraer e mais: quais ações sobem após as eleições presidenciais?",
-      "url": "https://www.infomoney.com.br/mercados/suzano-embraer-e-mais-quais-acoes-sobem-apos-as-eleicoes-presidenciais-vitoria-lula/",
-      "category": "Brasil",
-      "source": "InfoMoney",
-      "publishedAt": "2026-10-26T15:07:31+00:00",
-      "language": "pt",
-      "description": "Apenas seis ações do Ibovespa operam em alta na primeira sessão após reeleição de Lula",
-      "translationStatus": "original",
-      "summary": "Apenas seis ações do Ibovespa operam em alta na primeira sessão após reeleição de Lula",
-      "topic": "Eleições e política",
-      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
-      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 48.84
+      "score": 41.55
     },
     {
       "title": "Quero pagar $ 4.500 em dívidas de cartão de crédito em 2 meses. Isso é possível?",
@@ -82,7 +274,7 @@
       "topic": "Fiscal e atividade",
       "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
       "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
-      "score": 41.84
+      "score": 41.48
     },
     {
       "title": "Contágio: mercados argentinos despencam após reeleição de Lula no Brasil",
@@ -98,23 +290,7 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 48.84
-    },
-    {
-      "title": "Senado do Alasca: Peltola busca rejeição rápida do processo eleitoral do DOJ antes do meio do mandato",
-      "titleOriginal": "Alaska Senate: Peltola seeks quick dismissal of DOJ election lawsuit before midterm",
-      "url": "https://www.cnbc.com/2026/10/26/alaska-senate-peltola-doj-lawsuit-election-sullivan.html",
-      "category": "Mercados",
-      "source": "CNBC",
-      "publishedAt": "2026-10-26T15:06:39+00:00",
-      "language": "en",
-      "description": "The winner of the Alaska Senate election could determine whether Republicans or Democrats have a majority in the Senate in the next Congress.",
-      "summary": "O vencedor da eleição para o Senado do Alasca poderá determinar se os republicanos ou os democratas terão maioria no Senado no próximo Congresso.",
-      "translationStatus": "translated",
-      "topic": "Eleições e política",
-      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
-      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 41.84
+      "score": 48.48
     },
     {
       "title": "Anthropic entra com pedido de IPO mesmo com valuation abaixo de US$ 1 trilhão; veja números da empresa",
@@ -130,23 +306,7 @@
       "topic": "Empresas e mercados",
       "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
       "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
-      "score": 48.83
-    },
-    {
-      "title": "Meta lança oferta de ações no valor de US$ 35 bi para financiar expansão da IA",
-      "titleOriginal": "Meta lança oferta de ações no valor de US$ 35 bi para financiar expansão da IA",
-      "url": "https://www.infomoney.com.br/business/meta-lanca-oferta-de-acoes-no-valor-de-us-35-bi-para-financiar-expansao-da-ia/",
-      "category": "Brasil",
-      "source": "InfoMoney",
-      "publishedAt": "2026-10-26T14:57:33+00:00",
-      "language": "pt",
-      "description": "Controladora do Facebook busca reforçar o caixa para bancar a expansão de data centers, capacidade computacional e produtos de IA em disputa com OpenAI e Anthropic",
-      "translationStatus": "original",
-      "summary": "Controladora do Facebook busca reforçar o caixa para bancar a expansão de data centers, capacidade computacional e produtos de IA em disputa com OpenAI e Anthropic",
-      "topic": "Empresas e mercados",
-      "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
-      "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
-      "score": 48.76
+      "score": 48.47
     },
     {
       "title": "Eleições 2026: Confira em 7 mapas e gráficos como foi a disputa Lula x Flávio Bolsonaro no 2º turno",
@@ -162,23 +322,7 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 41.76
-    },
-    {
-      "title": "Netanyahu destaca apoio de Trump em eleição e sugere retomada de guerra contra Irã",
-      "titleOriginal": "Netanyahu destaca apoio de Trump em eleição e sugere retomada de guerra contra Irã",
-      "url": "https://www.infomoney.com.br/mundo/netanyahu-destaca-apoio-de-trump-em-eleicao-e-sugere-retomada-de-guerra-contra-ira/",
-      "category": "Brasil",
-      "source": "InfoMoney",
-      "publishedAt": "2026-10-26T14:52:59+00:00",
-      "language": "pt",
-      "description": "Netanyahu disse que Trump estava disposto a tomar medidas “que finalmente, finalmente, eliminariam a ameaça iraniana”",
-      "translationStatus": "original",
-      "summary": "Netanyahu disse que Trump estava disposto a tomar medidas “que finalmente, finalmente, eliminariam a ameaça iraniana”",
-      "topic": "Eleições e política",
-      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
-      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 48.72
+      "score": 41.4
     },
     {
       "title": "Fundos imobiliários desabam após vitória de Lula e disparada dos juros; veja o que esperar dos FIIs",
@@ -194,23 +338,7 @@
       "topic": "Juros e inflação",
       "context": "Juros alteram o custo do crédito e a taxa usada para avaliar investimentos. Inflação e expectativas influenciam decisões dos bancos centrais; a reação dos ativos depende do que já estava nos preços.",
       "question": "O dado mudou a expectativa para os próximos juros ou apenas confirmou o esperado?",
-      "score": 48.72
-    },
-    {
-      "title": "Goldman vê risco fiscal maior com Lula e alerta para governabilidade",
-      "titleOriginal": "Goldman vê risco fiscal maior com Lula e alerta para governabilidade",
-      "url": "https://www.infomoney.com.br/mercados/goldman-risco-fiscal-lula-governabilidade/",
-      "category": "Brasil",
-      "source": "InfoMoney",
-      "publishedAt": "2026-10-26T14:51:34+00:00",
-      "language": "pt",
-      "description": "Banco afirma que Orçamento de 2027, definição do ministro da Fazenda e relação com o Congresso serão centrais para os ativos brasileiros",
-      "translationStatus": "original",
-      "summary": "Banco afirma que Orçamento de 2027, definição do ministro da Fazenda e relação com o Congresso serão centrais para os ativos brasileiros",
-      "topic": "Fiscal e atividade",
-      "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
-      "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
-      "score": 48.71
+      "score": 48.37
     },
     {
       "title": "PL de Flávio Bolsonaro deve ficar isolado no pedido para anular a eleição",
@@ -226,7 +354,7 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 41.7
+      "score": 41.35
     },
     {
       "title": "Duas escolhas de ações para capitalizar os temores equivocados de Wall Street sobre IA",
@@ -242,7 +370,7 @@
       "topic": "Empresas e mercados",
       "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
       "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
-      "score": 41.67
+      "score": 41.32
     },
     {
       "title": "Wall Street sobe com pedido de IPO da Anthropic e alívio nos preços do petróleo",
@@ -258,7 +386,7 @@
       "topic": "Energia e commodities",
       "context": "Energia e matérias-primas entram nos custos de transporte e produção. Choques de oferta podem afetar a inflação e a renda de países exportadores e importadores de maneiras diferentes.",
       "question": "A mudança vem da oferta, da demanda ou do risco de interrupção?",
-      "score": 48.63
+      "score": 48.28
     },
     {
       "title": "Kassab dá parabéns a Lula e Alckmin pela vitória nas eleições",
@@ -274,7 +402,7 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 41.63
+      "score": 41.27
     },
     {
       "title": "Os mercados do Brasil caem enquanto os investidores apostam que Lula aumentará os problemas fiscais",
@@ -290,7 +418,7 @@
       "topic": "Fiscal e atividade",
       "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
       "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
-      "score": 41.6
+      "score": 41.25
     },
     {
       "title": "Steve Bannon diz que eleição no Brasil foi roubada",
@@ -306,7 +434,7 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 41.58
+      "score": 41.23
     },
     {
       "title": "Trump diz que em breve decidirá se ‘faz um acordo’ com o Irão ou ‘acabará com ele’",
@@ -322,7 +450,7 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 41.58
+      "score": 41.23
     },
     {
       "title": "Comemorações na Sérvia depois que o governante veterano Vučić perdeu a eleição para um movimento de protesto liderado por estudantes",
@@ -338,11 +466,11 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 41.57
+      "score": 41.22
     },
     {
-      "title": "Euro dispara 10,12% e vai a R$ 6,155 após reeleição de Lula",
-      "titleOriginal": "Euro dispara 10,12% e vai a R$ 6,155 após reeleição de Lula",
+      "title": "Euro chega a subir 10,12% e vai a R$ 6,155 após reeleição de Lula",
+      "titleOriginal": "Euro chega a subir 10,12% e vai a R$ 6,155 após reeleição de Lula",
       "url": "https://www.poder360.com.br/poder-economia/euro-dispara-1012-e-vai-a-r-6155-apos-reeleicao-de-lula/",
       "category": "Eleições",
       "source": "Poder360",
@@ -354,7 +482,7 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 41.56
+      "score": 41.21
     },
     {
       "title": "Plebiscito: eleitores de 6 cidades decidem transferência de distritos",
@@ -370,7 +498,7 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 41.37
+      "score": 41.02
     },
     {
       "title": "As ações brasileiras balançaram quando Lula venceu as eleições presidenciais, Bolsonaro supostamente se recusa a conceder",
@@ -386,55 +514,7 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 41.36
-    },
-    {
-      "title": "Meta anuncia oferta de ações de US$ 95 bilhões para financiar expansão de IA",
-      "titleOriginal": "Meta announces $95 billion stock offering to fund AI expansion",
-      "url": "https://www.cnbc.com/2026/10/26/meta-stock-offering-ai.html",
-      "category": "Mercados",
-      "source": "CNBC",
-      "publishedAt": "2026-10-26T14:05:36+00:00",
-      "language": "en",
-      "description": "Meta plans to raise $95 billion to fund AI infrastructure and superintelligence, as Nvidia, AMD and Broadcom eye up to $5 billion in shares.",
-      "summary": "A Meta planeja levantar US$ 95 bilhões para financiar infraestrutura de IA e superinteligência, enquanto Nvidia, AMD e Broadcom planejam até US$ 5 bilhões em ações.",
-      "translationStatus": "translated",
-      "topic": "Empresas e mercados",
-      "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
-      "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
-      "score": 41.33
-    },
-    {
-      "title": "Bolsa tomba 16% depois de acionar circuit breaker",
-      "titleOriginal": "Bolsa tomba 16% depois de acionar circuit breaker",
-      "url": "https://www.poder360.com.br/poder-economia/bolsa-tomba-16-depois-de-acionar-circuit-breaker/",
-      "category": "Eleições",
-      "source": "Poder360",
-      "publishedAt": "2026-10-26T14:02:10+00:00",
-      "language": "pt",
-      "description": "O mercado reage à vitória de Lula contra Flávio Bolsonaro no domingo (5.out); presidente terá 4º mandato",
-      "translationStatus": "original",
-      "summary": "O mercado reage à vitória de Lula contra Flávio Bolsonaro no domingo (5.out); presidente terá 4º mandato",
-      "topic": "Empresas e mercados",
-      "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
-      "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
-      "score": 41.3
-    },
-    {
-      "title": "Após derrota de Flávio, Ricardo Nunes diz esperar que novo governo recupere a economia",
-      "titleOriginal": "Após derrota de Flávio, Ricardo Nunes diz esperar que novo governo recupere a economia",
-      "url": "https://g1.globo.com/sp/sao-paulo/eleicoes/2026/noticia/2026/10/26/apos-derrota-de-flavio-ricardo-nunes-diz-esperar-que-novo-governo-recupere-a-economia.ghtml",
-      "category": "Eleições",
-      "source": "G1 Política",
-      "publishedAt": "2026-10-26T13:55:53+00:00",
-      "language": "pt",
-      "description": "O prefeito de São Paulo, Ricardo Nunes (MDB), em coletiva de imprensa ao lado do governador Tarcísio de Freitas (Republicanos), no Palácio dos Bandeirnates em 16/12/2025. Paulo Guereta/Gesp Após a",
-      "translationStatus": "original",
-      "summary": "O prefeito de São Paulo, Ricardo Nunes (MDB), em coletiva de imprensa ao lado do governador Tarcísio de Freitas (Republicanos), no Palácio dos Bandeirnates em 16/12/2025. Paulo Guereta/Gesp Após a",
-      "topic": "Fiscal e atividade",
-      "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
-      "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
-      "score": 41.25
+      "score": 41.01
     },
     {
       "title": "Lula vence quarto mandato em dramática volta às eleições no Brasil",
@@ -450,71 +530,7 @@
       "topic": "Eleições e política",
       "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
       "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 41.23
-    },
-    {
-      "title": "Lula é reeleito presidente do Brasil em votação de ponta de faca",
-      "titleOriginal": "Lula is re-elected Brazil’s president in knife-edge vote",
-      "url": "https://www.ft.com/content/7585a18f-88d9-4fcd-882d-ed938c7c9c41?syn-25a6b1a6=1",
-      "category": "Mercados",
-      "source": "Financial Times",
-      "publishedAt": "2026-10-26T13:52:39+00:00",
-      "language": "en",
-      "description": "Victory of 80-year-old leftist over Flávio Bolsonaro is blow to Trump’s plan for greater US influence in Latin America",
-      "summary": "Vitória de esquerdista de 80 anos sobre Flávio Bolsonaro é golpe no plano de Trump para maior influência dos EUA na América Latina",
-      "translationStatus": "translated",
-      "topic": "Eleições e política",
-      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
-      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 41.22
-    },
-    {
-      "title": "Investigações que miram Flávio Bolsonaro podem permanecer no STF mesmo após perda do foro privilegiado; entenda",
-      "titleOriginal": "Investigações que miram Flávio Bolsonaro podem permanecer no STF mesmo após perda do foro privilegiado; entenda",
-      "url": "https://g1.globo.com/politica/noticia/2026/10/26/investigacoes-que-miram-flavio-bolsonaro-podem-permanecer-no-stf-mesmo-apos-perda-do-foro-privilegiado-entenda.ghtml",
-      "category": "Eleições",
-      "source": "G1 Política",
-      "publishedAt": "2026-10-26T13:48:35+00:00",
-      "language": "pt",
-      "description": "As investigações que miram o senador Flávio Bolsonaro (PL-RJ), derrotado na disputa pela Presidência da República, podem permanecer no Supremo Tribunal Federal (STF) mesmo depois que ele deixar o cargo.",
-      "translationStatus": "original",
-      "summary": "As investigações que miram o senador Flávio Bolsonaro (PL-RJ), derrotado na disputa pela Presidência da República, podem permanecer no Supremo Tribunal Federal (STF) mesmo depois que ele deixar o cargo.",
-      "topic": "Eleições e política",
-      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
-      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 41.18
-    },
-    {
-      "title": "As ações da Neocloud caem enquanto Elon Musk diz que mais de 200 delas enfrentam ‘morte no nível de guppy’",
-      "titleOriginal": "Neocloud stocks fall as Elon Musk says more than 200 of them face 'guppy-level death'",
-      "url": "https://www.cnbc.com/2026/10/26/neocloud-stocks-today-coreweave-nebius-iren-elon-musk.html",
-      "category": "Mercados",
-      "source": "CNBC",
-      "publishedAt": "2026-10-26T13:43:14+00:00",
-      "language": "en",
-      "description": "Investors are already questioning the debt-fueled expansion of neoclouds and whether the large AI infrastructure build-out will generate long-term returns.",
-      "summary": "Os investidores já estão a questionar a expansão das neonuvens alimentada pela dívida e se a grande construção de infra-estruturas de IA irá gerar retornos a longo prazo.",
-      "translationStatus": "translated",
-      "topic": "Empresas e mercados",
-      "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
-      "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
-      "score": 41.14
-    },
-    {
-      "title": "Os investidores de varejo estão ficando com os pés frios sobre as ações, justamente quando o mercado mais precisa delas",
-      "titleOriginal": "Retail investors are getting cold feet about stocks, just when the market needs them most",
-      "url": "https://www.marketwatch.com/story/retail-investors-are-getting-cold-feet-about-stocks-just-when-the-market-needs-them-most-00a5c9c8?mod=mw_rss_topstories",
-      "category": "Mercados",
-      "source": "MarketWatch",
-      "publishedAt": "2026-10-26T13:37:00+00:00",
-      "language": "en",
-      "description": "Last week’s carnage for hedge funds highlighted the relative decline in trading activity among retail investors.",
-      "summary": "A carnificina da semana passada para os fundos de hedge destacou o declínio relativo na atividade de negociação entre os investidores de varejo.",
-      "translationStatus": "translated",
-      "topic": "Empresas e mercados",
-      "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
-      "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
-      "score": 41.09
+      "score": 40.88
     },
     {
       "title": "Proprietários de salões de beleza pedem redução do IVA no orçamento à medida que aumentam as pressões sobre o pessoal",
@@ -530,7 +546,7 @@
       "topic": "Fiscal e atividade",
       "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
       "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
-      "score": 39.69
+      "score": 39.33
     },
     {
       "title": "Healey protegerá os pensionistas de baixa renda do imposto de renda no orçamento",
@@ -546,7 +562,7 @@
       "topic": "Fiscal e atividade",
       "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
       "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
-      "score": 39.51
+      "score": 39.16
     },
     {
       "title": "O que é o Orçamento e o que poderia conter?",
@@ -562,7 +578,7 @@
       "topic": "Fiscal e atividade",
       "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
       "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
-      "score": 35.42
+      "score": 35.06
     },
     {
       "title": "O orçamento de Healey precisa sustentar a economia mais forte através da acumulação de nuvens",
@@ -578,23 +594,7 @@
       "topic": "Fiscal e atividade",
       "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
       "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
-      "score": 34.5
-    },
-    {
-      "title": "Israel profundamente dividido se prepara para eleições cruciais",
-      "titleOriginal": "Deeply divided Israel braces for pivotal election",
-      "url": "https://www.bbc.co.uk/news/articles/ckpdgy6pl7xlo",
-      "category": "Geopolítica",
-      "source": "BBC News",
-      "publishedAt": "2026-10-25T22:11:13+00:00",
-      "language": "en",
-      "description": "After three years of regional war, this is a battle Israel always knew was coming, writes Lucy Williamson.",
-      "summary": "Após três anos de guerra regional, esta é uma batalha que Israel sempre soube que estava por vir, escreve Lucy Williamson.",
-      "translationStatus": "translated",
-      "topic": "Eleições e política",
-      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
-      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "score": 33.37
+      "score": 34.15
     },
     {
       "title": "Orçamento incluirá £ 1 bilhão para habitação social e acessível",
@@ -646,11 +646,11 @@
     }
   ],
   "briefing": [
-    "https://www.infomoney.com.br/economia/reeleicao-lula-mercado-financeiro-risco-fiscal/",
-    "https://www.marketwatch.com/story/i-want-to-pay-off-4-500-in-credit-card-debt-in-2-months-is-this-possible-059d9a21?mod=mw_rss_topstories",
-    "https://www.moneytimes.com.br/anthropic-entra-com-pedido-de-ipo-mesmo-com-valuation-abaixo-de-us-1-trilhao-veja-numeros-da-empresa-rens/",
-    "https://www.moneytimes.com.br/ifix-desaba-8-com-disparada-dos-juros-apos-vitoria-de-lula-veja-o-que-esperar-dos-fiis-igdl/",
-    "https://www.moneytimes.com.br/wall-street-sobe-com-pedido-de-ipo-da-anthropic-davs/"
+    "https://www.cnbc.com/2026/10/26/maurene-comey-firing-unlawful-trump.html",
+    "https://www.infomoney.com.br/mercados/bolsa-tomba-15-apos-vitoria-de-lula-e-registra-uma-das-maiores-quedas-da-historia/",
+    "https://www.moneytimes.com.br/durigan-vamos-fazer-alteracoes-para-buscar-o-centro-da-meta-fiscal-ainda-este-ano/",
+    "https://www.cnbc.com/2026/10/26/sp-500-ex-ai-index-tech-selloff.html",
+    "https://www.moneytimes.com.br/ifix-desaba-8-com-disparada-dos-juros-apos-vitoria-de-lula-veja-o-que-esperar-dos-fiis-igdl/"
   ],
   "indicators": [
     {
@@ -660,7 +660,7 @@
       "referenceDate": "26/10/2026",
       "source": "Banco Central · SGS",
       "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados/ultimos/10?formato=json",
-      "checkedAt": "2026-10-26T15:26:29.980906+00:00",
+      "checkedAt": "2026-10-26T16:09:02.593874+00:00",
       "status": "ok"
     },
     {
@@ -670,7 +670,7 @@
       "referenceDate": "23/10/2026",
       "source": "Banco Central · SGS",
       "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados/ultimos/10?formato=json",
-      "checkedAt": "2026-10-26T15:26:28.721670+00:00",
+      "checkedAt": "2026-10-26T16:09:03.264205+00:00",
       "status": "ok"
     },
     {
@@ -680,7 +680,7 @@
       "referenceDate": "01/09/2026",
       "source": "Banco Central · SGS",
       "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.433/dados/ultimos/10?formato=json",
-      "checkedAt": "2026-10-26T15:26:28.769741+00:00",
+      "checkedAt": "2026-10-26T16:09:03.133559+00:00",
       "status": "ok"
     },
     {
@@ -691,7 +691,7 @@
       "source": "Banco Central · SGS",
       "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.13522/dados/ultimos/10?formato=json",
       "checkedAt": "2026-10-26T15:26:28.789455+00:00",
-      "status": "ok"
+      "status": "cached"
     }
   ],
   "calendar": {
@@ -764,7 +764,7 @@
         "url": "https://www.bls.gov/schedule/"
       }
     ],
-    "checkedAt": "2026-10-26T15:26:30.126334+00:00"
+    "checkedAt": "2026-10-26T16:09:17.670250+00:00"
   },
   "method": "Seleção automática por atualidade, relevância temática e diversidade; resumo extraído da descrição RSS, com tradução automática quando disponível. Contexto educativo por tema, sem previsão de preços."
 }
