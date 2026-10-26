@@ -397,14 +397,14 @@ def sgs_series(code, count):
     """Últimos `count` pontos de uma série SGS, normalizados para {date, value}."""
     url = f'https://api.bcb.gov.br/dados/serie/bcdata.sgs.{code}/dados/ultimos/{count}?formato=json'
     rows = None
-    for attempt, wait in enumerate((0, 8, 20, 30)):
+    for attempt, wait in enumerate((0, 8, 20, 35, 50)):
         if wait:
             time.sleep(wait)
         try:
-            rows = json.loads(request(url, timeout=30).decode('utf-8'))
+            rows = json.loads(request(url, timeout=60).decode('utf-8'))
             break
         except Exception:
-            if attempt == 3:
+            if attempt == 4:
                 raise
     points = []
     for row in rows or []:
