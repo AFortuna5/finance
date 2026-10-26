@@ -63,6 +63,20 @@ SERIES = [
     ('IPCA · mensal', 433, '% no mês'),
     ('IPCA · 12 meses', 13522, '% em 12 meses'),
 ]
+MARKET_ASSETS = [
+    ('^BVSP', 'Ibovespa', 'pts', 'B3 · Brasil'),
+    ('BRL=X', 'Dólar comercial', 'R$', 'Câmbio · Brasil'),
+    ('EURBRL=X', 'Euro', 'R$', 'Câmbio · Brasil'),
+    ('^GSPC', 'S&P 500', 'pts', 'Wall Street · EUA'),
+    ('^IXIC', 'Nasdaq', 'pts', 'Tecnologia · EUA'),
+    ('BTC-USD', 'Bitcoin', 'US$', 'Cripto · global'),
+    ('GC=F', 'Ouro', 'US$/oz', 'Commodity · global'),
+    ('CL=F', 'Petróleo WTI', 'US$/barril', 'Commodity · global'),
+]
+ELECTION_MARKERS = [
+    {'date': '2026-10-04', 'label': '1º turno'},
+    {'date': '2026-10-25', 'label': '2º turno'},
+]
 
 
 def request(url, timeout=20):
@@ -269,6 +283,54 @@ def indicators(previous):
         return list(pool.map(fetch_series, SERIES))
 
 
+def change_since(series, boundary):
+    base = next((p for p in reversed(series) if p['date'] <= boundary), None)
+    last = series[-1]['value'] if series else None
+    if not base or not last or not base['value']:
+        return None
+    return round((last / base['value'] - 1) * 100, 2)
+
+
+def market_series(asset):
+    symbol, name, unit, board = asset
+    url = f'https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(symbol, safe="")}?range=3mo&interval=1d'
+    data = json.loads(request(url, timeout=15).decode('utf-8'))
+    result = (data.get('chart', {}).get('result') or [None])[0]
+    if not result:
+        raise ValueError('Resposta vazia')
+    timestamps = result.get('timestamp') or []
+    closes = ((result.get('indicators', {}).get('quote') or [{}])[0]).get('close') or []
+    by_date = {}
+    for ts, close in zip(timestamps, closes):
+        if close is None:
+            continue
+        by_date[dt.datetime.fromtimestamp(ts, TIMEZONE).date().isoformat()] = round(float(close), 4)
+    series = [{'date': d, 'value': by_date[d]} for d in sorted(by_date)]
+    if len(series) < 5:
+        raise ValueError('Série insuficiente')
+    return {'symbol': symbol, 'name': name, 'unit': unit, 'board': board, 'series': series,
+            'last': series[-1]['value'], 'lastDate': series[-1]['date'],
+            'changeFirstRound': change_since(series, ELECTION_MARKERS[0]['date']),
+            'changeSecondRound': change_since(series, ELECTION_MARKERS[1]['date']),
+            'change30d': change_since(series, (dt.datetime.now(TIMEZONE).date() - dt.timedelta(days=30)).isoformat()),
+            'source': 'Yahoo Finance', 'status': 'ok'}
+
+
+def markets(previous):
+    def fetch(asset):
+        try:
+            return market_series(asset)
+        except Exception as error:
+            old = next((a for a in previous if a.get('symbol') == asset[0] and len(a.get('series', [])) >= 5), None)
+            print(f'Mercado indisponível: {asset[1]}: {type(error).__name__}')
+            return {**old, 'status': 'cached'} if old else {'symbol': asset[0], 'name': asset[1], 'unit': asset[2], 'board': asset[3], 'series': [], 'status': 'unavailable', 'source': 'Yahoo Finance'}
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+        assets = list(pool.map(fetch, MARKET_ASSETS))
+    return {'updatedAt': dt.datetime.now(dt.timezone.utc).isoformat(), 'elections': ELECTION_MARKERS,
+            'assets': assets,
+            'method': 'Fechamentos diários via Yahoo Finance (3 meses). Variações comparam o último fechamento com o último pregão anterior a cada turno. A projeção tracejada é apenas a tendência linear dos últimos 10 fechamentos — ilustrativa, não é recomendação de investimento.'}
+
+
 def event_ts(value):
     try:
         if len(str(value)) == 10:
@@ -388,6 +450,11 @@ def main():
               'calendar': calendar(previous.get('calendar', {}).get('events', [])),
               'method': 'Seleção automática por atualidade, relevância temática e diversidade; resumo extraído da descrição RSS, com tradução automática quando disponível. Contexto educativo por tema, sem previsão de preços.'}
     editions_dir.mkdir(parents=True, exist_ok=True)
+    previous_markets = []
+    markets_file = ROOT / 'public/markets.json'
+    if markets_file.exists():
+        previous_markets = json.loads(markets_file.read_text(encoding='utf-8')).get('assets', [])
+    markets_file.write_text(json.dumps(markets(previous_markets), ensure_ascii=False, indent=2), encoding='utf-8')
     payload = json.dumps(output, ensure_ascii=False, indent=2)
     target.write_text(payload, encoding='utf-8')
     (editions_dir / f'{edition_id}.json').write_text(payload, encoding='utf-8')

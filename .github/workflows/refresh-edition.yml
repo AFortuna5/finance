@@ -26,6 +26,6 @@ jobs:
         run: |
           git config user.name 'meridiano-bot'
           git config user.email 'meridiano-bot@users.noreply.github.com'
-          git add public/news.json public/history.json public/editions
+          git add public/news.json public/history.json public/editions public/markets.json
           git diff --cached --quiet || git commit -m 'Atualizar edição do Meridiano'
           git push

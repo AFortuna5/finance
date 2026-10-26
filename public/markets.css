@@ -1,0 +1,31 @@
+.back-link{color:var(--accent);font-weight:600}
+.status-link{font:inherit;letter-spacing:.8px;color:var(--green);font-weight:600}
+.movers{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.movers .chip{border:1px solid var(--line);padding:8px 12px;font-size:10px;letter-spacing:.5px}
+.movers .chip b{font-weight:700}
+.charts{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:30px}
+.mkt{border:1px solid var(--line);padding:22px}
+.mkt-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+.mkt-name{font-family:'Libre Caslon Display',Georgia,serif;font-size:23px;font-weight:400}
+.mkt-board{font-size:9px;letter-spacing:.8px;color:var(--muted);text-transform:uppercase;margin-top:3px}
+.mkt-last{text-align:right}
+.mkt-last strong{font-family:Georgia,serif;font-size:26px;font-weight:400;display:block}
+.mkt-last small{font-size:9px;color:var(--muted);letter-spacing:.6px}
+.mkt-deltas{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 4px}
+.delta{font-size:9px;letter-spacing:.5px;padding:4px 8px;border:1px solid var(--line);color:var(--muted)}
+.delta b{font-weight:700}
+.delta.up b{color:var(--green)}
+.delta.down b{color:var(--accent)}
+.mkt svg{display:block;width:100%;height:auto;margin-top:8px}
+.mkt .axis{fill:var(--muted);font-size:9px;letter-spacing:.4px}
+.mkt .grid{stroke:var(--line);stroke-width:.5;stroke-dasharray:2 4}
+.mkt .series{fill:none;stroke:var(--green);stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round}
+.mkt .area{fill:var(--green);opacity:.07}
+.mkt .projection{fill:none;stroke:var(--accent);stroke-width:1.4;stroke-dasharray:4 4}
+.mkt .marker{stroke:var(--accent);stroke-width:.8;stroke-dasharray:3 3}
+.mkt .marker-label{fill:var(--accent);font-size:8px;letter-spacing:.5px;text-transform:uppercase}
+.mkt .last-dot{fill:var(--green)}
+.mkt-note{font-size:9px;color:var(--muted);line-height:1.6;margin-top:6px}
+.mkt.stale{opacity:.55}
+.charts-empty{grid-column:1/-1;padding:45px 0;color:var(--muted);line-height:1.8}
+@media(max-width:900px){.charts{grid-template-columns:1fr}}
