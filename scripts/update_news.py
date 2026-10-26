@@ -1,4 +1,12 @@
-"""Collect public RSS headlines; no full articles or API keys required."""
+"""Coletor de dados do Meridiano — roda no GitHub Actions a cada 15 minutos.
+
+Pipeline: feeds RSS -> curadoria -> tradução pt-BR -> indicadores (BCB/SGS) ->
+mercados (Yahoo + TradingView + Focus) -> painel do governo (SGS -> SIDRA ->
+Ipeadata -> Tesouro) -> agenda econômica -> grava JSONs em public/.
+
+Todas as fontes são públicas e sem chave. Fonte indisponível gera fallback ou
+reuso do último cache bom — nunca dado inventado. Detalhes no README.md.
+"""
 import concurrent.futures
 import datetime as dt
 import email.utils
