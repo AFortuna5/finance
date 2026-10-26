@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="pt-BR">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f2efe7"><meta name="description" content="Painel de mercados do Meridiano: cotações, variação desde os turnos da eleição e trajetória ilustrativa dos principais ativos."><title>Meridiano — Painel de mercados</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="markets.css"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f2efe7"><meta name="description" content="Painel de mercados do Meridiano: cotações, variação desde os turnos da eleição e trajetória ilustrativa dos principais ativos."><title>Meridiano — Painel de mercados</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="markets.css"><link rel="stylesheet" href="mobile.css"></head>
 <body>
 <div class="edition"><span>UM OLHAR SOBRE OS MERCADOS</span><time id="today"></time><span>EDIÇÃO PESSOAL · AF</span></div>
 <header><a class="masthead" href="./">meridiano<span>↗</span></a><div class="tagline">O mercado em números.<br><a href="./" class="back-link">← Voltar ao jornal</a></div><button id="theme" aria-label="Alternar tema">◐</button></header>
@@ -14,5 +14,6 @@
 <section class="method"><span class="eyebrow">SOBRE ESTE PAINEL</span><p>Fechamentos diários: Yahoo Finance, últimos três meses. As variações comparam o último fechamento com o último pregão anterior a cada turno: 1º turno em 04/10/2026 e 2º turno em 25/10/2026.</p><p>O termômetro técnico vem do scanner público do TradingView — sintetiza médias móveis e osciladores em compra/venda/neutro, com RSI, distância da média de 200 dias e volatilidade. O consenso Focus é a mediana das projeções de mais de cem instituições financeiras compiladas pelo Banco Central.</p><p>A linha tracejada estende a tendência linear dos últimos dez fechamentos por uma semana — referência visual, sem modelo estatístico nem fundamentos. Os links de cada ativo abrem TradingView, Investing.com e fontes oficiais para conferência. Nada aqui é recomendação de investimento.</p></section>
 </main>
 <footer><a href="./">meridiano ↗</a><span>UM JORNAL PARA ENTENDER, ANTES DE DECIDIR.</span><a href="https://github.com/AFortuna5/finance" target="_blank" rel="noopener noreferrer">Projeto no GitHub ↗</a></footer>
+<nav class="tabbar" aria-label="Seções do Meridiano"><a href="./"><i>▤</i><span>Jornal</span></a><a href="mercados.html" class="active" aria-current="page"><i>▲</i><span>Mercados</span></a><a href="perfil.html"><i>◉</i><span>Perfil</span></a></nav>
 <script type="module" src="markets.js"></script>
 </body></html>

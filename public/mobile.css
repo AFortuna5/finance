@@ -1,0 +1,48 @@
+/* Meridiano — edição mobile. Layout próprio para telas pequenas; o desktop segue o desenho editorial original. */
+.tabbar{display:none}
+@media(max-width:700px){
+body{padding-bottom:calc(74px + env(safe-area-inset-bottom))}
+.edition{padding:11px 0 9px}
+header{padding:16px 0 14px;border-bottom:2px solid var(--ink)}
+.masthead{font-size:46px;letter-spacing:-2px}
+.masthead span{margin-left:9px}
+#theme{font-size:19px;padding:8px 4px;margin-left:12px}
+.intro{margin-top:18px;padding:24px 20px;background:var(--card);border-left:3px solid var(--green);display:block}
+.intro h1{font-size:34px;margin-top:9px}
+.intro>p{font-size:12px;line-height:1.8;margin:15px 0 0}
+.intro>p br{display:none}
+.intro>p br:after{content:' '}
+.status{font-size:8px}
+.status>span:last-child{display:none}
+nav.news-filter{position:sticky;top:0;z-index:40;background:var(--paper);margin:0 -20px;padding:0 20px}
+#categories{gap:9px;padding:9px 0}
+nav.news-filter button{border:1px solid var(--line);padding:9px 13px;font-size:10px}
+nav.news-filter button.active{box-shadow:none;border-color:var(--accent);color:var(--paper);background:var(--accent)}
+.search kbd{display:none}
+#news article{border:1px solid var(--line);padding:18px;margin-bottom:14px}
+.headline{font-size:25px;margin-right:26px}
+article:first-child .headline{font-size:30px}
+.save{top:14px;right:0;font-size:21px;padding:6px}
+.meta{padding-right:26px}
+.briefing{border-bottom-width:1px}
+.brief-heading h2{font-size:30px}
+#indicators{gap:16px 20px}
+.context h2{font-size:28px}
+.note{padding:20px}
+.movers .chip{padding:10px 12px}
+.focus-strip{padding:14px}
+.mkt{padding:17px}
+.mkt-name{font-size:21px}
+.mkt-last strong{font-size:22px}
+.mkt-deltas{gap:6px}
+.chat{margin-top:24px}
+.msg{max-width:92%;font-size:12px}
+.chips button{padding:12px 16px}
+.chat-input{position:sticky;bottom:calc(62px + env(safe-area-inset-bottom));background:var(--paper);z-index:30;margin-bottom:10px}
+.chat-input button{padding:0 18px}
+footer{padding-bottom:10px}
+.tabbar{position:fixed;left:0;right:0;bottom:0;top:auto;margin:0;z-index:60;display:grid;grid-template-columns:repeat(3,1fr);background:var(--paper);border:0;border-top:2px solid var(--ink);padding:0 0 env(safe-area-inset-bottom)}
+.tabbar a{display:flex;flex-direction:column;align-items:center;gap:4px;padding:11px 0 10px;font-size:8px;letter-spacing:1.6px;color:var(--muted)}
+.tabbar a i{font-style:normal;font-size:16px;line-height:1}
+.tabbar a.active{color:var(--accent);font-weight:700;box-shadow:inset 0 2px var(--accent)}
+}
