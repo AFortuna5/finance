@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26T14:44:52.234107+00:00",
+  "updatedAt": "2026-10-26T15:06:34.571843+00:00",
   "charts": [
     {
       "id": "selic",
@@ -43,11 +43,6 @@
     }
   ],
   "tesouro": [
-    {
-      "label": "Resultado primário acumulado",
-      "value": "R$-81 bi",
-      "hint": "Governo gasta acima do que arrecada quando negativo"
-    },
     {
       "label": "Despesa primária total",
       "value": "R$1,56 tri",
