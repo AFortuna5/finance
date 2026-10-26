@@ -84,7 +84,7 @@ def clean_feed_text(value=''):
         text = decoded
     text = re.sub(r'<(script|style)\b[^>]*>[\s\S]*?</\1\s*>', ' ', text, flags=re.I)
     text = re.sub(r'<!--[\s\S]*?(?:-->|$)', ' ', text)
-    text = re.sub(r'</?[a-z](?:[^>"\']|"[^"]*"|\'[^\']*\')*(?:>|$)', ' ', text, flags=re.I)
+    text = re.sub(r'</?[a-z](?:"[^"]*"|\'[^\']*\'|"[^"]*$|\'[^\']*$|[^>"\'])*(?:>|$)', ' ', text, flags=re.I)
     return re.sub(r'\s+', ' ', text).strip()
 
 

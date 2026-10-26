@@ -14,7 +14,7 @@ export function cleanFeedText(value = '') {
   }
   return text.replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, ' ')
     .replace(/<!--[\s\S]*?(?:-->|$)/g, ' ')
-    .replace(/<\/?[a-z](?:[^>"']|"[^"]*"|'[^']*')*(?:>|$)/gi, ' ')
+    .replace(/<\/?[a-z](?:"[^"]*"|'[^']*'|"[^"]*$|'[^']*$|[^>"'])*(?:>|$)/gi, ' ')
     .replace(/\s+/g, ' ').trim();
 }
 
