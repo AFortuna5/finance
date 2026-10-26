@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26T13:13:20.014293+00:00",
+  "updatedAt": "2026-10-26T13:21:27.788578+00:00",
   "elections": [
     {
       "date": "2026-10-04",
@@ -546,14 +546,14 @@
         },
         {
           "date": "2026-10-26",
-          "value": 4.9993
+          "value": 5.5933
         }
       ],
-      "last": 4.9993,
+      "last": 5.5933,
       "lastDate": "2026-10-26",
-      "changeFirstRound": -4.28,
-      "changeSecondRound": -1.0,
-      "change30d": -3.68,
+      "changeFirstRound": 7.09,
+      "changeSecondRound": 10.76,
+      "change30d": 7.76,
       "source": "Yahoo Finance",
       "status": "ok"
     },
@@ -1762,14 +1762,14 @@
         },
         {
           "date": "2026-10-25",
-          "value": 80039.75
+          "value": 80013.8594
         }
       ],
-      "last": 80039.75,
+      "last": 80013.8594,
       "lastDate": "2026-10-25",
-      "changeFirstRound": -6.7,
+      "changeFirstRound": -6.73,
       "changeSecondRound": 0.0,
-      "change30d": -5.23,
+      "change30d": -5.26,
       "source": "Yahoo Finance",
       "status": "ok"
     },
@@ -2037,14 +2037,14 @@
         },
         {
           "date": "2026-10-26",
-          "value": 4031.3999
+          "value": 4026.8999
         }
       ],
-      "last": 4031.3999,
+      "last": 4026.8999,
       "lastDate": "2026-10-26",
-      "changeFirstRound": -3.14,
-      "changeSecondRound": 0.59,
-      "change30d": -6.71,
+      "changeFirstRound": -3.25,
+      "changeSecondRound": 0.47,
+      "change30d": -6.81,
       "source": "Yahoo Finance",
       "status": "ok"
     },
@@ -2312,14 +2312,14 @@
         },
         {
           "date": "2026-10-26",
-          "value": 101.1
+          "value": 101.88
         }
       ],
-      "last": 101.1,
+      "last": 101.88,
       "lastDate": "2026-10-26",
-      "changeFirstRound": 10.96,
-      "changeSecondRound": -2.1,
-      "change30d": 9.4,
+      "changeFirstRound": 11.82,
+      "changeSecondRound": -1.35,
+      "change30d": 10.25,
       "source": "Yahoo Finance",
       "status": "ok"
     }
