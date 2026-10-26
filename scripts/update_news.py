@@ -89,7 +89,7 @@ TV_COLUMNS = ['Recommend.All', 'Recommend.MA', 'Recommend.Other', 'RSI', 'EMA50'
 FOCUS_INDICATORS = ['Câmbio', 'Selic', 'IPCA', 'PIB Total']
 # Painel do governo: séries mensais do SGS. (id, título, unidade, nota, modo)
 GOV_CHARTS = [
-    ('selic', 'Taxa Selic', '% a.a.', 'Juros básicos definidos pelo Copom — o preço do dinheiro no Brasil.', 'line', 432, 800),
+    ('selic', 'Taxa Selic', '% a.a.', 'Juros básicos definidos pelo Copom — o preço do dinheiro no Brasil.', 'line', 432, 400),
     ('ipca12', 'IPCA · 12 meses', '%', 'Inflação oficial acumulada — a meta do regime é ~3% com banda de 1,5 p.p.', 'line', 13522, 72),
     ('ipca', 'IPCA · no mês', '%', 'Variação mensal da inflação oficial (IBGE).', 'bars', 433, 36),
     ('divida', 'Dívida pública', '% do PIB', 'Dívida bruta e líquida — quanto o Estado deve em relação ao tamanho da economia.', 'multi', None, None),
