@@ -20,3 +20,12 @@ const legacy={articles:[{summary:broken,description:encoded,url:'https://example
 assert.equal(cleanEdition(legacy).articles[0].summary,expected,'Edições antigas recebem a mesma correção');
 assert.equal(legacy.articles[0].summary,broken,'Leitura não modifica o registro original');
 console.log('Regressão de HTML bruto, escapado, truncado e histórico: OK');
+// JSONs publicados precisam ser UTF-8 válido — um arquivo em cp1252 vira "?" no navegador.
+import {readFileSync} from 'node:fs';
+const utf8=new TextDecoder('utf-8',{fatal:true});
+for(const file of ['news.json','markets.json','governo.json','history.json']){
+  const raw=readFileSync(`public/${file}`);
+  utf8.decode(raw);
+  assert.doesNotMatch(utf8.decode(raw),/�/,`${file} contém caractere de substituição`);
+}
+console.log('Codificação UTF-8 dos JSONs publicados: OK');

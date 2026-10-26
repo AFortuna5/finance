@@ -1,5 +1,5 @@
 .back-link{color:var(--accent);font-weight:600}
-.status-link{font:inherit;letter-spacing:.8px;color:var(--wine);font-weight:600}
+.status-link{font:inherit;letter-spacing:.8px;color:var(--green);font-weight:600}
 .movers{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
 .movers .chip{border:1px solid var(--line);padding:8px 12px;font-size:10px;letter-spacing:.5px}
 .movers .chip b{font-weight:700}
@@ -27,7 +27,7 @@
 .mkt .last-dot{fill:var(--green)}
 .mkt .proj-label{fill:var(--accent);font-size:8px;letter-spacing:.6px}
 .mkt-stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;padding-top:8px;border-top:1px solid var(--line);font-size:8px;letter-spacing:.6px;color:var(--muted)}
-.mkt-about{font-family:var(--serif);font-size:13px;font-style:italic;line-height:1.7;color:var(--muted);margin-top:12px;padding-left:12px;border-left:2px solid var(--wine)}
+.mkt-about{font-family:var(--serif);font-size:13px;font-style:italic;line-height:1.7;color:var(--muted);margin-top:12px;padding-left:12px;border-left:2px solid var(--green)}
 .mkt-sig{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}
 .sig-head{display:flex;justify-content:space-between;align-items:baseline;font-size:8px;letter-spacing:.6px;color:var(--muted)}
 .sig-head b{font-size:10px;letter-spacing:.8px}
@@ -37,16 +37,16 @@
 .gauge{position:relative;height:3px;margin-top:7px;background:linear-gradient(90deg,var(--accent) 0%,var(--accent) 25%,var(--line) 50%,var(--green) 75%,var(--green) 100%)}
 .gauge i{position:absolute;top:-3px;width:2px;height:9px;background:var(--ink);margin-left:-1px}
 .sig-sub{font-size:8px;letter-spacing:.5px;color:var(--muted);margin-top:7px}
-.mkt-focus-note{font-size:9px;color:var(--wine);line-height:1.6;margin-top:10px;padding-top:8px;border-top:1px solid var(--line)}
+.mkt-focus-note{font-size:9px;color:var(--green);line-height:1.6;margin-top:10px;padding-top:8px;border-top:1px solid var(--line)}
 .mkt-links{display:flex;gap:12px;flex-wrap:wrap;align-items:baseline;margin-top:10px;font-size:8px;letter-spacing:.6px;color:var(--muted)}
-.mkt-links a{color:var(--wine);font-weight:600;letter-spacing:.6px}
+.mkt-links a{color:var(--green);font-weight:600;letter-spacing:.6px}
 .mkt-note{font-size:9px;color:var(--muted);line-height:1.6;margin-top:6px}
 .focus-strip{margin-top:20px;border:1px solid var(--line);padding:16px 18px}
 .focus-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;font-size:8px;letter-spacing:.8px;color:var(--muted)}
 .focus-head small{letter-spacing:.5px}
 .focus-chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
 .focus-chips .chip{border:1px solid var(--line);padding:7px 11px;font-size:10px;letter-spacing:.5px}
-.focus-strip>a{display:inline-block;margin-top:10px;font-size:8px;letter-spacing:.8px;color:var(--wine);font-weight:600}
+.focus-strip>a{display:inline-block;margin-top:10px;font-size:8px;letter-spacing:.8px;color:var(--green);font-weight:600}
 .mkt.stale{opacity:.55}
 .charts-empty{grid-column:1/-1;padding:45px 0;color:var(--muted);line-height:1.8}
 @media(max-width:900px){.charts{grid-template-columns:1fr}}

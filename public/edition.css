@@ -13,7 +13,7 @@
 .reading-time{display:block;font-size:10px;margin-top:25px;color:var(--muted)}
 #brief-list{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:24px 30px}
 #brief-list li{display:flex;gap:14px}
-#brief-list li>span{font-family:var(--display);font-style:italic;color:var(--wine);font-size:30px;line-height:1}
+#brief-list li>span{font-family:var(--display);font-style:italic;color:var(--accent);font-size:30px;line-height:1}
 #brief-list small{display:block;text-transform:uppercase;letter-spacing:1.4px;font-size:8px;color:var(--muted);margin-bottom:7px}
 #brief-list a{font-family:var(--serif);font-weight:500;font-size:17px;line-height:1.3;display:block}
 #brief-list a:hover{text-decoration:underline}
@@ -23,12 +23,12 @@
 .edition-controls label{font-size:10px;white-space:nowrap;color:var(--muted)}
 select{display:block;width:160px;margin-top:6px;background:var(--paper);color:var(--ink);border:1px solid var(--line);padding:8px;font:inherit}
 .news-summary{font-family:var(--serif);font-size:15px;line-height:1.75;color:var(--muted);margin:0 0 15px}
-#news article:first-child .news-summary::first-letter{font-family:var(--display);font-weight:600;font-size:58px;line-height:.78;float:left;padding:4px 10px 0 0;color:var(--wine)}
-.article-context{border:0;border-left:2px solid var(--wine);padding:9px 13px;background:var(--card);margin:14px 0}
-.article-context summary{font-size:11px;color:var(--wine);font-weight:600}
+#news article:first-child .news-summary::first-letter{font-family:var(--display);font-weight:600;font-size:58px;line-height:.78;float:left;padding:4px 10px 0 0;color:var(--accent)}
+.article-context{border:0;border-left:2px solid var(--green);padding:9px 13px;background:var(--card);margin:14px 0}
+.article-context summary{font-size:11px;color:var(--green);font-weight:600}
 .article-context small{font-size:8px;color:var(--muted);display:block;margin-top:15px;letter-spacing:.6px}
 .article-context p{margin-bottom:0;font-family:var(--serif);font-size:13px;line-height:1.7}
-.article-context .reading-question{font-style:italic;color:var(--wine);margin-bottom:8px}
+.article-context .reading-question{font-style:italic;color:var(--green);margin-bottom:8px}
 .original-title{border:0;padding:0 0 15px;color:var(--muted)}
 .original-title summary{font-size:10px}
 .original-title p{font-size:11px;font-family:var(--serif)}
@@ -36,10 +36,10 @@ select{display:block;width:160px;margin-top:6px;background:var(--paper);color:va
 .calendar h2{font-size:32px;margin-top:10px}
 .calendar-note{font-size:10px;line-height:1.7;color:var(--muted)}
 .calendar-event{border-top:1px solid var(--line);padding:13px 0;display:flex;flex-direction:column;gap:7px}
-.calendar-event time{font-size:9px;color:var(--wine);letter-spacing:1px}
+.calendar-event time{font-size:9px;color:var(--accent);letter-spacing:1px}
 .calendar-event a{font-family:var(--serif);font-size:16px;line-height:1.4}
 .calendar-event small{font-size:9px;color:var(--muted)}
-#calendar-sources a{display:block;font-size:11px;padding:10px 0;color:var(--wine)}
+#calendar-sources a{display:block;font-size:11px;padding:10px 0;color:var(--green)}
 .calendar details summary{font-size:11px}
 #result-count{white-space:nowrap}
 .section-title{gap:12px}
