@@ -96,6 +96,8 @@ GOV_CHARTS = [
     ('desemprego', 'Desemprego', '%', 'Taxa de desocupação da PNAD Contínua (IBGE).', 'line', 24369, 48),
 ]
 GOV_DIVIDA_SERIES = [('bruta', 'Dívida bruta (governo geral)', 13762), ('liquida', 'Dívida líquida (setor público)', 4503)]
+# Fallback SIDRA (IBGE) quando o SGS está instável: card -> (tabela, variável)
+GOV_SIDRA = {'ipca': (1737, 63), 'ipca12': (1737, 2265), 'desemprego': (6381, 4099)}
 TESOURO_ENDPOINTS = [
     ('resultado_primario', 'Resultado primário acumulado', 'Governo gasta acima do que arrecada quando negativo'),
     ('receita_primaria_liquida', 'Receita primária líquida', 'O que entra no caixa, sem juros'),
@@ -416,6 +418,20 @@ def sgs_series(code, count):
     return points
 
 
+def sidra_series(table, var, count):
+    """Série mensal do SIDRA/IBGE (mesma família de dados do SGS para IPCA e PNAD)."""
+    url = f'https://apisidra.ibge.gov.br/values/t/{table}/n1/all/v/{var}/p/last%20{count}/d/v{var}%202'
+    rows = json.loads(request(url, timeout=30).decode('utf-8'))
+    points = []
+    for row in rows:
+        try:
+            yyyymm = row['D3C']
+            points.append({'date': f'{yyyymm[:4]}-{yyyymm[4:]}-01', 'value': float(row['V'])})
+        except (KeyError, ValueError):
+            continue
+    return points
+
+
 def monthlyize(points):
     """Uma entrada por mês (a última do mês) — a Selic vem em granularidade diária."""
     by_month = {}
@@ -437,12 +453,25 @@ def gov_panel():
                 if not card['lines']:
                     raise ValueError('sem dados')
             else:
-                series = monthlyize(sgs_series(code, count))
+                series, card['source'] = monthlyize(sgs_series(code, count)), 'Banco Central · SGS'
                 if not series:
                     raise ValueError('sem dados')
                 card['series'] = series
             card['status'] = 'ok'
+            card['source'] = 'Banco Central · SGS'
+            card['status'] = 'ok'
         except Exception as error:
+            fb = GOV_SIDRA.get(cid)
+            if fb and mode != 'multi':
+                try:
+                    series = sidra_series(fb[0], fb[1], 72)
+                    if series:
+                        card['series'], card['source'], card['status'] = series, 'IBGE · SIDRA', 'ok'
+                        charts.append(card)
+                        time.sleep(4)
+                        continue
+                except Exception:
+                    pass
             card['status'] = 'unavailable'
             print(f'Série do governo indisponível: {title}: {type(error).__name__}')
         charts.append(card)

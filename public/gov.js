@@ -100,7 +100,7 @@ function cardEl(card) {
     last = l0.value; lastDate = l0.date;
   }
   right.append(node('strong', last != null ? fmtV(last, card.unit) : 'Indisponível'),
-               node('small', (lastDate ? 'ref. ' + fmtDate(lastDate) : '') + (card.status === 'cached' ? ' · cache' : '')));
+               node('small', (lastDate ? 'ref. ' + fmtDate(lastDate) : '') + (card.source ? ' · ' + card.source : '') + (card.status === 'cached' ? ' · cache' : '')));
   top.append(left, right);
   box.append(top);
   if (card.mode === 'multi' && card.lines?.length) {
