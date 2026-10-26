@@ -1,0 +1,76 @@
+{
+  "updatedAt": "2026-10-26T14:44:52.234107+00:00",
+  "charts": [
+    {
+      "id": "selic",
+      "title": "Taxa Selic",
+      "unit": "% a.a.",
+      "note": "Juros básicos definidos pelo Copom — o preço do dinheiro no Brasil.",
+      "mode": "line",
+      "status": "unavailable"
+    },
+    {
+      "id": "ipca12",
+      "title": "IPCA · 12 meses",
+      "unit": "%",
+      "note": "Inflação oficial acumulada — a meta do regime é ~3% com banda de 1,5 p.p.",
+      "mode": "line",
+      "status": "unavailable"
+    },
+    {
+      "id": "ipca",
+      "title": "IPCA · no mês",
+      "unit": "%",
+      "note": "Variação mensal da inflação oficial (IBGE).",
+      "mode": "bars",
+      "status": "unavailable"
+    },
+    {
+      "id": "divida",
+      "title": "Dívida pública",
+      "unit": "% do PIB",
+      "note": "Dívida bruta e líquida — quanto o Estado deve em relação ao tamanho da economia.",
+      "mode": "multi",
+      "status": "unavailable"
+    },
+    {
+      "id": "desemprego",
+      "title": "Desemprego",
+      "unit": "%",
+      "note": "Taxa de desocupação da PNAD Contínua (IBGE).",
+      "mode": "line",
+      "status": "unavailable"
+    }
+  ],
+  "tesouro": [
+    {
+      "label": "Resultado primário acumulado",
+      "value": "R$-81 bi",
+      "hint": "Governo gasta acima do que arrecada quando negativo"
+    },
+    {
+      "label": "Despesa primária total",
+      "value": "R$1,56 tri",
+      "hint": "O que sai do caixa, sem juros"
+    }
+  ],
+  "sources": [
+    [
+      "Banco Central · SGS",
+      "https://www.bcb.gov.br/estatisticas/series-temporais"
+    ],
+    [
+      "IBGE · IPCA",
+      "https://www.ibge.gov.br/estatisticas/economicas/precos-e-custos/9256-indice-nacional-de-precos-ao-consumidor-amplo.html"
+    ],
+    [
+      "IBGE · PNAD",
+      "https://www.ibge.gov.br/estatisticas/sociais/trabalho/9171-pesquisa-nacional-por-amostra-de-domicilios-continua-mensal.html"
+    ],
+    [
+      "Tesouro Nacional",
+      "https://www.tesourotransparente.gov.br/ckan/dataset/resultado-do-tesouro-nacional"
+    ]
+  ],
+  "method": "Séries oficiais do Banco Central (SGS), IBGE e Tesouro Nacional, atualizadas na coleta de 15 em 15 minutos. A maioria dos dados fiscais e de inflação é publicada mensalmente — cada gráfico mostra o mês de referência."
+}

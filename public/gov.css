@@ -1,0 +1,17 @@
+.tesouro{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
+.tchip{border:1px solid var(--line);border-left:3px solid var(--accent);padding:12px 16px;display:flex;flex-direction:column;gap:5px;min-width:190px}
+.tchip small{font-size:8px;letter-spacing:.8px;color:var(--muted);text-transform:uppercase}
+.tchip b{font-family:Georgia,serif;font-size:22px;font-weight:400}
+.tchip em{font-style:normal;font-size:8px;color:var(--muted);letter-spacing:.5px}
+.gov .mkt-board{line-height:1.6;text-transform:none;letter-spacing:.3px;max-width:330px}
+.gov-legend{display:flex;gap:16px;flex-wrap:wrap;margin:12px 0 2px;font-size:9px;letter-spacing:.5px;color:var(--muted)}
+.gov-legend .lg{display:flex;align-items:center;gap:7px}
+.gov-legend .sw{width:14px;height:3px;display:inline-block}
+.gov-legend .s1{background:var(--green)}
+.gov-legend .s2{background:var(--accent)}
+.mkt .series-2{fill:none;stroke:var(--accent);stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round}
+.mkt .dot-2{fill:var(--accent)}
+.mkt .zero{stroke:var(--muted);stroke-width:.7}
+.mkt .bar.pos{fill:var(--green);opacity:.75}
+.mkt .bar.neg{fill:var(--accent);opacity:.75}
+@media(max-width:700px){.tchip{min-width:0;flex:1}}

@@ -7,6 +7,7 @@ import html
 import json
 import pathlib
 import re
+import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -86,6 +87,20 @@ TV_SYMBOLS = {
 }
 TV_COLUMNS = ['Recommend.All', 'Recommend.MA', 'Recommend.Other', 'RSI', 'EMA50', 'EMA200', 'Volatility.D']
 FOCUS_INDICATORS = ['Câmbio', 'Selic', 'IPCA', 'PIB Total']
+# Painel do governo: séries mensais do SGS. (id, título, unidade, nota, modo)
+GOV_CHARTS = [
+    ('selic', 'Taxa Selic', '% a.a.', 'Juros básicos definidos pelo Copom — o preço do dinheiro no Brasil.', 'line', 432, 800),
+    ('ipca12', 'IPCA · 12 meses', '%', 'Inflação oficial acumulada — a meta do regime é ~3% com banda de 1,5 p.p.', 'line', 13522, 72),
+    ('ipca', 'IPCA · no mês', '%', 'Variação mensal da inflação oficial (IBGE).', 'bars', 433, 36),
+    ('divida', 'Dívida pública', '% do PIB', 'Dívida bruta e líquida — quanto o Estado deve em relação ao tamanho da economia.', 'multi', None, None),
+    ('desemprego', 'Desemprego', '%', 'Taxa de desocupação da PNAD Contínua (IBGE).', 'line', 24369, 48),
+]
+GOV_DIVIDA_SERIES = [('bruta', 'Dívida bruta (governo geral)', 13762), ('liquida', 'Dívida líquida (setor público)', 4503)]
+TESOURO_ENDPOINTS = [
+    ('resultado_primario', 'Resultado primário acumulado', 'Governo gasta acima do que arrecada quando negativo'),
+    ('receita_primaria_liquida', 'Receita primária líquida', 'O que entra no caixa, sem juros'),
+    ('despesa_primaria_total', 'Despesa primária total', 'O que sai do caixa, sem juros'),
+]
 ELECTION_MARKERS = [
     {'date': '2026-10-04', 'label': '1º turno'},
     {'date': '2026-10-25', 'label': '2º turno'},
@@ -378,6 +393,80 @@ def focus_expectations():
             'url': 'https://www.bcb.gov.br/publicacoes/focus'}
 
 
+def sgs_series(code, count):
+    """Últimos `count` pontos de uma série SGS, normalizados para {date, value}."""
+    url = f'https://api.bcb.gov.br/dados/serie/bcdata.sgs.{code}/dados/ultimos/{count}?formato=json'
+    rows = None
+    for attempt, wait in enumerate((0, 8, 20, 30)):
+        if wait:
+            time.sleep(wait)
+        try:
+            rows = json.loads(request(url, timeout=30).decode('utf-8'))
+            break
+        except Exception:
+            if attempt == 3:
+                raise
+    points = []
+    for row in rows or []:
+        try:
+            day, month, year = row['data'].split('/')
+            points.append({'date': f'{year}-{month}-{day}', 'value': float(row['valor'])})
+        except (KeyError, ValueError):
+            continue
+    return points
+
+
+def monthlyize(points):
+    """Uma entrada por mês (a última do mês) — a Selic vem em granularidade diária."""
+    by_month = {}
+    for p in points:
+        by_month[p['date'][:7]] = p
+    return list(by_month.values())
+
+
+def gov_panel():
+    """Coleta as séries fiscais/macro para a página As contas do governo."""
+    charts = []
+    for cid, title, unit, note, mode, code, count in GOV_CHARTS:
+        card = {'id': cid, 'title': title, 'unit': unit, 'note': note, 'mode': mode}
+        try:
+            if mode == 'multi':
+                card['lines'] = [{'key': key, 'label': label, 'series': monthlyize(sgs_series(sid, 72))}
+                                 for key, label, sid in GOV_DIVIDA_SERIES]
+                card['lines'] = [l for l in card['lines'] if l['series']]
+                if not card['lines']:
+                    raise ValueError('sem dados')
+            else:
+                series = monthlyize(sgs_series(code, count))
+                if not series:
+                    raise ValueError('sem dados')
+                card['series'] = series
+            card['status'] = 'ok'
+        except Exception as error:
+            card['status'] = 'unavailable'
+            print(f'Série do governo indisponível: {title}: {type(error).__name__}')
+        charts.append(card)
+        time.sleep(4)  # o SGS limita requisições rápidas em sequência
+    tesouro = []
+    for endpoint, label, hint in TESOURO_ENDPOINTS:
+        try:
+            req = urllib.request.Request(f'https://grandesnumeros.tesouro.gov.br/{endpoint}',
+                                         headers={'User-Agent': 'Meridiano/1.0'})
+            data = json.loads(urllib.request.urlopen(req, timeout=20).read())
+            value = data.get('num') or data.get('valor')
+            if value:
+                tesouro.append({'label': label, 'value': value, 'hint': hint})
+        except Exception:
+            pass
+    return {'updatedAt': dt.datetime.now(dt.timezone.utc).isoformat(), 'charts': charts,
+            'tesouro': tesouro,
+            'sources': [['Banco Central · SGS', 'https://www.bcb.gov.br/estatisticas/series-temporais'],
+                        ['IBGE · IPCA', 'https://www.ibge.gov.br/estatisticas/economicas/precos-e-custos/9256-indice-nacional-de-precos-ao-consumidor-amplo.html'],
+                        ['IBGE · PNAD', 'https://www.ibge.gov.br/estatisticas/sociais/trabalho/9171-pesquisa-nacional-por-amostra-de-domicilios-continua-mensal.html'],
+                        ['Tesouro Nacional', 'https://www.tesourotransparente.gov.br/ckan/dataset/resultado-do-tesouro-nacional']],
+            'method': 'Séries oficiais do Banco Central (SGS), IBGE e Tesouro Nacional, atualizadas na coleta de 15 em 15 minutos. A maioria dos dados fiscais e de inflação é publicada mensalmente — cada gráfico mostra o mês de referência.'}
+
+
 def markets(previous, previous_focus):
     def fetch(asset):
         try:
@@ -536,6 +625,19 @@ def main():
         previous_markets = previous_data.get('assets', [])
         previous_focus = previous_data.get('focus')
     markets_file.write_text(json.dumps(markets(previous_markets, previous_focus), ensure_ascii=False, indent=2), encoding='utf-8')
+    gov_file = ROOT / 'public/governo.json'
+    previous_gov = json.loads(gov_file.read_text(encoding='utf-8')) if gov_file.exists() else {}
+    fresh_gov = gov_panel()
+    if previous_gov.get('charts'):
+        fresh_ids = {c['id'] for c in fresh_gov['charts'] if c['status'] == 'ok'}
+        for old in previous_gov['charts']:
+            if old.get('id') not in fresh_ids and old.get('status') == 'ok':
+                old['status'] = 'cached'
+                fresh_gov['charts'].append(old)
+        fresh_gov['charts'].sort(key=lambda c: next((i for i, g in enumerate(GOV_CHARTS) if g[0] == c['id']), 99))
+    if not fresh_gov['tesouro'] and previous_gov.get('tesouro'):
+        fresh_gov['tesouro'] = previous_gov['tesouro']
+    gov_file.write_text(json.dumps(fresh_gov, ensure_ascii=False, indent=2), encoding='utf-8')
     payload = json.dumps(output, ensure_ascii=False, indent=2)
     target.write_text(payload, encoding='utf-8')
     (editions_dir / f'{edition_id}.json').write_text(payload, encoding='utf-8')
