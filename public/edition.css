@@ -38,7 +38,7 @@ select{display:block;width:160px;margin-top:6px;background:var(--paper);color:va
 .calendar-event{border-top:1px solid var(--line);padding:13px 0;display:flex;flex-direction:column;gap:7px}
 .calendar-event time{font-size:9px;color:var(--accent);letter-spacing:1px}
 .calendar-event a{font-family:var(--serif);font-size:16px;line-height:1.4}
-.calendar-event small{font-size:9px;color:var(--muted)}
+.calendar-event small{font-size:10px;color:var(--muted);letter-spacing:.04em}
 #calendar-sources a{display:block;font-size:11px;padding:10px 0;color:var(--green)}
 .calendar details summary{font-size:11px}
 #result-count{white-space:nowrap}
