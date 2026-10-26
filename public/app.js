@@ -64,7 +64,11 @@ function renderDashboard(data){
   for(const source of data.calendar?.sources||[])$('#calendar-sources').append(safeLink(source.name+' ↗',source.url));
   $('#edition-note').textContent=(data.editionId?'Edição de '+data.editionId.split('-').reverse().join('/')+'. ':'')+(data.translationFailures?`${data.translationFailures} traduções indisponíveis. `:'')+'Resumo do feed; contexto educativo por tema. Não é recomendação de investimento.';
 }
-async function loadEdition(id=''){const response=await fetch('/api/news'+(id?'?edition='+encodeURIComponent(id):''),{cache:'no-store'});if(!response.ok)throw Error();showEdition(await response.json());}
+async function fetchEdition(url){const response=await fetch(url,{cache:'no-store'});if(!response.ok)throw Error();return response.json();}
+async function loadEdition(id=''){
+  try { showEdition(await fetchEdition('/api/news'+(id?'?edition='+encodeURIComponent(id):''))); return; }
+  catch { showEdition(await fetchEdition(id?`editions/${encodeURIComponent(id)}.json`:'news.json')); }
+}
 loadEdition().catch(()=>{$('#updated').textContent='Não foi possível carregar a edição.';$('#news').textContent='Recarregue a página para tentar novamente.';});
-fetch('/api/news?history=1',{cache:'no-store'}).then(r=>r.json()).then(rows=>{for(const row of rows){const option=node('option',row.id.split('-').reverse().join('/'));option.value=row.id;$('#history').append(option);}}).catch(()=>{});
+fetchEdition('/api/news?history=1').catch(()=>fetchEdition('history.json')).then(rows=>{for(const row of rows){const option=node('option',row.id.split('-').reverse().join('/'));option.value=row.id;$('#history').append(option);}}).catch(()=>{});
 $('#history').onchange=async()=>{try{await loadEdition($('#history').value);}catch{$('#edition-note').textContent='Não foi possível abrir esta edição. Tente novamente.';}};
