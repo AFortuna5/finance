@@ -701,7 +701,9 @@
         "at": "2026-10-28",
         "source": "Federal Reserve",
         "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
-        "kind": "date"
+        "kind": "date",
+        "geo": "EUA",
+        "titleEn": "Rate decision · Federal Reserve"
       },
       {
         "title": "Decisão da Selic · Copom",
@@ -710,7 +712,9 @@
         "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=43383",
         "kind": "date",
         "verifiedAt": "2026-10-23",
-        "method": "Calendário oficial 2026 · Comunicado 43.383"
+        "method": "Calendário oficial 2026 · Comunicado 43.383",
+        "geo": "Brasil",
+        "titleEn": "Selic decision · Copom"
       },
       {
         "title": "Decisão da Selic · Copom",
@@ -719,28 +723,36 @@
         "url": "https://www.bcb.gov.br/estabilidadefinanceira/exibenormativo?tipo=Comunicado&numero=43383",
         "kind": "date",
         "verifiedAt": "2026-10-23",
-        "method": "Calendário oficial 2026 · Comunicado 43.383"
+        "method": "Calendário oficial 2026 · Comunicado 43.383",
+        "geo": "Brasil",
+        "titleEn": "Selic decision · Copom"
       },
       {
         "title": "Decisão de juros · Federal Reserve",
         "at": "2026-12-09",
         "source": "Federal Reserve",
         "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
-        "kind": "date"
+        "kind": "date",
+        "geo": "EUA",
+        "titleEn": "Rate decision · Federal Reserve"
       },
       {
         "title": "Decisão de juros · Federal Reserve",
         "at": "2027-01-27",
         "source": "Federal Reserve",
         "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
-        "kind": "date"
+        "kind": "date",
+        "geo": "EUA",
+        "titleEn": "Rate decision · Federal Reserve"
       },
       {
         "title": "Decisão de juros · Federal Reserve",
         "at": "2027-03-17",
         "source": "Federal Reserve",
         "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
-        "kind": "date"
+        "kind": "date",
+        "geo": "EUA",
+        "titleEn": "Rate decision · Federal Reserve"
       }
     ],
     "warnings": [

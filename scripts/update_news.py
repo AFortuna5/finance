@@ -611,7 +611,8 @@ def event_ts(value):
 
 
 def calendar(previous_events):
-    verified = json.loads((ROOT / 'lib/calendar-verified.json').read_text(encoding='utf-8'))
+    verified_path = ROOT / 'lib/calendar-verified.json'
+    verified = json.loads(verified_path.read_text(encoding='utf-8')) if verified_path.exists() else []
     now = dt.datetime.now(dt.timezone.utc).timestamp()
     events = [e for e in verified if event_ts(e['at']) > now]
     warnings = []
@@ -619,9 +620,12 @@ def calendar(previous_events):
         ics = request('https://www.bls.gov/schedule/news_release/bls.ics', timeout=15).decode('utf-8')
         titles = {'Consumer Price Index': 'Inflação ao consumidor (CPI) · EUA', 'Employment Situation': 'Emprego e desemprego (Payroll) · EUA',
                   'Producer Price Index': 'Inflação ao produtor (PPI) · EUA', 'Job Openings and Labor Turnover': 'Vagas de emprego (JOLTS) · EUA'}
+        titles_en = {'Consumer Price Index': 'US consumer inflation (CPI)', 'Employment Situation': 'US jobs report (Payroll)',
+                     'Producer Price Index': 'US producer inflation (PPI)', 'Job Openings and Labor Turnover': 'US job openings (JOLTS)'}
         for block in re.sub(r'\r?\n[ \t]', '', ics).split('BEGIN:VEVENT')[1:]:
             name = (re.search(r'SUMMARY:(.*)', block) or [None, ''])[1].strip()
             title = next((titles[k] for k in titles if name.startswith(k)), None)
+            title_en = next((titles_en[k] for k in titles_en if name.startswith(k)), title)
             match = re.search(r'DTSTART([^:]*):(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})(Z?)', block)
             if not title or not match:
                 continue
@@ -635,7 +639,7 @@ def calendar(previous_events):
             else:
                 continue
             if now < at.timestamp() < now + 90 * 86400:
-                events.append({'title': title, 'at': at.isoformat(), 'source': 'BLS', 'url': 'https://www.bls.gov/schedule/', 'kind': 'timed'})
+                events.append({'title': title, 'titleEn': title_en, 'geo': 'EUA', 'at': at.isoformat(), 'source': 'BLS', 'url': 'https://www.bls.gov/schedule/', 'kind': 'timed'})
     except Exception:
         warnings.append('BLS')
         events += [e for e in previous_events if e.get('source') == 'BLS' and event_ts(e['at']) > now]
@@ -655,11 +659,13 @@ def calendar(previous_events):
                     continue
                 at = f'{year_match[1]}-{month:02d}-{int(day_text):02d}'
                 if at >= today and dt.datetime.fromisoformat(at).timestamp() < now + 180 * 86400:
-                    events.append({'title': 'Decisão de juros · Federal Reserve', 'titleEn': 'Rate decision · Federal Reserve', 'at': at, 'source': 'Federal Reserve', 'url': CALENDAR_SOURCES[2]['url'], 'kind': 'date'})
+                    events.append({'title': 'Decisão de juros · Federal Reserve', 'titleEn': 'Rate decision · Federal Reserve', 'geo': 'EUA', 'at': at, 'source': 'Federal Reserve', 'url': CALENDAR_SOURCES[2]['url'], 'kind': 'date'})
     except Exception:
         warnings.append('Federal Reserve')
         events += [e for e in previous_events if e.get('source') == 'Federal Reserve' and event_ts(e['at']) > now]
     unique = {(e['title'], e['at']): e for e in events}
+    for event in unique.values():
+        event.setdefault('geo', 'EUA' if event.get('source') in ('BLS', 'Federal Reserve') else 'Brasil')
     return {'events': sorted(unique.values(), key=lambda e: e['at'])[:14], 'warnings': warnings,
             'sources': CALENDAR_SOURCES, 'checkedAt': dt.datetime.now(dt.timezone.utc).isoformat()}
 
