@@ -1,5 +1,6 @@
 {
   "version": 2,
   "framework": null,
+  "buildCommand": "node scripts/test-data.mjs",
   "outputDirectory": "public"
 }
