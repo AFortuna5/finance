@@ -2,11 +2,15 @@ name: Atualizar edição publicada
 
 on:
   schedule:
-    - cron: '17 10,16,22 * * *'
+    - cron: '*/15 * * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: journal-refresh
+  cancel-in-progress: false
 
 jobs:
   refresh:
