@@ -1,6 +1,5 @@
 {
   "version": 2,
   "framework": null,
-  "buildCommand": "node scripts/prepare-ui.mjs",
   "outputDirectory": "public"
 }

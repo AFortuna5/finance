@@ -18,7 +18,8 @@ jobs:
       - run: node --check public/perfil.js
       - run: node --check public/gov.js
       - run: node --check public/feed-text.js
-      - run: python3 -m py_compile scripts/update_news.py
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m py_compile scripts/update_news.py
       - run: node scripts/test-data.mjs
-      - run: node scripts/prepare-ui.mjs
-      - run: git diff --exit-code lib/journal-html.ts

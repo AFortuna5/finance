@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {validObservation,cleanFeedText} from '../lib/validation.ts';
+import {validObservation,cleanFeedText} from '../public/feed-text.js';
 const now=new Date('2026-10-23T12:00:00Z');
 assert.equal(validObservation({data:'04/11/2026',valor:'13.75'},now),false,'Dados futuros não podem ser apresentados como atuais');
 assert.equal(validObservation({data:'22/10/2026',valor:'5.03'},now),true);

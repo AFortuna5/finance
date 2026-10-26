@@ -15,19 +15,15 @@ investimento.
 | `/governo.html` | As contas do governo: Selic, IPCA 12m e mensal, dívida pública % PIB, desemprego e os grandes números do Tesouro (resultado primário, receita, despesa). |
 | `/perfil.html` | Conversa guiada: o visitante descreve objetivo, risco, horizonte e exposição cambial; recebe uma leitura do cenário pós-eleição com os dados reais do dia. |
 
-O projeto também contém a versão "app" do jornal (interface React/Next em `app/`,
-`components/`, `lib/`, `worker/`), publicada separadamente no ambiente de apps do
-ChatGPT. O site público não depende dela.
-
 ## Como o site se atualiza
 
 ```
 GitHub Actions (a cada 15 min)          Vercel
 ┌──────────────────────────────┐
-│ scripts/update_news.py       │   push    ┌────────────────────────┐
-│  · lê 13 feeds RSS           │ ───────►  │ build: prepare-ui.mjs  │
-│  · cura, traduz, contextualiza│  commit   │ public/  ──►  CDN      │
-│  · coleta APIs de dados      │           └────────────────────────┘
+│ scripts/update_news.py       │   push    ┌──────────────────┐
+│  · lê 13 feeds RSS           │ ───────►  │ public/ ──► CDN  │
+│  · cura, traduz, contextualiza│  commit   └──────────────────┘
+│  · coleta APIs de dados      │
 │  · grava JSONs em public/    │
 └──────────────────────────────┘
 ```
@@ -40,7 +36,7 @@ GitHub Actions (a cada 15 min)          Vercel
    <201008665+AFortuna5@users.noreply.github.com>` — e-mail que a Vercel
    reconhece para liberar o deploy.
 4. A Vercel publica `public/` como site estático (`vercel.json`: sem framework,
-   build apenas roda `prepare-ui.mjs` para manter o HTML embutido do app).
+   sem build — a pasta vai direto para a CDN).
 
 O navegador só lê os JSONs gerados — nenhuma chave privada ou chamada direta a
 APIs externas acontece no front-end.
@@ -67,16 +63,15 @@ séries indisponíveis mostram o último cache bom (`status: cached`) ou
 ## Estrutura
 
 ```
-public/            site estático servido pela Vercel
+public/            o site inteiro, servido pela Vercel
   index.html       jornal  ·  mercados.html  painel de mercados
   governo.html     contas do governo  ·  perfil.html  leitura de perfil
   *.js / *.css     um par por página + style.css (base) + mobile.css (mobile)
+  feed-text.js     limpeza de HTML de feed e validação de datas (site + testes)
   *.json           dados gerados pelo coletor (não editar à mão)
 scripts/
-  update_news.py   coletor: feeds, tradução, mercados, Focus, governo
-  prepare-ui.mjs   gera lib/journal-html.ts a partir de public/index.html
+  update_news.py   o "backend": feeds, tradução, mercados, Focus, governo, agenda
   test-data.mjs    regressão: datas válidas e limpeza de HTML dos feeds
-app/ components/ lib/ db/ worker/   versão app (ChatGPT), independente do site
 .github/workflows/ refresh-edition.yml (coleta 15min) + checks.yml (CI)
 CONTINUIDADE_*.md  diário de decisões e pendências entre sessões
 ```
@@ -89,8 +84,8 @@ node scripts/test-data.mjs      # regressão de dados/limpeza de HTML
 # servir public/ com qualquer servidor estático para ver o site local
 ```
 
-CI (`checks.yml`) valida sintaxe dos JS, compila o Python, roda a regressão e
-garante que `lib/journal-html.ts` está sincronizado com `public/index.html`.
+CI (`checks.yml`) valida a sintaxe de todos os JS públicos, compila o Python e
+roda a regressão — não há dependências npm nem etapa de build.
 
 ## Regras de integridade
 

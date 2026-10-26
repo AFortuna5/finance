@@ -1,6 +1,0 @@
-import readline from 'node:readline';
-import {Writable} from 'node:stream';
-const sink=new Writable({write(chunk,encoding,callback){callback();}});
-const reader=readline.createInterface({input:process.stdin,output:sink,terminal:true});
-console.log('Ready for private Site service JSON on stdin (input is hidden).');
-reader.once('line',async line=>{reader.close();try{const {origin,token,method='read_journal'}=JSON.parse(line);if(origin!=='https://meridiano-arthur-finance.creamyluck6.chatgpt.site')throw Error('Unexpected service origin');const updating=method==='update_journal';const response=await fetch(origin+(updating?'/api/update':'/api/news'),{method:updating?'POST':'GET',headers:{'Content-Type':'application/json','OAI-Sites-Authorization':'Bearer '+token},signal:AbortSignal.timeout(180000)});if(!response.ok)throw Error('HTTP '+response.status+' '+(await response.text()).slice(0,100));const content=await response.json();console.log(JSON.stringify(updating?content:{updatedAt:content.updatedAt,articles:content.articles.length,translated:content.articles.filter(a=>a.translationStatus==='translated').length,indicators:content.indicators,calendar:content.calendar}));}catch(e){console.error(e.message);process.exitCode=1;}});
