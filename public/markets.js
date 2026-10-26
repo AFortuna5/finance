@@ -17,6 +17,16 @@ const LINKS = {
   'GC=F': [['TradingView','https://br.tradingview.com/symbols/GOLD/'],['Investing.com','https://br.investing.com/commodities/gold']],
   'CL=F': [['TradingView','https://br.tradingview.com/symbols/NYMEX-CL1!/'],['Investing.com','https://br.investing.com/commodities/crude-oil']],
 };
+const ABOUT = {
+  '^BVSP': 'O Ibovespa é o índice da B3 que reúne as ações mais negociadas do Brasil — Vale, Petrobras, bancos e companhia. Quando ele sobe, o mercado está pagando mais pelas maiores empresas do país.',
+  'BRL=X': 'O dólar comercial é o câmbio usado entre bancos e empresas — a referência de todos os outros preços em dólar. Ele pesa na inflação, em viagens, em importados e nas contas de quem exporta ou deve em moeda.',
+  'EURBRL=X': 'O euro em reais é a referência para quem se expõe à Europa — viagens, reservas e empresas que faturam em euros.',
+  '^GSPC': 'O S&P 500 reúne as 500 maiores empresas listadas nos EUA. É a régua mundial da bolsa — quando cai, o mundo inteiro reprecifica risco.',
+  '^IXIC': 'A Nasdaq é o índice concentrado em tecnologia — Apple, Microsoft, Nvidia. Por depender de crescimento futuro, reage forte a juros americanos.',
+  'BTC-USD': 'O bitcoin é um criptoativo negociado 24 horas por dia, sem banco central e com oferta limitada a 21 milhões. Trata-se como ativo de risco de alta volatilidade.',
+  'GC=F': 'O ouro é o metal usado há séculos como reserva de valor. Ganha atenção em crises, quando os juros reais caem ou quando o dólar enfraquece.',
+  'CL=F': 'O WTI é a referência de preço do barril nos EUA. Petróleo mais caro pressiona gasolina, transporte e inflação — e anima produtoras como a Petrobras.',
+};
 const FOCUS_LABELS = {'Câmbio': ['DÓLAR', v => 'R$\u00a0' + v.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})],
   'Selic': ['SELIC', v => v.toLocaleString('pt-BR', {maximumFractionDigits: 2}) + '%'],
   'IPCA': ['IPCA', v => v.toLocaleString('pt-BR', {maximumFractionDigits: 2}) + '%'],
@@ -164,6 +174,7 @@ function card(asset, elections, focus) {
   deltas.append(delta('1º TURNO', asset.changeFirstRound), delta('2º TURNO', asset.changeSecondRound), delta('30 DIAS', asset.change30d));
   box.append(deltas);
   if (asset.series?.length >= 5) box.append(chart(asset, elections), statsBlock(asset));
+  if (ABOUT[asset.symbol]) box.append(node('p', ABOUT[asset.symbol], 'mkt-about'));
   const sig = signalBlock(asset);
   if (sig) box.append(sig);
   const fx = focus?.items?.find(i => i.indicator === 'Câmbio');
