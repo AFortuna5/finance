@@ -5,6 +5,7 @@ import email.utils
 import gzip
 import html
 import json
+import math
 import pathlib
 import re
 import time
@@ -98,6 +99,12 @@ GOV_CHARTS = [
 GOV_DIVIDA_SERIES = [('bruta', 'Dívida bruta (governo geral)', 13762), ('liquida', 'Dívida líquida (setor público)', 4503)]
 # Fallback SIDRA (IBGE) quando o SGS está instável: card -> (tabela, variável)
 GOV_SIDRA = {'ipca': (1737, 63), 'ipca12': (1737, 2265), 'desemprego': (6381, 4099)}
+# Última via: IPEA/Ipeadata (espelha séries do BCB). card -> (código, nota, unidade de substituição)
+# A série de Selic do IPEA é mensal em % a.m. — quando usada, a unidade do card muda para refletir isso.
+GOV_IPEA = {
+    'selic': ('BM12_TJOVER12', 'Selic acumulada no mês — variação mensal da taxa básica de juros (série IPEA/BCB).', '% a.m.'),
+    'divida': ('PAN12_DTSPY12', 'Dívida líquida do setor público (% do PIB) — série mensal do IPEA (fonte BCB).', None),
+}
 TESOURO_ENDPOINTS = [
     ('resultado_primario', 'Resultado primário acumulado', 'Governo gasta acima do que arrecada quando negativo'),
     ('receita_primaria_liquida', 'Receita primária líquida', 'O que entra no caixa, sem juros'),
@@ -396,26 +403,43 @@ def focus_expectations():
 
 
 def sgs_series(code, count):
-    """Últimos `count` pontos de uma série SGS, normalizados para {date, value}."""
-    url = f'https://api.bcb.gov.br/dados/serie/bcdata.sgs.{code}/dados/ultimos/{count}?formato=json'
-    rows = None
-    for attempt, wait in enumerate((0, 8, 20, 35, 50)):
-        if wait:
-            time.sleep(wait)
-        try:
-            rows = json.loads(request(url, timeout=60).decode('utf-8'))
+    """Últimos `count` pontos de uma série SGS, normalizados para {date, value}.
+    CSV é mais leve e passa melhor quando a API está instável; JSON é a reserva."""
+    start = (dt.datetime.now(TIMEZONE).date() - dt.timedelta(days=6 * 365)).strftime('%d/%m/%Y')
+    urls = [
+        f'https://api.bcb.gov.br/dados/serie/bcdata.sgs.{code}/dados?formato=csv&dataInicial={start}',
+        f'https://api.bcb.gov.br/dados/serie/bcdata.sgs.{code}/dados/ultimos/{count}?formato=csv',
+        f'https://api.bcb.gov.br/dados/serie/bcdata.sgs.{code}/dados/ultimos/{count}?formato=json',
+    ]
+    raw = None
+    for url in urls:
+        for attempt, wait in enumerate((0, 8, 20, 35)):
+            if wait:
+                time.sleep(wait)
+            try:
+                raw = request(url, timeout=60).decode('utf-8')
+                break
+            except Exception:
+                continue
+        if raw:
             break
-        except Exception:
-            if attempt == 4:
-                raise
+    if not raw:
+        raise ConnectionError('SGS sem resposta')
     points = []
-    for row in rows or []:
+    if raw.lstrip().startswith('['):
+        rows = json.loads(raw)
+    else:
+        rows = [{'data': p[0], 'valor': p[1].replace(',', '.')}
+                for line in raw.strip().splitlines()[1:]
+                if len(p := line.replace('"', '').split(';')) == 2]
+    for row in rows:
         try:
             day, month, year = row['data'].split('/')
             points.append({'date': f'{year}-{month}-{day}', 'value': float(row['valor'])})
         except (KeyError, ValueError):
             continue
-    return points
+    points.sort(key=lambda p: p['date'])
+    return points[-count:] if len(points) > count else points
 
 
 def sidra_series(table, var, count):
@@ -440,40 +464,66 @@ def monthlyize(points):
     return list(by_month.values())
 
 
+def ipeadata_series(code, count=72):
+    """Série mensal do Ipeadata (OData4), normalizada para {date, value}."""
+    url = f"https://www.ipeadata.gov.br/api/odata4/ValoresSerie(SERCODIGO='{code}')"
+    data = json.loads(request(url, timeout=45).decode('utf-8'))
+    points = []
+    for row in data.get('value', []):
+        try:
+            value = float(row['VALVALOR'])
+            if math.isnan(value):
+                continue
+            points.append({'date': str(row['VALDATA'])[:10], 'value': value})
+        except (KeyError, TypeError, ValueError):
+            continue
+    points.sort(key=lambda p: p['date'])
+    return points[-count:] if len(points) > count else points
+
+
 def gov_panel():
     """Coleta as séries fiscais/macro para a página As contas do governo."""
     charts = []
     for cid, title, unit, note, mode, code, count in GOV_CHARTS:
-        card = {'id': cid, 'title': title, 'unit': unit, 'note': note, 'mode': mode}
+        card = {'id': cid, 'title': title, 'unit': unit, 'note': note, 'mode': mode,
+                'status': 'unavailable'}
         try:
             if mode == 'multi':
-                card['lines'] = [{'key': key, 'label': label, 'series': monthlyize(sgs_series(sid, 72))}
-                                 for key, label, sid in GOV_DIVIDA_SERIES]
-                card['lines'] = [l for l in card['lines'] if l['series']]
+                card['lines'] = [l for l in ({'key': k, 'label': lab, 'series': monthlyize(sgs_series(sid, 72))}
+                                             for k, lab, sid in GOV_DIVIDA_SERIES) if l['series']]
                 if not card['lines']:
                     raise ValueError('sem dados')
             else:
-                series, card['source'] = monthlyize(sgs_series(code, count)), 'Banco Central · SGS'
-                if not series:
+                card['series'] = monthlyize(sgs_series(code, count))
+                if not card['series']:
                     raise ValueError('sem dados')
-                card['series'] = series
-            card['status'] = 'ok'
-            card['source'] = 'Banco Central · SGS'
-            card['status'] = 'ok'
+            card['source'], card['status'] = 'Banco Central · SGS', 'ok'
         except Exception as error:
-            fb = GOV_SIDRA.get(cid)
-            if fb and mode != 'multi':
-                try:
-                    series = sidra_series(fb[0], fb[1], 72)
-                    if series:
-                        card['series'], card['source'], card['status'] = series, 'IBGE · SIDRA', 'ok'
-                        charts.append(card)
-                        time.sleep(4)
-                        continue
-                except Exception:
-                    pass
-            card['status'] = 'unavailable'
-            print(f'Série do governo indisponível: {title}: {type(error).__name__}')
+            print(f'SGS indisponível para {title}: {type(error).__name__}')
+        fb = GOV_SIDRA.get(cid)
+        if card['status'] != 'ok' and fb and mode != 'multi':
+            try:
+                series = sidra_series(fb[0], fb[1], 72)
+                if series:
+                    card['series'], card['source'], card['status'] = series, 'IBGE · SIDRA', 'ok'
+            except Exception:
+                pass
+        ipea = GOV_IPEA.get(cid)
+        if card['status'] != 'ok' and ipea:
+            try:
+                series = ipeadata_series(ipea[0])
+                if series:
+                    if mode == 'multi':
+                        card['lines'] = [{'key': 'liquida', 'label': 'Dívida líquida (setor público)', 'series': series}]
+                    else:
+                        card['series'], card['note'] = series, ipea[1]
+                        if ipea[2]:
+                            card['unit'] = ipea[2]
+                    card['source'], card['status'] = 'IPEA · Ipeadata', 'ok'
+            except Exception:
+                pass
+        if card['status'] != 'ok':
+            print(f'Série do governo indisponível: {title}')
         charts.append(card)
         time.sleep(4)  # o SGS limita requisições rápidas em sequência
     tesouro = []
@@ -492,6 +542,7 @@ def gov_panel():
             'sources': [['Banco Central · SGS', 'https://www.bcb.gov.br/estatisticas/series-temporais'],
                         ['IBGE · IPCA', 'https://www.ibge.gov.br/estatisticas/economicas/precos-e-custos/9256-indice-nacional-de-precos-ao-consumidor-amplo.html'],
                         ['IBGE · PNAD', 'https://www.ibge.gov.br/estatisticas/sociais/trabalho/9171-pesquisa-nacional-por-amostra-de-domicilios-continua-mensal.html'],
+                        ['IPEA · Ipeadata', 'https://www.ipeadata.gov.br/'],
                         ['Tesouro Nacional', 'https://www.tesourotransparente.gov.br/ckan/dataset/resultado-do-tesouro-nacional']],
             'method': 'Séries oficiais do Banco Central (SGS), IBGE e Tesouro Nacional, atualizadas na coleta de 15 em 15 minutos. A maioria dos dados fiscais e de inflação é publicada mensalmente — cada gráfico mostra o mês de referência.'}
 

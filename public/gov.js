@@ -14,8 +14,25 @@ function el(tag, attrs, parent) {
 }
 function node(tag, text, className) { const e = document.createElement(tag); if (text != null) e.textContent = text; if (className) e.className = className; return e; }
 const fmtV = (v, unit) => unit.startsWith('%') ? v.toLocaleString('pt-BR', {maximumFractionDigits: 2}) + '%' : v.toLocaleString('pt-BR');
-const fmtDate = d => new Date(d + 'T12:00:00Z').toLocaleDateString('pt-BR', {month: 'short', year: '2-digit', timeZone: 'UTC'});
+const MONTHS = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+const fmtDate = d => { const p = new Date(d + 'T12:00:00Z'); return MONTHS[p.getUTCMonth()] + '/' + String(p.getUTCFullYear()).slice(2); };
 const ts = d => new Date(d + 'T12:00:00Z').getTime();
+
+function dateTicks(svg, series, x) {
+  const n = series.length;
+  const step = Math.ceil(n / 5);
+  for (let i = 0; i < n; i += step) {
+    const px = x(ts(series[i].date));
+    el('line', {class: 'tick', x1: px, x2: px, y1: H - PAD.b, y2: H - PAD.b + 4}, svg);
+    const t = el('text', {class: 'axis', x: px, y: H - 8, 'text-anchor': 'middle'}, svg);
+    t.textContent = fmtDate(series[i].date);
+  }
+  const last = series.at(-1);
+  const pl = x(ts(last.date));
+  el('line', {class: 'tick', x1: pl, x2: pl, y1: H - PAD.b, y2: H - PAD.b + 4}, svg);
+  const tl = el('text', {class: 'axis', x: pl, y: H - 8, 'text-anchor': 'end'}, svg);
+  tl.textContent = fmtDate(last.date);
+}
 
 function scales(seriesList) {
   const all = seriesList.flat().map(p => p.value);
@@ -47,8 +64,7 @@ function lineChart(card) {
   el('polygon', {class: 'area', points: `${sc.x(sc.t0)},${sc.y(sc.lo)} ` + s.map(p => `${sc.x(ts(p.date))},${sc.y(p.value)}`).join(' ') + ` ${sc.x(sc.t1)},${sc.y(sc.lo)}`}, svg);
   el('polyline', {class: 'series', points: s.map(p => `${sc.x(ts(p.date))},${sc.y(p.value)}`).join(' ')}, svg);
   el('circle', {class: 'last-dot', cx: sc.x(sc.t1), cy: sc.y(s.at(-1).value), r: 3}, svg);
-  const d0 = el('text', {class: 'axis', x: PAD.l, y: H - 8}, svg); d0.textContent = fmtDate(s[0].date);
-  const d1 = el('text', {class: 'axis', x: W - PAD.r, y: H - 8, 'text-anchor': 'end'}, svg); d1.textContent = fmtDate(s.at(-1).date);
+  dateTicks(svg, s, t => sc.x(t));
   return svg;
 }
 
@@ -67,8 +83,7 @@ function barChart(card) {
     const px = x(ts(p.date)) - bw / 2, py = y(Math.max(0, p.value)), h = Math.abs(y(p.value) - y0);
     el('rect', {class: 'bar ' + (p.value >= 0 ? 'pos' : 'neg'), x: px, y: py, width: bw, height: Math.max(0.5, h)}, svg);
   }
-  const d0 = el('text', {class: 'axis', x: PAD.l, y: H - 8}, svg); d0.textContent = fmtDate(s[0].date);
-  const d1 = el('text', {class: 'axis', x: W - PAD.r, y: H - 8, 'text-anchor': 'end'}, svg); d1.textContent = fmtDate(s.at(-1).date);
+  dateTicks(svg, s, x);
   return svg;
 }
 
@@ -81,9 +96,7 @@ function multiChart(card) {
     el('polyline', {class: i ? 'series-2' : 'series', points: pts}, svg);
     el('circle', {class: i ? 'dot-2' : 'last-dot', cx: sc.x(ts(l.series.at(-1).date)), cy: sc.y(l.series.at(-1).value), r: 3}, svg);
   }
-  const first = lines[0].series;
-  const d0 = el('text', {class: 'axis', x: PAD.l, y: H - 8}, svg); d0.textContent = fmtDate(first[0].date);
-  const d1 = el('text', {class: 'axis', x: W - PAD.r, y: H - 8, 'text-anchor': 'end'}, svg); d1.textContent = fmtDate(first.at(-1).date);
+  dateTicks(svg, lines[0].series, t => sc.x(t));
   return svg;
 }
 
