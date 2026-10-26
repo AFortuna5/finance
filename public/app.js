@@ -70,5 +70,5 @@ async function loadEdition(id=''){
   catch { showEdition(await fetchEdition(id?`editions/${encodeURIComponent(id)}.json`:'news.json')); }
 }
 loadEdition().catch(()=>{$('#updated').textContent='Não foi possível carregar a edição.';$('#news').textContent='Recarregue a página para tentar novamente.';});
-fetchEdition('/api/news?history=1').catch(()=>fetchEdition('history.json')).then(rows=>{for(const row of rows){const option=node('option',row.id.split('-').reverse().join('/'));option.value=row.id;$('#history').append(option);}}).catch(()=>{});
+fetchEdition('/api/news?history=1').catch(()=>fetchEdition('history.json')).then(rows=>{if(rows.length){const en=$('#edition-no');if(en)en.textContent='Nº '+rows.length;}for(const row of rows){const option=node('option',row.id.split('-').reverse().join('/'));option.value=row.id;$('#history').append(option);}}).catch(()=>{});
 $('#history').onchange=async()=>{try{await loadEdition($('#history').value);}catch{$('#edition-note').textContent='Não foi possível abrir esta edição. Tente novamente.';}};
