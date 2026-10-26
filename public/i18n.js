@@ -5,7 +5,6 @@
 (function () {
   const DICT = {
     // --- faixa de edição / cabeçalho (todas as páginas) ---
-    'ed.personal': {pt: 'EDIÇÃO PESSOAL · AF', en: 'PERSONAL EDITION · AF'},
     'ed.look': {pt: 'UM OLHAR SOBRE O MUNDO', en: 'A LOOK AT THE WORLD'},
     'ed.markets': {pt: 'UM OLHAR SOBRE OS MERCADOS', en: 'A LOOK AT THE MARKETS'},
     'ed.gov': {pt: 'UM OLHAR SOBRE AS CONTAS PÚBLICAS', en: 'A LOOK AT PUBLIC ACCOUNTS'},
@@ -19,11 +18,6 @@
     'tagline.g': {pt: 'O Estado em números.', en: 'The State in numbers.'},
     'tagline.p': {pt: 'Leitura guiada do seu perfil.', en: 'A guided read of your profile.'},
     'status.load': {pt: 'Carregando edição…', en: 'Loading edition…'},
-    'nav.perfil': {pt: 'LEITURA DE PERFIL ↗︎', en: 'PROFILE READING ↗︎'},
-    'nav.markets': {pt: 'PAINEL DE MERCADOS ↗︎', en: 'MARKETS PANEL ↗︎'},
-    'nav.gov': {pt: 'CONTAS DO GOVERNO ↗︎', en: 'GOVERNMENT ACCOUNTS ↗︎'},
-    'nav.jornal': {pt: 'JORNAL ↗︎', en: 'JOURNAL ↗︎'},
-    'nav.mercados': {pt: 'MERCADOS ↗︎', en: 'MARKETS ↗︎'},
     'tab.jornal': {pt: 'Jornal', en: 'Journal'},
     'tab.mercados': {pt: 'Mercados', en: 'Markets'},
     'tab.governo': {pt: 'Governo', en: 'Government'},

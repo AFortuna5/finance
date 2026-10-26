@@ -32,6 +32,11 @@ nav button.active{color:var(--accent);box-shadow:inset 0 -3px var(--accent);font
 #saved-count{font-size:10px;padding:2px 5px;background:var(--card);margin-left:5px}
 .status{border-block:1px solid var(--line);padding:12px 0;display:flex;justify-content:space-between;color:var(--muted);font-size:9px;letter-spacing:.8px}
 .status i{display:inline-block;width:6px;height:6px;background:var(--green);border-radius:50%;margin-right:7px}
+.sections{display:flex;border-bottom:1px solid var(--line)}
+.sections a{flex:1;text-align:center;padding:13px 8px;font-size:10px;letter-spacing:2.6px;text-transform:uppercase;color:var(--muted);border-left:1px solid var(--line)}
+.sections a:first-child{border-left:0}
+.sections a:hover{color:var(--ink)}
+.sections a.active{color:var(--ink);font-weight:700;box-shadow:inset 0 -3px var(--accent)}
 .intro{display:flex;align-items:center;gap:65px;padding:52px 0 44px}
 .eyebrow{font-size:9px;letter-spacing:2.2px;font-weight:700;color:var(--green)}
 h1{font-family:var(--display);font-size:clamp(46px,5.8vw,82px);font-weight:500;line-height:1;letter-spacing:-.01em;margin:18px 0 0}

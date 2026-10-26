@@ -1,6 +1,7 @@
 /* Meridiano — edição mobile. Layout próprio para telas pequenas; o desktop segue o desenho editorial original. */
 .tabbar{display:none}
 @media(max-width:700px){
+.sections{display:none}
 body{padding-bottom:calc(74px + env(safe-area-inset-bottom))}
 .edition{padding:11px 0 9px}
 header{position:relative;justify-content:center;padding:20px 0 16px;border-bottom:3px double var(--ink)}
