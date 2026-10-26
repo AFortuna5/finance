@@ -51,7 +51,7 @@
     'cat.markets': {pt: 'Mercados', en: 'Markets'},
     'cat.geo': {pt: 'Geopolítica', en: 'Geopolitics'},
     'cat.elec': {pt: 'Eleições', en: 'Elections'},
-    'cat.saved': {pt: 'Salvas', en: 'Saved'},
+
     'search.ph': {pt: 'Busque um assunto, país ou fonte', en: 'Search a topic, country or source'},
     'search.aria': {pt: 'Buscar notícias', en: 'Search stories'},
     'more': {pt: 'Ver mais notícias ↓︎', en: 'More stories ↓︎'},

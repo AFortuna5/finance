@@ -1,7 +1,7 @@
 import {cleanEdition} from './feed-text.js';
 const $ = s => document.querySelector(s);
-let saved = new Set(), articles = [], category = 'Todas', limit = 12, currentEdition = null;
-try { saved = new Set(JSON.parse(localStorage.getItem('meridiano-saved') || '[]')); if (localStorage.getItem('meridiano-theme') === 'dark') document.body.classList.add('dark'); } catch {}
+let articles = [], category = 'Todas', limit = 12, currentEdition = null;
+try { if (localStorage.getItem('meridiano-theme') === 'dark') document.body.classList.add('dark'); } catch {}
 const LOC = () => window.merLocale ? window.merLocale() : 'pt-BR';
 const EN = () => window.merLang && window.merLang() === 'en';
 const CAT_EN = {'Brasil':'Brazil','Mundo':'World','Mercados':'Markets','Geopolítica':'Geopolitics','Eleições':'Elections'};
@@ -16,10 +16,9 @@ const setToday = () => { $('#today').textContent = new Date().toLocaleDateString
 setToday();
 function render() {
   const query = $('#search').value.toLocaleLowerCase(LOC());
-  const rows = articles.filter(a => (category === 'Todas' || (category === 'Salvas' ? saved.has(a.url) : a.category === category)) && `${a.title} ${a.titleOriginal||''} ${a.source} ${a.category}`.toLocaleLowerCase(LOC()).includes(query));
-  $('#saved-count').textContent = saved.size;
+  const rows = articles.filter(a => (category === 'Todas' || a.category === category) && `${a.title} ${a.titleOriginal||''} ${a.source} ${a.category}`.toLocaleLowerCase(LOC()).includes(query));
   $('#result-count').textContent = `${rows.length} ${pick('notícias','stories')}`;
-  $('#section-label').textContent = category === 'Todas' ? pick('Na primeira página','Front page') : category === 'Salvas' ? pick('Para ler com calma','Read at leisure') : catLabel(category);
+  $('#section-label').textContent = category === 'Todas' ? pick('Na primeira página','Front page') : catLabel(category);
   $('#news').replaceChildren();
   for (const a of rows.slice(0,limit)) {
     const item = document.createElement('article');
@@ -32,15 +31,13 @@ function render() {
     const language = document.createElement('span'); language.textContent=EN()?(a.language==='en'?'ENGLISH SOURCE':'PORTUGUESE SOURCE'):(a.language==='en'?(a.translationStatus==='translated'?'TRADUÇÃO AUTOMÁTICA · FONTE EM INGLÊS':'TRADUÇÃO INDISPONÍVEL · ORIGINAL EM INGLÊS'):'FONTE EM PORTUGUÊS');
     const read = document.createElement('a');read.href=a.url;read.target='_blank';read.rel='noopener noreferrer';read.textContent=pick('Ler na fonte ↗︎','Read at source ↗︎');
     bottom.append(language,read);
-    const button = document.createElement('button');button.className=`save ${saved.has(a.url)?'selected':''}`;button.textContent=saved.has(a.url)?'◆':'◇';button.setAttribute('aria-label',saved.has(a.url)?pick('Remover dos salvos','Remove from saved'):pick('Salvar notícia','Save story'));button.setAttribute('aria-pressed',saved.has(a.url));
-    button.onclick=()=>{saved.has(a.url)?saved.delete(a.url):saved.add(a.url);try{localStorage.setItem('meridiano-saved',JSON.stringify([...saved]));}catch{}render();};
     item.append(meta,link);
     const summary=artSummary(a);if(summary&&summary!==artTitle(a)){const p=document.createElement('p');p.className='news-summary';p.textContent=summary;item.append(p);}
     const ctx=artContext(a);if(ctx){const context=document.createElement('details');context.className='article-context';const heading=document.createElement('summary');heading.textContent=pick('Por que isso importa?','Why does it matter?');const body=document.createElement('p');body.textContent=ctx;const label=document.createElement('small');label.textContent=pick('CONTEXTO EDUCATIVO · ','EDUCATIONAL CONTEXT · ')+(artTopic(a)||'');const question=document.createElement('p');question.className='reading-question';question.textContent=pick('Para acompanhar: ','To follow: ')+(artQuestion(a)||'');context.append(heading,label,body,question);item.append(context);}
     if(!EN()&&a.titleOriginal&&a.titleOriginal!==a.title){const original=document.createElement('details');original.className='original-title';const heading=document.createElement('summary');heading.textContent='Ver manchete original';const text=document.createElement('p');text.textContent=a.titleOriginal;text.lang=a.language;original.append(heading,text);item.append(original);}
-    item.append(bottom,button);$('#news').append(item);
+    item.append(bottom);$('#news').append(item);
   }
-  if(!rows.length){const empty=document.createElement('p');empty.className='empty';empty.textContent=category==='Salvas'?pick('Seu caderno está em branco. Use o losango ao lado de uma manchete para guardar sua leitura.','Your notebook is blank. Use the diamond next to a headline to keep your reading.'):pick('Nenhuma notícia encontrada para esta seleção.','No stories found for this selection.');$('#news').append(empty);}
+  if(!rows.length){const empty=document.createElement('p');empty.className='empty';empty.textContent=pick('Nenhuma notícia encontrada para esta seleção.','No stories found for this selection.');$('#news').append(empty);}
   $('#more').hidden=rows.length<=limit;
 }
 $('#categories').onclick=e=>{const button=e.target.closest('button');if(!button)return;category=button.dataset.category;limit=12;document.querySelectorAll('#categories button').forEach(b=>b.classList.toggle('active',b===button));render();};

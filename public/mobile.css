@@ -27,7 +27,6 @@ nav.news-filter button.active{box-shadow:none;border-color:var(--accent);color:v
 .headline{font-size:25px;margin-right:26px}
 article:first-child .headline{font-size:30px}
 .save{top:14px;right:0;font-size:21px;padding:6px}
-.meta{padding-right:26px}
 .briefing{border-bottom-width:1px}
 .brief-heading h2{font-size:30px}
 #indicators{gap:16px 20px}

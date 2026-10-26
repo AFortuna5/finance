@@ -31,7 +31,7 @@ nav{border-top:3px solid var(--ink);border-bottom:1px solid var(--ink);display:f
 #categories{display:flex;gap:27px;overflow:auto}
 nav button{border:0;background:none;padding:19px 0;white-space:nowrap;font-size:12px}
 nav button.active{color:var(--accent);box-shadow:inset 0 -3px var(--accent);font-weight:700}
-#saved-count{font-size:10px;padding:2px 5px;background:var(--card);margin-left:5px}
+#saved-count{display:none}
 .status{border-block:1px solid var(--line);padding:12px 0;display:flex;justify-content:space-between;color:var(--muted);font-size:9px;letter-spacing:.8px}
 .status i{display:inline-block;width:6px;height:6px;background:var(--green);border-radius:50%;margin-right:7px}
 .sections{display:flex;border-bottom:1px solid var(--line)}
@@ -58,15 +58,14 @@ h2{font-family:var(--display);font-size:30px;font-weight:500;margin:0}
 .search input{width:100%;background:none;border:0;outline:none;font-size:12px}
 .search kbd{border:1px solid var(--line);padding:1px 6px}
 article{padding:24px 0;border-bottom:1px solid var(--line);position:relative}
-.meta{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:9px;letter-spacing:.6px;color:var(--muted);padding-right:28px}
+.meta{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:9px;letter-spacing:.6px;color:var(--muted)}
 .category{color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:1.4px}
 .headline{font-family:var(--display);font-size:30px;line-height:1.1;font-weight:500;display:block;margin:12px 32px 16px 0}
 .headline:hover{color:var(--green)}
 article:first-child .headline{font-size:52px;line-height:1.02}
 .article-bottom{display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:10px}
 .article-bottom a{color:var(--green);font-weight:600}
-.save{position:absolute;right:0;top:20px;border:0;background:none;font-size:23px;color:var(--muted)}
-.save.selected{color:var(--accent)}
+.save{display:none}
 #more{margin:25px 0;width:100%;border:1px solid var(--line);background:none;padding:15px;font-size:12px}
 #more:hover{background:var(--card)}
 .context{background:var(--green);color:var(--paper);padding:28px}
