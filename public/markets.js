@@ -99,7 +99,7 @@ function chart(asset, elections) {
 
   const projEnd = projection.at(-1);
   const projLabel = el('text', {class: 'proj-label', x: W - PAD.r, y: Math.max(PAD.t + 4, y(projEnd.v) - 8), 'text-anchor': 'end'}, svg);
-  projLabel.textContent = 'TENDÊNCIA →';
+  projLabel.textContent = 'TENDÊNCIA →︎';
 
   const firstLabel = el('text', {class: 'axis', x: PAD.l, y: H - 8}, svg); firstLabel.textContent = fmtDate(series[0].date);
   const lastLabel = el('text', {class: 'axis', x: Math.min(x(lastT), W - PAD.r - 22), y: H - 8, 'text-anchor': 'middle'}, svg); lastLabel.textContent = fmtDate(series.at(-1).date);
@@ -154,7 +154,7 @@ function linksBlock(asset) {
   const box = node('div', null, 'mkt-links');
   box.append(node('span', 'ACOMPANHAR EM '));
   for (const [name, url] of links) {
-    const a = node('a', name + ' ↗');
+    const a = node('a', name + ' ↗︎');
     a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer';
     box.append(a);
   }
@@ -204,7 +204,7 @@ function focusStrip(focus) {
     chip.append(node('span', `${conf[0]} ${item.year} `), node('b', conf[1](item.median)));
     chips.append(chip);
   }
-  const link = node('a', 'Focus · BCB ↗');
+  const link = node('a', 'Focus · BCB ↗︎');
   link.href = focus.url || 'https://www.bcb.gov.br/publicacoes/focus';
   link.target = '_blank'; link.rel = 'noopener noreferrer';
   strip.append(head, chips, link);

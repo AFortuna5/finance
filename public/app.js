@@ -20,7 +20,7 @@ function render() {
     const link = document.createElement('a');link.className='headline';link.href=a.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent=a.title;link.lang=a.translationStatus==='translated'?'pt-BR':a.language;
     const bottom = document.createElement('div');bottom.className='article-bottom';
     const language = document.createElement('span'); language.textContent=a.language==='en'?(a.translationStatus==='translated'?'TRADUÇÃO AUTOMÁTICA · FONTE EM INGLÊS':'TRADUÇÃO INDISPONÍVEL · ORIGINAL EM INGLÊS'):'FONTE EM PORTUGUÊS';
-    const read = document.createElement('a');read.href=a.url;read.target='_blank';read.rel='noopener noreferrer';read.textContent='Ler na fonte ↗';
+    const read = document.createElement('a');read.href=a.url;read.target='_blank';read.rel='noopener noreferrer';read.textContent='Ler na fonte ↗︎';
     bottom.append(language,read);
     const button = document.createElement('button');button.className=`save ${saved.has(a.url)?'selected':''}`;button.textContent=saved.has(a.url)?'◆':'◇';button.setAttribute('aria-label',saved.has(a.url)?'Remover dos salvos':'Salvar notícia');button.setAttribute('aria-pressed',saved.has(a.url));
     button.onclick=()=>{saved.has(a.url)?saved.delete(a.url):saved.add(a.url);try{localStorage.setItem('meridiano-saved',JSON.stringify([...saved]));}catch{}render();};
@@ -61,7 +61,7 @@ function renderDashboard(data){
   for(const event of data.calendar?.events||[]){const card=node('div',null,'calendar-event');card.append(node('time',event.kind==='date'?event.at.split('-').reverse().join('/')+' · horário a confirmar':new Date(event.at).toLocaleString('pt-BR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit',timeZone:'America/Sao_Paulo'})+' · Brasília'),safeLink(event.title,event.url),node('small',event.source));$('#calendar-events').append(card);}
   if(!data.calendar?.events?.length)$('#calendar-events').append(node('p','Agenda automática indisponível nesta edição. Consulte os calendários oficiais abaixo.'));
   $('#calendar-sources').replaceChildren();
-  for(const source of data.calendar?.sources||[])$('#calendar-sources').append(safeLink(source.name+' ↗',source.url));
+  for(const source of data.calendar?.sources||[])$('#calendar-sources').append(safeLink(source.name+' ↗︎',source.url));
   $('#edition-note').textContent=(data.editionId?'Edição de '+data.editionId.split('-').reverse().join('/')+'. ':'')+(data.translationFailures?`${data.translationFailures} traduções indisponíveis. `:'')+'Resumo do feed; contexto educativo por tema. Não é recomendação de investimento.';
 }
 async function fetchEdition(url){const response=await fetch(url,{cache:'no-store'});if(!response.ok)throw Error();return response.json();}
