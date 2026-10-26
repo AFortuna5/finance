@@ -1,6 +1,9 @@
 const $ = s => document.querySelector(s);
+const LOC = () => window.merLocale ? window.merLocale() : 'pt-BR';
+const EN = () => window.merLang && window.merLang() === 'en';
 try { if (localStorage.getItem('meridiano-theme') === 'dark') document.body.classList.add('dark'); } catch {}
-$('#today').textContent = new Date().toLocaleDateString('pt-BR',{day:'numeric',month:'long',year:'numeric',timeZone:'America/Sao_Paulo'}).toUpperCase();
+const setToday = () => { $('#today').textContent = new Date().toLocaleDateString(LOC(),{day:'numeric',month:'long',year:'numeric',timeZone:'America/Sao_Paulo'}).toUpperCase(); };
+setToday();
 $('#theme').onclick = () => { document.body.classList.toggle('dark'); try { localStorage.setItem('meridiano-theme', document.body.classList.contains('dark') ? 'dark' : 'light'); } catch {} };
 
 const SVGNS = 'http://www.w3.org/2000/svg';
@@ -13,9 +16,10 @@ function el(tag, attrs, parent) {
   return node;
 }
 function node(tag, text, className) { const e = document.createElement(tag); if (text != null) e.textContent = text; if (className) e.className = className; return e; }
-const fmtV = (v, unit) => unit.startsWith('%') ? v.toLocaleString('pt-BR', {maximumFractionDigits: 2}) + '%' : v.toLocaleString('pt-BR');
-const MONTHS = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
-const fmtDate = d => { const p = new Date(d + 'T12:00:00Z'); return MONTHS[p.getUTCMonth()] + '/' + String(p.getUTCFullYear()).slice(2); };
+const fmtV = (v, unit) => unit.startsWith('%') ? v.toLocaleString(LOC(), {maximumFractionDigits: 2}) + '%' : v.toLocaleString(LOC());
+const MONTHS_PT = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+const MONTHS_EN = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const fmtDate = d => { const p = new Date(d + 'T12:00:00Z'); return (EN() ? MONTHS_EN : MONTHS_PT)[p.getUTCMonth()] + '/' + String(p.getUTCFullYear()).slice(2); };
 const ts = d => new Date(d + 'T12:00:00Z').getTime();
 
 function dateTicks(svg, series, x) {
@@ -104,7 +108,7 @@ function cardEl(card) {
   const box = node('article', null, 'mkt gov' + (card.status === 'cached' ? ' stale' : ''));
   const top = node('div', null, 'mkt-top');
   const left = node('div');
-  left.append(node('div', card.title, 'mkt-name'), node('div', card.note || '', 'mkt-board'));
+  left.append(node('div', (EN() && card.titleEn) || card.title, 'mkt-name'), node('div', (EN() && card.noteEn) || card.note || '', 'mkt-board'));
   const right = node('div', null, 'mkt-last');
   let last = null, lastDate = null;
   if (card.series?.length) { last = card.series.at(-1).value; lastDate = card.series.at(-1).date; }
@@ -112,15 +116,15 @@ function cardEl(card) {
     const l0 = card.lines[0].series.at(-1);
     last = l0.value; lastDate = l0.date;
   }
-  right.append(node('strong', last != null ? fmtV(last, card.unit) : 'Indisponível'),
-               node('small', (lastDate ? 'ref. ' + fmtDate(lastDate) : '') + (card.source ? ' · ' + card.source : '') + (card.status === 'cached' ? ' · cache' : '')));
+  right.append(node('strong', last != null ? fmtV(last, card.unit) : pick('Indisponível','Unavailable')),
+               node('small', (lastDate ? 'ref. ' + fmtDate(lastDate) : '') + (card.source ? ' · ' + card.source : '') + (card.status === 'cached' ? pick(' · cache',' · cached') : '')));
   top.append(left, right);
   box.append(top);
   if (card.mode === 'multi' && card.lines?.length) {
     const legend = node('div', null, 'gov-legend');
     for (const [i, l] of card.lines.entries()) {
       const item = node('span', null, 'lg');
-      item.append(node('i', null, i ? 'sw s2' : 'sw s1'), document.createTextNode(`${l.label} · ${fmtV(l.series.at(-1).value, card.unit)}`));
+      item.append(node('i', null, i ? 'sw s2' : 'sw s1'), document.createTextNode(`${(EN() && l.labelEn) || l.label} · ${fmtV(l.series.at(-1).value, card.unit)}`));
       legend.append(item);
     }
     box.append(legend);
@@ -133,19 +137,28 @@ function cardEl(card) {
   return box;
 }
 
-async function load() {
-  const response = await fetch('governo.json', {cache: 'no-store'});
-  if (!response.ok) throw Error('HTTP ' + response.status);
-  const data = await response.json();
+let panelData = null;
+function setUpdated(data) {
   const updated = new Date(data.updatedAt);
-  $('#updated').textContent = `Atualizado ${updated.toLocaleDateString('pt-BR', {day: '2-digit', month: 'short', timeZone: 'America/Sao_Paulo'})} às ${updated.toLocaleTimeString('pt-BR', {hour: '2-digit', minute: '2-digit', timeZone: 'America/Sao_Paulo'})} · fontes oficiais`;
+  $('#updated').textContent = `${pick('Atualizado','Updated')} ${updated.toLocaleDateString(LOC(), {day: '2-digit', month: 'short', timeZone: 'America/Sao_Paulo'})} ${pick('às','at')} ${updated.toLocaleTimeString(LOC(), {hour: '2-digit', minute: '2-digit', timeZone: 'America/Sao_Paulo'})} · ${pick('fontes oficiais','official sources')}`;
+}
+function render(data) {
+  setUpdated(data);
+  $('#tesouro').replaceChildren(); $('#charts').replaceChildren();
   for (const t of data.tesouro || []) {
     const chip = node('span', null, 'tchip');
-    chip.append(node('small', t.label), node('b', t.value), node('em', t.hint));
+    chip.append(node('small', (EN() && t.labelEn) || t.label), node('b', t.value), node('em', (EN() && t.hintEn) || t.hint));
     $('#tesouro').append(chip);
   }
   const charts = data.charts || [];
-  if (!charts.length) { $('#charts').append(node('p', 'Painel temporariamente indisponível.', 'charts-empty')); return; }
+  if (!charts.length) { $('#charts').append(node('p', pick('Painel temporariamente indisponível.','Panel temporarily unavailable.'), 'charts-empty')); return; }
   for (const card of charts) $('#charts').append(cardEl(card));
 }
-load().catch(() => { $('#updated').textContent = 'Não foi possível carregar o painel.'; });
+async function load() {
+  const response = await fetch('governo.json', {cache: 'no-store'});
+  if (!response.ok) throw Error('HTTP ' + response.status);
+  panelData = await response.json();
+  render(panelData);
+}
+load().catch(() => { $('#updated').textContent = pick('Não foi possível carregar o painel.','Could not load the panel.'); });
+window.addEventListener('mer-lang', () => { setToday(); if (panelData) render(panelData); });

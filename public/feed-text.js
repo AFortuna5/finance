@@ -20,7 +20,7 @@ export function cleanFeedText(value = '') {
 
 export function cleanArticle(article) {
   const result = { ...article };
-  for (const key of ['title', 'titleOriginal', 'description', 'summary', 'context', 'question']) {
+  for (const key of ['title', 'titleOriginal', 'description', 'summary', 'context', 'question', 'contextEn', 'questionEn', 'topicEn']) {
     if (typeof result[key] === 'string') result[key] = cleanFeedText(result[key]);
   }
   return result;

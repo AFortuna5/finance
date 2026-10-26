@@ -42,46 +42,58 @@ ITEMS_PER_FEED = 12
 PER_CATEGORY_CAP = 10
 TOTAL_CAP = 40
 CALENDAR_SOURCES = [
-    {'name': 'IBGE · inflação e atividade', 'url': 'https://www.ibge.gov.br/calendario-de-divulgacao.html'},
-    {'name': 'Banco Central · Copom', 'url': 'https://www.bcb.gov.br/controleinflacao/calendariocopom'},
-    {'name': 'Federal Reserve · FOMC', 'url': 'https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm'},
-    {'name': 'BLS · inflação e emprego nos EUA', 'url': 'https://www.bls.gov/schedule/'},
+    {'name': 'IBGE · inflação e atividade', 'nameEn': 'IBGE · inflation and activity', 'url': 'https://www.ibge.gov.br/calendario-de-divulgacao.html'},
+    {'name': 'Banco Central · Copom', 'nameEn': 'Central Bank · Copom', 'url': 'https://www.bcb.gov.br/controleinflacao/calendariocopom'},
+    {'name': 'Federal Reserve · FOMC', 'nameEn': 'Federal Reserve · FOMC', 'url': 'https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm'},
+    {'name': 'BLS · inflação e emprego nos EUA', 'nameEn': 'BLS · US inflation and jobs', 'url': 'https://www.bls.gov/schedule/'},
 ]
 TOPICS = [
-    {'name': 'Eleições e política', 'pattern': r'eleiç|eleitor|presidente|campanha|debate|pesquisa|votaç|mandato|congresso|senado|câmara|supremo|\bstf\b|election|vote|ballot|trump|\bgop\b|democrat|midterm|congress',
+    {'name': 'Eleições e política', 'nameEn': 'Elections and politics', 'pattern': r'eleiç|eleitor|presidente|campanha|debate|pesquisa|votaç|mandato|congresso|senado|câmara|supremo|\bstf\b|election|vote|ballot|trump|\bgop\b|democrat|midterm|congress',
      'context': 'Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.',
-     'question': 'O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?'},
-    {'name': 'Juros e inflação', 'pattern': r'interest rate|inflation|central bank|federal reserve|\bfed\b|\bjuros\b|infla|selic|copom|\bcpi\b|\bipca\b',
+     'question': 'O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?',
+     'contextEn': 'Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.',
+     'questionEn': 'What was already priced in and what does this story change in the electoral landscape or the government agenda?'},
+    {'name': 'Juros e inflação', 'nameEn': 'Rates and inflation', 'pattern': r'interest rate|inflation|central bank|federal reserve|\bfed\b|\bjuros\b|infla|selic|copom|\bcpi\b|\bipca\b',
      'context': 'Juros alteram o custo do crédito e a taxa usada para avaliar investimentos. Inflação e expectativas influenciam decisões dos bancos centrais; a reação dos ativos depende do que já estava nos preços.',
-     'question': 'O dado mudou a expectativa para os próximos juros ou apenas confirmou o esperado?'},
-    {'name': 'Energia e commodities', 'pattern': r'\boil\b|brent|energy|gas |petrol|energia|commodit|\bgold\b|\bouro\b|petróleo|minério|soja\b',
+     'question': 'O dado mudou a expectativa para os próximos juros ou apenas confirmou o esperado?',
+     'contextEn': 'Rates change the cost of credit and the discount rate used to value investments. Inflation and expectations steer central banks; asset reactions depend on what was already priced in.',
+     'questionEn': 'Did the data shift expectations for the next rates or merely confirm what was expected?'},
+    {'name': 'Energia e commodities', 'nameEn': 'Energy and commodities', 'pattern': r'\boil\b|brent|energy|gas |petrol|energia|commodit|\bgold\b|\bouro\b|petróleo|minério|soja\b',
      'context': 'Energia e matérias-primas entram nos custos de transporte e produção. Choques de oferta podem afetar a inflação e a renda de países exportadores e importadores de maneiras diferentes.',
-     'question': 'A mudança vem da oferta, da demanda ou do risco de interrupção?'},
-    {'name': 'Comércio e geopolítica', 'pattern': r'tariff|trade|sanction|war\b|ukrain|russia|iran|china|guerra|comércio|tarifa|sanções',
+     'question': 'A mudança vem da oferta, da demanda ou do risco de interrupção?',
+     'contextEn': 'Energy and raw materials feed into transport and production costs. Supply shocks can affect inflation and the income of exporters and importers in different ways.',
+     'questionEn': 'Does the move come from supply, demand or disruption risk?'},
+    {'name': 'Comércio e geopolítica', 'nameEn': 'Trade and geopolitics', 'pattern': r'tariff|trade|sanction|war\b|ukrain|russia|iran|china|guerra|comércio|tarifa|sanções',
      'context': 'Conflitos e barreiras comerciais podem alterar cadeias de suprimentos, fretes e fluxos de capital. Um risco político só se traduz em efeito econômico conforme sua duração, escala e exposição dos países.',
-     'question': 'Qual é o canal econômico concreto: energia, comércio, moeda ou financiamento?'},
-    {'name': 'Fiscal e atividade', 'pattern': r'budget|debt|fiscal|gdp|growth|tax|econom|orçamento|dívida|arrecada|pib|emprego|jobs|unemployment',
+     'question': 'Qual é o canal econômico concreto: energia, comércio, moeda ou financiamento?',
+     'contextEn': 'Conflicts and trade barriers can alter supply chains, freight and capital flows. A political risk only becomes an economic effect through its duration, scale and exposure.',
+     'questionEn': 'What is the concrete economic channel: energy, trade, currency or financing?'},
+    {'name': 'Fiscal e atividade', 'nameEn': 'Fiscal and activity', 'pattern': r'budget|debt|fiscal|gdp|growth|tax|econom|orçamento|dívida|arrecada|pib|emprego|jobs|unemployment',
      'context': 'Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.',
-     'question': 'O movimento é pontual ou aparece em uma série de dados comparáveis?'},
-    {'name': 'Empresas e mercados', 'pattern': r'earnings|stock|market|bank|merger|tesla|bolsa|empresa|banco|lucro|finance|crédito|ibovespa|ações|investidor',
+     'question': 'O movimento é pontual ou aparece em uma série de dados comparáveis?',
+     'contextEn': 'Activity and public accounts influence tax revenue, credit demand and risk perception. Compare real and nominal values, the reference period and revisions before calling a trend.',
+     'questionEn': 'Is the move a one-off or does it show up in a comparable data series?'},
+    {'name': 'Empresas e mercados', 'nameEn': 'Companies and markets', 'pattern': r'earnings|stock|market|bank|merger|tesla|bolsa|empresa|banco|lucro|finance|crédito|ibovespa|ações|investidor',
      'context': 'Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.',
-     'question': 'O que mudou nos resultados ou nas expectativas, e em qual horizonte?'},
+     'question': 'O que mudou nos resultados ou nas expectativas, e em qual horizonte?',
+     'contextEn': 'Earnings, funding conditions and expectations change how companies are valued. A stock rising does not prove structural improvement; check the headline against profits, debt and cash generation.',
+     'questionEn': 'What changed in results or expectations, and over which horizon?'},
 ]
 SERIES = [
-    ('Selic meta', 432, '% a.a.'),
-    ('Dólar PTAX · venda', 1, 'R$ / US$'),
-    ('IPCA · mensal', 433, '% no mês'),
-    ('IPCA · 12 meses', 13522, '% em 12 meses'),
+    ('Selic meta', 432, '% a.a.', 'Selic target'),
+    ('Dólar PTAX · venda', 1, 'R$ / US$', 'PTAX dollar · ask'),
+    ('IPCA · mensal', 433, '% no mês', 'IPCA · monthly'),
+    ('IPCA · 12 meses', 13522, '% em 12 meses', 'IPCA · 12 months'),
 ]
 MARKET_ASSETS = [
-    ('^BVSP', 'Ibovespa', 'pts', 'B3 · Brasil'),
-    ('BRL=X', 'Dólar comercial', 'R$', 'Câmbio · Brasil'),
-    ('EURBRL=X', 'Euro', 'R$', 'Câmbio · Brasil'),
-    ('^GSPC', 'S&P 500', 'pts', 'Wall Street · EUA'),
-    ('^IXIC', 'Nasdaq', 'pts', 'Tecnologia · EUA'),
-    ('BTC-USD', 'Bitcoin', 'US$', 'Cripto · global'),
-    ('GC=F', 'Ouro', 'US$/oz', 'Commodity · global'),
-    ('CL=F', 'Petróleo WTI', 'US$/barril', 'Commodity · global'),
+    ('^BVSP', 'Ibovespa', 'pts', 'B3 · Brasil', 'Ibovespa', 'B3 · Brazil'),
+    ('BRL=X', 'Dólar comercial', 'R$', 'Câmbio · Brasil', 'US dollar', 'FX · Brazil'),
+    ('EURBRL=X', 'Euro', 'R$', 'Câmbio · Brasil', 'Euro', 'FX · Brazil'),
+    ('^GSPC', 'S&P 500', 'pts', 'Wall Street · EUA', 'S&P 500', 'Wall Street · US'),
+    ('^IXIC', 'Nasdaq', 'pts', 'Tecnologia · EUA', 'Nasdaq', 'Tech · US'),
+    ('BTC-USD', 'Bitcoin', 'US$', 'Cripto · global', 'Bitcoin', 'Crypto · global'),
+    ('GC=F', 'Ouro', 'US$/oz', 'Commodity · global', 'Gold', 'Commodity · global'),
+    ('CL=F', 'Petróleo WTI', 'US$/barril', 'Commodity · global', 'WTI oil', 'Commodity · global'),
 ]
 # symbol -> (mercado no scanner TradingView, ticker)
 TV_SYMBOLS = {
@@ -98,29 +110,29 @@ TV_COLUMNS = ['Recommend.All', 'Recommend.MA', 'Recommend.Other', 'RSI', 'EMA50'
 FOCUS_INDICATORS = ['Câmbio', 'Selic', 'IPCA', 'PIB Total']
 # Painel do governo: séries mensais do SGS. (id, título, unidade, nota, modo)
 GOV_CHARTS = [
-    ('selic', 'Taxa Selic', '% a.a.', 'Juros básicos definidos pelo Copom — o preço do dinheiro no Brasil.', 'line', 432, 400),
-    ('ipca12', 'IPCA · 12 meses', '%', 'Inflação oficial acumulada — a meta do regime é ~3% com banda de 1,5 p.p.', 'line', 13522, 72),
-    ('ipca', 'IPCA · no mês', '%', 'Variação mensal da inflação oficial (IBGE).', 'bars', 433, 36),
-    ('divida', 'Dívida pública', '% do PIB', 'Dívida bruta e líquida — quanto o Estado deve em relação ao tamanho da economia.', 'multi', None, None),
-    ('desemprego', 'Desemprego', '%', 'Taxa de desocupação da PNAD Contínua (IBGE).', 'line', 24369, 48),
+    ('selic', 'Taxa Selic', '% a.a.', 'Juros básicos definidos pelo Copom — o preço do dinheiro no Brasil.', 'line', 432, 400, 'Selic rate', 'Base rate set by the Copom — the price of money in Brazil.'),
+    ('ipca12', 'IPCA · 12 meses', '%', 'Inflação oficial acumulada — a meta do regime é ~3% com banda de 1,5 p.p.', 'line', 13522, 72, 'IPCA · 12 months', 'Official inflation accumulated — the regime target is ~3% with a 1.5 p.p. band.'),
+    ('ipca', 'IPCA · no mês', '%', 'Variação mensal da inflação oficial (IBGE).', 'bars', 433, 36, 'IPCA · monthly', 'Monthly change in official inflation (IBGE).'),
+    ('divida', 'Dívida pública', '% do PIB', 'Dívida bruta e líquida — quanto o Estado deve em relação ao tamanho da economia.', 'multi', None, None, 'Public debt', 'Gross and net debt — how much the State owes relative to the size of the economy.'),
+    ('desemprego', 'Desemprego', '%', 'Taxa de desocupação da PNAD Contínua (IBGE).', 'line', 24369, 48, 'Unemployment', 'Jobless rate from the PNAD Contínua survey (IBGE).'),
 ]
-GOV_DIVIDA_SERIES = [('bruta', 'Dívida bruta (governo geral)', 13762), ('liquida', 'Dívida líquida (setor público)', 4503)]
+GOV_DIVIDA_SERIES = [('bruta', 'Dívida bruta (governo geral)', 13762, 'Gross debt (general government)'), ('liquida', 'Dívida líquida (setor público)', 4503, 'Net debt (public sector)')]
 # Fallback SIDRA (IBGE) quando o SGS está instável: card -> (tabela, variável)
 GOV_SIDRA = {'ipca': (1737, 63), 'ipca12': (1737, 2265), 'desemprego': (6381, 4099)}
 # Última via: IPEA/Ipeadata (espelha séries do BCB). card -> (código, nota, unidade de substituição)
 # A série de Selic do IPEA é mensal em % a.m. — quando usada, a unidade do card muda para refletir isso.
 GOV_IPEA = {
-    'selic': ('BM12_TJOVER12', 'Selic acumulada no mês — variação mensal da taxa básica de juros (série IPEA/BCB).', '% a.m.'),
-    'divida': ('PAN12_DTSPY12', 'Dívida líquida do setor público (% do PIB) — série mensal do IPEA (fonte BCB).', None),
+    'selic': ('BM12_TJOVER12', 'Selic acumulada no mês — variação mensal da taxa básica de juros (série IPEA/BCB).', '% a.m.', 'Selic accumulated in the month — monthly change of the base rate (IPEA/CB series).'),
+    'divida': ('PAN12_DTSPY12', 'Dívida líquida do setor público (% do PIB) — série mensal do IPEA (fonte BCB).', None, 'Net public-sector debt (% of GDP) — monthly IPEA series (CB source).'),
 }
 TESOURO_ENDPOINTS = [
-    ('resultado_primario', 'Resultado primário acumulado', 'Governo gasta acima do que arrecada quando negativo'),
-    ('receita_primaria_liquida', 'Receita primária líquida', 'O que entra no caixa, sem juros'),
-    ('despesa_primaria_total', 'Despesa primária total', 'O que sai do caixa, sem juros'),
+    ('resultado_primario', 'Resultado primário acumulado', 'Governo gasta acima do que arrecada quando negativo', 'Accumulated primary result', 'The government spends above revenue when negative'),
+    ('receita_primaria_liquida', 'Receita primária líquida', 'O que entra no caixa, sem juros', 'Net primary revenue', 'What flows into the till, before interest'),
+    ('despesa_primaria_total', 'Despesa primária total', 'O que sai do caixa, sem juros', 'Total primary spending', 'What flows out of the till, before interest'),
 ]
 ELECTION_MARKERS = [
-    {'date': '2026-10-04', 'label': '1º turno'},
-    {'date': '2026-10-25', 'label': '2º turno'},
+    {'date': '2026-10-04', 'label': '1º turno', 'labelEn': '1st round'},
+    {'date': '2026-10-25', 'label': '2º turno', 'labelEn': 'Runoff'},
 ]
 
 
@@ -310,7 +322,7 @@ def valid_observation(row, now):
 def indicators(previous):
     now = dt.datetime.now(dt.timezone.utc).timestamp()
     def fetch_series(series):
-        name, code, unit = series
+        name, code, unit, name_en = series
         url = f'https://api.bcb.gov.br/dados/serie/bcdata.sgs.{code}/dados/ultimos/10?formato=json'
         try:
             rows = json.loads(request(url, timeout=15).decode('utf-8'))
@@ -318,12 +330,12 @@ def indicators(previous):
             if not valid:
                 raise ValueError('Valor inválido')
             row = sorted(valid, key=lambda r: r['data'].split('/')[::-1])[-1]
-            return {'name': name, 'unit': unit, 'value': float(str(row['valor']).replace(',', '.')),
+            return {'name': name, 'nameEn': name_en, 'unit': unit, 'value': float(str(row['valor']).replace(',', '.')),
                     'referenceDate': row['data'], 'source': 'Banco Central · SGS', 'url': url,
                     'checkedAt': dt.datetime.now(dt.timezone.utc).isoformat(), 'status': 'ok'}
         except Exception:
             old = next((x for x in previous if x.get('name') == name and valid_observation({'data': x.get('referenceDate'), 'valor': x.get('value')}, now)), None)
-            return {**old, 'status': 'cached'} if old else {'name': name, 'unit': unit, 'status': 'unavailable', 'source': 'Banco Central · SGS', 'url': url}
+            return {**old, 'status': 'cached'} if old else {'name': name, 'nameEn': name_en, 'unit': unit, 'status': 'unavailable', 'source': 'Banco Central · SGS', 'url': url}
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         return list(pool.map(fetch_series, SERIES))
 
@@ -337,7 +349,7 @@ def change_since(series, boundary):
 
 
 def market_series(asset):
-    symbol, name, unit, board = asset
+    symbol, name, unit, board, name_en, board_en = asset
     url = f'https://query1.finance.yahoo.com/v8/finance/chart/{urllib.parse.quote(symbol, safe="")}?range=3mo&interval=1d'
     data = json.loads(request(url, timeout=15).decode('utf-8'))
     result = (data.get('chart', {}).get('result') or [None])[0]
@@ -353,7 +365,7 @@ def market_series(asset):
     series = [{'date': d, 'value': by_date[d]} for d in sorted(by_date)]
     if len(series) < 5:
         raise ValueError('Série insuficiente')
-    return {'symbol': symbol, 'name': name, 'unit': unit, 'board': board, 'series': series,
+    return {'symbol': symbol, 'name': name, 'nameEn': name_en, 'unit': unit, 'board': board, 'boardEn': board_en, 'series': series,
             'last': series[-1]['value'], 'lastDate': series[-1]['date'],
             'changeFirstRound': change_since(series, ELECTION_MARKERS[0]['date']),
             'changeSecondRound': change_since(series, ELECTION_MARKERS[1]['date']),
@@ -492,13 +504,13 @@ def ipeadata_series(code, count=72):
 def gov_panel():
     """Coleta as séries fiscais/macro para a página As contas do governo."""
     charts = []
-    for cid, title, unit, note, mode, code, count in GOV_CHARTS:
-        card = {'id': cid, 'title': title, 'unit': unit, 'note': note, 'mode': mode,
+    for cid, title, unit, note, mode, code, count, title_en, note_en in GOV_CHARTS:
+        card = {'id': cid, 'title': title, 'titleEn': title_en, 'unit': unit, 'note': note, 'noteEn': note_en, 'mode': mode,
                 'status': 'unavailable'}
         try:
             if mode == 'multi':
-                card['lines'] = [l for l in ({'key': k, 'label': lab, 'series': monthlyize(sgs_series(sid, 72))}
-                                             for k, lab, sid in GOV_DIVIDA_SERIES) if l['series']]
+                card['lines'] = [l for l in ({'key': k, 'label': lab, 'labelEn': lab_en, 'series': monthlyize(sgs_series(sid, 72))}
+                                             for k, lab, sid, lab_en in GOV_DIVIDA_SERIES) if l['series']]
                 if not card['lines']:
                     raise ValueError('sem dados')
             else:
@@ -522,9 +534,11 @@ def gov_panel():
                 series = ipeadata_series(ipea[0])
                 if series:
                     if mode == 'multi':
-                        card['lines'] = [{'key': 'liquida', 'label': 'Dívida líquida (setor público)', 'series': series}]
+                        card['lines'] = [{'key': 'liquida', 'label': 'Dívida líquida (setor público)', 'labelEn': 'Net debt (public sector)', 'series': series}]
                     else:
                         card['series'], card['note'] = series, ipea[1]
+                        if len(ipea) > 3:
+                            card['noteEn'] = ipea[3]
                         if ipea[2]:
                             card['unit'] = ipea[2]
                     card['source'], card['status'] = 'IPEA · Ipeadata', 'ok'
@@ -535,14 +549,14 @@ def gov_panel():
         charts.append(card)
         time.sleep(4)  # o SGS limita requisições rápidas em sequência
     tesouro = []
-    for endpoint, label, hint in TESOURO_ENDPOINTS:
+    for endpoint, label, hint, label_en, hint_en in TESOURO_ENDPOINTS:
         try:
             req = urllib.request.Request(f'https://grandesnumeros.tesouro.gov.br/{endpoint}',
                                          headers={'User-Agent': 'Meridiano/1.0'})
             data = json.loads(urllib.request.urlopen(req, timeout=20).read())
             value = data.get('num') or data.get('valor')
             if value:
-                tesouro.append({'label': label, 'value': value, 'hint': hint})
+                tesouro.append({'label': label, 'labelEn': label_en, 'value': value, 'hint': hint, 'hintEn': hint_en})
         except Exception:
             pass
     return {'updatedAt': dt.datetime.now(dt.timezone.utc).isoformat(), 'charts': charts,
@@ -562,7 +576,7 @@ def markets(previous, previous_focus):
         except Exception as error:
             old = next((a for a in previous if a.get('symbol') == asset[0] and len(a.get('series', [])) >= 5), None)
             print(f'Mercado indisponível: {asset[1]}: {type(error).__name__}')
-            return {**old, 'status': 'cached'} if old else {'symbol': asset[0], 'name': asset[1], 'unit': asset[2], 'board': asset[3], 'series': [], 'status': 'unavailable', 'source': 'Yahoo Finance'}
+            return {**old, 'status': 'cached'} if old else {'symbol': asset[0], 'name': asset[1], 'nameEn': asset[4], 'unit': asset[2], 'board': asset[3], 'boardEn': asset[5], 'series': [], 'status': 'unavailable', 'source': 'Yahoo Finance'}
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         assets = list(pool.map(fetch, MARKET_ASSETS))
     try:
@@ -641,7 +655,7 @@ def calendar(previous_events):
                     continue
                 at = f'{year_match[1]}-{month:02d}-{int(day_text):02d}'
                 if at >= today and dt.datetime.fromisoformat(at).timestamp() < now + 180 * 86400:
-                    events.append({'title': 'Decisão de juros · Federal Reserve', 'at': at, 'source': 'Federal Reserve', 'url': CALENDAR_SOURCES[2]['url'], 'kind': 'date'})
+                    events.append({'title': 'Decisão de juros · Federal Reserve', 'titleEn': 'Rate decision · Federal Reserve', 'at': at, 'source': 'Federal Reserve', 'url': CALENDAR_SOURCES[2]['url'], 'kind': 'date'})
     except Exception:
         warnings.append('Federal Reserve')
         events += [e for e in previous_events if e.get('source') == 'Federal Reserve' and event_ts(e['at']) > now]
@@ -683,6 +697,9 @@ def main():
         article['topic'] = topic['name']
         article['context'] = topic['context']
         article['question'] = topic['question']
+        article['topicEn'] = topic.get('nameEn')
+        article['contextEn'] = topic.get('contextEn')
+        article['questionEn'] = topic.get('questionEn')
         article['score'] = round(rank(article, now), 2)
     translated.sort(key=lambda a: a['publishedAt'], reverse=True)
     top, seen = [], set()

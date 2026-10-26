@@ -1,6 +1,8 @@
 const $ = s => document.querySelector(s);
+const LOC = () => window.merLocale ? window.merLocale() : 'pt-BR';
 try { if (localStorage.getItem('meridiano-theme') === 'dark') document.body.classList.add('dark'); } catch {}
-$('#today').textContent = new Date().toLocaleDateString('pt-BR',{day:'numeric',month:'long',year:'numeric',timeZone:'America/Sao_Paulo'}).toUpperCase();
+const setToday = () => { $('#today').textContent = new Date().toLocaleDateString(LOC(),{day:'numeric',month:'long',year:'numeric',timeZone:'America/Sao_Paulo'}).toUpperCase(); };
+setToday();
 $('#theme').onclick = () => { document.body.classList.toggle('dark'); try { localStorage.setItem('meridiano-theme', document.body.classList.contains('dark') ? 'dark' : 'light'); } catch {} };
 
 const SVGNS = 'http://www.w3.org/2000/svg';
@@ -18,15 +20,17 @@ const LINKS = {
   'CL=F': [['TradingView','https://br.tradingview.com/symbols/NYMEX-CL1!/'],['Investing.com','https://br.investing.com/commodities/crude-oil']],
 };
 const ABOUT = {
-  '^BVSP': 'O Ibovespa é o índice da B3 que reúne as ações mais negociadas do Brasil — Vale, Petrobras, bancos e companhia. Quando ele sobe, o mercado está pagando mais pelas maiores empresas do país.',
-  'BRL=X': 'O dólar comercial é o câmbio usado entre bancos e empresas — a referência de todos os outros preços em dólar. Ele pesa na inflação, em viagens, em importados e nas contas de quem exporta ou deve em moeda.',
-  'EURBRL=X': 'O euro em reais é a referência para quem se expõe à Europa — viagens, reservas e empresas que faturam em euros.',
-  '^GSPC': 'O S&P 500 reúne as 500 maiores empresas listadas nos EUA. É a régua mundial da bolsa — quando cai, o mundo inteiro reprecifica risco.',
-  '^IXIC': 'A Nasdaq é o índice concentrado em tecnologia — Apple, Microsoft, Nvidia. Por depender de crescimento futuro, reage forte a juros americanos.',
-  'BTC-USD': 'O bitcoin é um criptoativo negociado 24 horas por dia, sem banco central e com oferta limitada a 21 milhões. Trata-se como ativo de risco de alta volatilidade.',
-  'GC=F': 'O ouro é o metal usado há séculos como reserva de valor. Ganha atenção em crises, quando os juros reais caem ou quando o dólar enfraquece.',
-  'CL=F': 'O WTI é a referência de preço do barril nos EUA. Petróleo mais caro pressiona gasolina, transporte e inflação — e anima produtoras como a Petrobras.',
+  '^BVSP': ['O Ibovespa é o índice da B3 que reúne as ações mais negociadas do Brasil — Vale, Petrobras, bancos e companhia. Quando ele sobe, o mercado está pagando mais pelas maiores empresas do país.', 'The Ibovespa is the B3 index gathering Brazil’s most traded stocks — Vale, Petrobras, banks and company. When it rises, the market is paying more for the country’s largest companies.'],
+  'BRL=X': ['O dólar comercial é o câmbio usado entre bancos e empresas — a referência de todos os outros preços em dólar. Ele pesa na inflação, em viagens, em importados e nas contas de quem exporta ou deve em moeda.', 'The commercial dollar is the exchange rate used between banks and companies — the reference for every other dollar price. It weighs on inflation, travel, imports and the accounts of anyone who exports or owes in foreign currency.'],
+  'EURBRL=X': ['O euro em reais é a referência para quem se expõe à Europa — viagens, reservas e empresas que faturam em euros.', 'The euro in reais is the reference for anyone exposed to Europe — travel, reserves and companies that earn in euros.'],
+  '^GSPC': ['O S&P 500 reúne as 500 maiores empresas listadas nos EUA. É a régua mundial da bolsa — quando cai, o mundo inteiro reprecifica risco.', 'The S&P 500 gathers the 500 largest companies listed in the US. It is the world’s stock-market ruler — when it falls, the whole world reprices risk.'],
+  '^IXIC': ['A Nasdaq é o índice concentrado em tecnologia — Apple, Microsoft, Nvidia. Por depender de crescimento futuro, reage forte a juros americanos.', 'The Nasdaq is the tech-heavy index — Apple, Microsoft, Nvidia. Because it depends on future growth, it reacts strongly to US rates.'],
+  'BTC-USD': ['O bitcoin é um criptoativo negociado 24 horas por dia, sem banco central e com oferta limitada a 21 milhões. Trata-se como ativo de risco de alta volatilidade.', 'Bitcoin is a crypto asset traded 24 hours a day, with no central bank and supply capped at 21 million. Treat it as a highly volatile risk asset.'],
+  'GC=F': ['O ouro é o metal usado há séculos como reserva de valor. Ganha atenção em crises, quando os juros reais caem ou quando o dólar enfraquece.', 'Gold is the metal used for centuries as a store of value. It draws attention in crises, when real rates fall or when the dollar weakens.'],
+  'CL=F': ['O WTI é a referência de preço do barril nos EUA. Petróleo mais caro pressiona gasolina, transporte e inflação — e anima produtoras como a Petrobras.', 'WTI is the US barrel-price benchmark. Pricier oil pressures gasoline, transport and inflation — and cheers producers like Petrobras.'],
 };
+const about = sym => ABOUT[sym] ? pick(ABOUT[sym][0], ABOUT[sym][1]) : null;
+const FOCUS_EN = {'DÓLAR': 'USD', 'PIB': 'GDP'};
 const FOCUS_LABELS = {'Câmbio': ['DÓLAR', v => 'R$\u00a0' + v.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})],
   'Selic': ['SELIC', v => v.toLocaleString('pt-BR', {maximumFractionDigits: 2}) + '%'],
   'IPCA': ['IPCA', v => v.toLocaleString('pt-BR', {maximumFractionDigits: 2}) + '%'],
@@ -40,14 +44,14 @@ function el(tag, attrs, parent) {
 }
 function node(tag, text, className) { const e = document.createElement(tag); if (text != null) e.textContent = text; if (className) e.className = className; return e; }
 function fmt(value, unit) {
-  if (unit === 'pts') return Math.round(value).toLocaleString('pt-BR');
+  if (unit === 'pts') return Math.round(value).toLocaleString(LOC());
   if (unit === 'R$') return 'R$\u00a0' + value.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 3});
   if (unit.startsWith('US$')) return 'US$\u00a0' + (value >= 100 ? Math.round(value).toLocaleString('pt-BR') : value.toLocaleString('pt-BR', {maximumFractionDigits: 2}));
-  return value.toLocaleString('pt-BR');
+  return value.toLocaleString(LOC());
 }
-function pct(v) { return v == null ? '—' : (v > 0 ? '+' : '') + v.toLocaleString('pt-BR', {minimumFractionDigits: 1, maximumFractionDigits: 1}) + '%'; }
+function pct(v) { return v == null ? '—' : (v > 0 ? '+' : '') + v.toLocaleString(LOC(), {minimumFractionDigits: 1, maximumFractionDigits: 1}) + '%'; }
 const ts = d => new Date(d + 'T12:00:00Z').getTime();
-const fmtDate = d => new Date(d + 'T12:00:00Z').toLocaleDateString('pt-BR', {day: '2-digit', month: '2-digit', timeZone: 'UTC'});
+const fmtDate = d => new Date(d + 'T12:00:00Z').toLocaleDateString(LOC(), {day: '2-digit', month: '2-digit', timeZone: 'UTC'});
 
 function linearProjection(series, days = 7) {
   const tail = series.slice(-10);
@@ -77,7 +81,7 @@ function chart(asset, elections) {
   const x = t => PAD.l + (t - firstT) / (maxT - firstT) * (W - PAD.l - PAD.r);
   const y = v => PAD.t + (hi - v) / (hi - lo) * (H - PAD.t - PAD.b);
 
-  const svg = el('svg', {viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': `Gráfico de ${asset.name}`});
+  const svg = el('svg', {viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': `${pick('Gráfico de','Chart of')} ${(window.merLang && window.merLang() === 'en' && asset.nameEn) || asset.name}`});
   el('line', {class: 'grid', x1: PAD.l, x2: W - PAD.r, y1: y(hi - pad), y2: y(hi - pad)}, svg);
   el('line', {class: 'grid', x1: PAD.l, x2: W - PAD.r, y1: y(lo + pad), y2: y(lo + pad)}, svg);
   const hiLabel = el('text', {class: 'axis', x: PAD.l + 3, y: y(hi - pad) - 4}, svg); hiLabel.textContent = fmt(hi - pad, asset.unit);
@@ -88,7 +92,7 @@ function chart(asset, elections) {
     if (mt < firstT || mt > maxT) continue;
     el('line', {class: 'marker', x1: x(mt), x2: x(mt), y1: PAD.t - 8, y2: H - PAD.b}, svg);
     const label = el('text', {class: 'marker-label', x: Math.min(x(mt) + 4, W - 70), y: PAD.t - 12}, svg);
-    label.textContent = m.label;
+    label.textContent = (window.merLang && window.merLang() === 'en' && m.labelEn) || m.label;
   }
 
   const pts = series.map(p => `${x(ts(p.date))},${y(p.value)}`).join(' ');
@@ -99,7 +103,7 @@ function chart(asset, elections) {
 
   const projEnd = projection.at(-1);
   const projLabel = el('text', {class: 'proj-label', x: W - PAD.r, y: Math.max(PAD.t + 4, y(projEnd.v) - 8), 'text-anchor': 'end'}, svg);
-  projLabel.textContent = 'TENDÊNCIA →︎';
+  projLabel.textContent = pick('TENDÊNCIA →︎','TREND →︎');
 
   const firstLabel = el('text', {class: 'axis', x: PAD.l, y: H - 8}, svg); firstLabel.textContent = fmtDate(series[0].date);
   const lastLabel = el('text', {class: 'axis', x: Math.min(x(lastT), W - PAD.r - 22), y: H - 8, 'text-anchor': 'middle'}, svg); lastLabel.textContent = fmtDate(series.at(-1).date);
@@ -112,7 +116,7 @@ function delta(label, value) {
   return chip;
 }
 
-const ratingLabel = r => r >= .5 ? 'COMPRA FORTE' : r >= .1 ? 'COMPRA' : r > -.1 ? 'NEUTRO' : r > -.5 ? 'VENDA' : 'VENDA FORTE';
+const ratingLabel = r => r >= .5 ? pick('COMPRA FORTE','STRONG BUY') : r >= .1 ? pick('COMPRA','BUY') : r > -.1 ? 'NEUTRO' : r > -.5 ? pick('VENDA','SELL') : pick('VENDA FORTE','STRONG SELL');
 const ratingClass = r => r >= .1 ? 'sig-buy' : r > -.1 ? 'sig-neutral' : 'sig-sell';
 
 function signalBlock(asset) {
@@ -120,19 +124,19 @@ function signalBlock(asset) {
   if (!s || s.rating == null) return null;
   const box = node('div', null, 'mkt-sig');
   const head = node('div', null, 'sig-head');
-  head.append(node('span', 'TERMÔMETRO TÉCNICO · TRADINGVIEW' + (s.stale ? ' (ÚLTIMA LEITURA)' : '')),
+  head.append(node('span', pick('TERMÔMETRO TÉCNICO','TECHNICAL GAUGE') + ' · TRADINGVIEW' + (s.stale ? pick(' (ÚLTIMA LEITURA)',' (LAST READING)') : '')),
               node('b', ratingLabel(s.rating), ratingClass(s.rating)));
   const gauge = node('div', null, 'gauge');
   const tick = node('i');
   tick.style.left = Math.max(2, Math.min(98, (s.rating + 1) / 2 * 100)) + '%';
   gauge.append(tick);
   const parts = [];
-  if (s.rsi != null) parts.push('RSI ' + s.rsi.toLocaleString('pt-BR', {maximumFractionDigits: 0}) + (s.rsi >= 70 ? ' (sobrecomprado)' : s.rsi <= 30 ? ' (sobrevendido)' : ''));
+  if (s.rsi != null) parts.push('RSI ' + s.rsi.toLocaleString(LOC(), {maximumFractionDigits: 0}) + (s.rsi >= 70 ? pick(' (sobrecomprado)',' (overbought)') : s.rsi <= 30 ? pick(' (sobrevendido)',' (oversold)') : ''));
   if (s.ema200 != null && asset.last != null) {
     const diff = (asset.last / s.ema200 - 1) * 100;
-    parts.push(Math.abs(diff).toLocaleString('pt-BR', {maximumFractionDigits: 1}) + '% ' + (diff >= 0 ? 'acima' : 'abaixo') + ' da média de 200d');
+    parts.push(Math.abs(diff).toLocaleString(LOC(), {maximumFractionDigits: 1}) + '% ' + (diff >= 0 ? pick('acima','above') : pick('abaixo','below')) + pick(' da média de 200d',' the 200d average'));
   }
-  if (s.volatility != null && s.volatility < 8) parts.push('volatilidade ' + s.volatility.toLocaleString('pt-BR', {maximumFractionDigits: 1}) + '%/dia');
+  if (s.volatility != null && s.volatility < 8) parts.push(pick('volatilidade ','volatility ') + s.volatility.toLocaleString(LOC(), {maximumFractionDigits: 1}) + pick('%/dia','%/day'));
   box.append(head, gauge, node('div', parts.join(' · '), 'sig-sub'));
   return box;
 }
@@ -143,8 +147,8 @@ function statsBlock(asset) {
   const last = values.at(-1);
   const fromTop = (last / hi - 1) * 100;
   const box = node('div', null, 'mkt-stats');
-  box.append(node('span', 'MÍN ' + fmt(lo, asset.unit)), node('span', 'MÁX ' + fmt(hi, asset.unit)),
-             node('span', fromTop < -0.05 ? Math.abs(fromTop).toLocaleString('pt-BR', {maximumFractionDigits: 1}) + '% ABAIXO DO TOPO' : 'NO TOPO DO PERÍODO'));
+  box.append(node('span', pick('MÍN','MIN') + ' ' + fmt(lo, asset.unit)), node('span', pick('MÁX','MAX') + ' ' + fmt(hi, asset.unit)),
+             node('span', fromTop < -0.05 ? Math.abs(fromTop).toLocaleString(LOC(), {maximumFractionDigits: 1}) + pick('% ABAIXO DO TOPO','% BELOW PEAK') : pick('NO TOPO DO PERÍODO','AT PERIOD HIGH')));
   return box;
 }
 
@@ -152,7 +156,7 @@ function linksBlock(asset) {
   const links = LINKS[asset.symbol];
   if (!links) return null;
   const box = node('div', null, 'mkt-links');
-  box.append(node('span', 'ACOMPANHAR EM '));
+  box.append(node('span', pick('ACOMPANHAR EM ','FOLLOW ON ')));
   for (const [name, url] of links) {
     const a = node('a', name + ' ↗︎');
     a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer';
@@ -165,25 +169,27 @@ function card(asset, elections, focus) {
   const box = node('article', null, 'mkt' + (asset.status === 'cached' ? ' stale' : ''));
   const top = node('div', null, 'mkt-top');
   const left = node('div');
-  left.append(node('div', asset.name, 'mkt-name'), node('div', asset.board || '', 'mkt-board'));
+  const en = window.merLang && window.merLang() === 'en';
+  left.append(node('div', (en && asset.nameEn) || asset.name, 'mkt-name'), node('div', (en && asset.boardEn) || asset.board || '', 'mkt-board'));
   const right = node('div', null, 'mkt-last');
-  right.append(node('strong', asset.last != null ? fmt(asset.last, asset.unit) : 'Indisponível'), node('small', (asset.lastDate ? fmtDate(asset.lastDate) : '') + (asset.status === 'cached' ? ' · fonte indisponível' : '')));
+  right.append(node('strong', asset.last != null ? fmt(asset.last, asset.unit) : pick('Indisponível','Unavailable')), node('small', (asset.lastDate ? fmtDate(asset.lastDate) : '') + (asset.status === 'cached' ? pick(' · fonte indisponível',' · source unavailable') : '')));
   top.append(left, right);
   box.append(top);
   const deltas = node('div', null, 'mkt-deltas');
-  deltas.append(delta('1º TURNO', asset.changeFirstRound), delta('2º TURNO', asset.changeSecondRound), delta('30 DIAS', asset.change30d));
+  deltas.append(delta(pick('1º TURNO','1ST ROUND'), asset.changeFirstRound), delta(pick('2º TURNO','2ND ROUND'), asset.changeSecondRound), delta(pick('30 DIAS','30 DAYS'), asset.change30d));
   box.append(deltas);
   if (asset.series?.length >= 5) box.append(chart(asset, elections), statsBlock(asset));
-  if (ABOUT[asset.symbol]) box.append(node('p', ABOUT[asset.symbol], 'mkt-about'));
+  const ab = about(asset.symbol);
+  if (ab) box.append(node('p', ab, 'mkt-about'));
   const sig = signalBlock(asset);
   if (sig) box.append(sig);
   const fx = focus?.items?.find(i => i.indicator === 'Câmbio');
   if (asset.symbol === 'BRL=X' && fx) {
-    const note = node('p', `Consenso Focus (${fx.respondents || '~110'} instituições): dólar a ` +
-      'R$\u00a0' + fx.median.toLocaleString('pt-BR', {minimumFractionDigits: 2}) + ` no fim de ${fx.year} — mediana das projeções do Banco Central.`, 'mkt-focus-note');
+    const note = node('p', pick(`Consenso Focus (${fx.respondents || '~110'} instituições): dólar a `, `Focus consensus (${fx.respondents || '~110'} institutions): dollar at `) +
+      'R$\u00a0' + fx.median.toLocaleString('pt-BR', {minimumFractionDigits: 2}) + pick(` no fim de ${fx.year} — mediana das projeções do Banco Central.`, ` at end of ${fx.year} — median of Central Bank projections.`), 'mkt-focus-note');
     box.append(note);
   }
-  box.append(node('p', 'Traço vermelho: tendência linear dos últimos 10 fechamentos, por uma semana — ilustrativo.', 'mkt-note'));
+  box.append(node('p', pick('Traço vermelho: tendência linear dos últimos 10 fechamentos, por uma semana — ilustrativo.','Dashed red: linear trend of the last 10 closes, one week out — illustrative.'), 'mkt-note'));
   const links = linksBlock(asset);
   if (links) box.append(links);
   return box;
@@ -194,14 +200,15 @@ function focusStrip(focus) {
   if (!items.length) return;
   const strip = node('div', null, 'focus-strip');
   const head = node('div', null, 'focus-head');
-  head.append(node('span', 'CONSENSO FOCUS · BANCO CENTRAL'),
-              node('small', `mediana de ${items[0].respondents || '~110'} instituições · ${new Date(items[0].date + 'T12:00:00Z').toLocaleDateString('pt-BR', {timeZone: 'UTC'})}`));
+  head.append(node('span', pick('CONSENSO FOCUS · BANCO CENTRAL','FOCUS CONSENSUS · CENTRAL BANK')),
+              node('small', pick(`mediana de ${items[0].respondents || '~110'} instituições`,`median of ${items[0].respondents || '~110'} institutions`) + ` · ${new Date(items[0].date + 'T12:00:00Z').toLocaleDateString(LOC(), {timeZone: 'UTC'})}`));
   const chips = node('div', null, 'focus-chips');
   for (const item of items) {
     const conf = FOCUS_LABELS[item.indicator];
     if (!conf) continue;
     const chip = node('span', null, 'chip');
-    chip.append(node('span', `${conf[0]} ${item.year} `), node('b', conf[1](item.median)));
+    const en2 = window.merLang && window.merLang() === 'en';
+    chip.append(node('span', `${(en2 && FOCUS_EN[conf[0]]) || conf[0]} ${item.year} `), node('b', conf[1](item.median)));
     chips.append(chip);
   }
   const link = node('a', 'Focus · BCB ↗︎');
@@ -211,22 +218,29 @@ function focusStrip(focus) {
   $('#focus').append(strip);
 }
 
+let panelData = null;
 async function load() {
   const response = await fetch('markets.json', {cache: 'no-store'});
   if (!response.ok) throw Error('HTTP ' + response.status);
   const data = await response.json();
+  panelData = data;
+  render(data);
+}
+function render(data) {
+  $('#movers').replaceChildren(); $('#focus').replaceChildren(); $('#charts').replaceChildren();
   const assets = (data.assets || []).filter(a => a.series?.length);
   const updated = new Date(data.updatedAt);
-  $('#updated').textContent = `Cotações: ${updated.toLocaleDateString('pt-BR', {day: '2-digit', month: 'short', timeZone: 'America/Sao_Paulo'})} às ${updated.toLocaleTimeString('pt-BR', {hour: '2-digit', minute: '2-digit', timeZone: 'America/Sao_Paulo'})} (Brasília)`;
+  $('#updated').textContent = `${pick('Cotações: ','Quotes: ')}${updated.toLocaleDateString(LOC(), {day: '2-digit', month: 'short', timeZone: 'America/Sao_Paulo'})} ${pick('às','at')} ${updated.toLocaleTimeString(LOC(), {hour: '2-digit', minute: '2-digit', timeZone: 'America/Sao_Paulo'})} (Brasília)`;
   const movers = assets.filter(a => a.changeSecondRound != null).sort((a, b) => Math.abs(b.changeSecondRound) - Math.abs(a.changeSecondRound)).slice(0, 4);
   for (const a of movers) {
     const chip = node('span', null, 'chip');
-    chip.append(node('span', a.name + ' '), node('b', pct(a.changeSecondRound)));
+    chip.append(node('span', ((window.merLang && window.merLang() === 'en' && a.nameEn) || a.name) + ' '), node('b', pct(a.changeSecondRound)));
     $('#movers').append(chip);
   }
-  if (movers.length) $('#movers').prepend(node('span', 'desde o 2º turno ·', 'chip'));
+  if (movers.length) $('#movers').prepend(node('span', pick('desde o 2º turno ·','since the 2nd round ·'), 'chip'));
   focusStrip(data.focus);
-  if (!assets.length) { $('#charts').append(node('p', 'Painel temporariamente indisponível. Recarregue em instantes.', 'charts-empty')); return; }
+  if (!assets.length) { $('#charts').append(node('p', pick('Painel temporariamente indisponível. Recarregue em instantes.','Panel temporarily unavailable. Reload shortly.'), 'charts-empty')); return; }
   for (const asset of assets) $('#charts').append(card(asset, data.elections || [], data.focus));
 }
-load().catch(() => { $('#updated').textContent = 'Não foi possível carregar o painel.'; });
+load().catch(() => { $('#updated').textContent = pick('Não foi possível carregar o painel.','Could not load the panel.'); });
+window.addEventListener('mer-lang', () => { setToday(); if (panelData) render(panelData); });

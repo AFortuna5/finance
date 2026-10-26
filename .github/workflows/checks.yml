@@ -18,6 +18,8 @@ jobs:
       - run: node --check public/perfil.js
       - run: node --check public/gov.js
       - run: node --check public/feed-text.js
+      - run: node --check public/i18n.js
+      - run: node scripts/check-i18n.mjs
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
