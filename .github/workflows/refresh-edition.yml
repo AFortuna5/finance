@@ -24,8 +24,8 @@ jobs:
         run: python scripts/update_news.py
       - name: Publicar dados atualizados no repositório
         run: |
-          git config user.name 'meridiano-bot'
-          git config user.email 'meridiano-bot@users.noreply.github.com'
+          git config user.name 'Arthur Fortuna'
+          git config user.email '201008665+AFortuna5@users.noreply.github.com'
           git add public/news.json public/history.json public/editions public/markets.json
           git diff --cached --quiet || git commit -m 'Atualizar edição do Meridiano'
           git push
