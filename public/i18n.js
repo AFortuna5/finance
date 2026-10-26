@@ -26,6 +26,7 @@
     'tab.aria': {pt: 'Índice do Meridiano', en: 'Meridiano index'},
     'footer.motto': {pt: 'UM JORNAL PARA ENTENDER, ANTES DE DECIDIR.', en: 'A JOURNAL TO UNDERSTAND, BEFORE DECIDING.'},
     'footer.gh': {pt: 'Projeto no GitHub ↗︎', en: 'Project on GitHub ↗︎'},
+    'footer.rss': {pt: 'RSS ↗︎', en: 'RSS ↗︎'},
     'method.eyebrow': {pt: 'SOBRE ESTA EDIÇÃO', en: 'ABOUT THIS EDITION'},
     'method.panel': {pt: 'SOBRE ESTE PAINEL', en: 'ABOUT THIS PANEL'},
     'method.reading': {pt: 'SOBRE ESTA LEITURA', en: 'ABOUT THIS READING'},

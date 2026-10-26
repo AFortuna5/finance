@@ -755,7 +755,34 @@ def main():
     previous_history = json.loads(history_file.read_text(encoding='utf-8')) if history_file.exists() else []
     history = [{'id': edition_id, 'updatedAt': output['updatedAt']}] + [row for row in previous_history if row.get('id') != edition_id]
     history_file.write_text(json.dumps(history[:370], ensure_ascii=False, indent=2), encoding='utf-8')
+    write_rss(translated, output['updatedAt'], ROOT / 'public/feed.xml')
     print(f"{len(translated)} notícias; {output['translationFailures']} traduções indisponíveis; fontes falhas: {sorted(set(failures)) or 'nenhuma'}.")
+
+
+def write_rss(articles, updated_iso, feed_file):
+    esc = lambda s: html.escape(s or '', quote=True)
+    items = []
+    for a in articles[:20]:
+        try:
+            pub = email.utils.format_datetime(dt.datetime.fromisoformat(str(a.get('publishedAt', '')).replace('Z', '+00:00')))
+        except Exception:
+            pub = ''
+        items.append(
+            f'    <item><title>{esc(a.get("title"))}</title><link>{esc(a.get("url"))}</link>'
+            f'<guid isPermaLink="true">{esc(a.get("url"))}</guid>'
+            f'<description>{esc(a.get("summary"))}</description>'
+            f'<source>{esc(a.get("source"))}</source>'
+            + (f'<pubDate>{pub}</pubDate>' if pub else '') + '</item>')
+    last = email.utils.format_datetime(dt.datetime.fromisoformat(updated_iso.replace('Z', '+00:00')))
+    xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
+           '<rss version="2.0"><channel>'
+           '<title>Meridiano — edição do dia</title>'
+           '<link>https://meridiano-news.vercel.app/</link>'
+           '<description>Jornal sobre economia, mercados e geopolítica — atualizado a cada 15 minutos.</description>'
+           '<language>pt-br</language>'
+           f'<lastBuildDate>{last}</lastBuildDate>\n'
+           + '\n'.join(items) + '\n</channel></rss>\n')
+    feed_file.write_text(xml, encoding='utf-8')
 
 
 if __name__ == '__main__':
