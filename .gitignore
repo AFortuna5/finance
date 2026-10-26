@@ -28,3 +28,6 @@ __pycache__/
 # OS metadata
 .DS_Store
 Thumbs.db
+
+# Notas internas de continuidade entre sessões (locais, não publicar)
+CONTINUIDADE_*.md

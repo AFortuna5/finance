@@ -52,9 +52,8 @@ GitHub Actions (a cada 15 min)          Vercel
 2. O script coleta e grava `public/news.json`, `public/markets.json`,
    `public/governo.json`, `public/history.json` e `public/editions/<data>.json`
    (um snapshot por dia — o arquivo do jornal).
-3. Se algo mudou, o workflow comita como `Arthur Fortuna
-   <201008665+AFortuna5@users.noreply.github.com>` — e-mail que a Vercel
-   reconhece para liberar o deploy.
+3. Se algo mudou, o workflow comita e dá push — e a Vercel publica o novo
+   deploy automaticamente a cada push na `main`.
 4. A Vercel roda `node scripts/test-data.mjs` como etapa de build: se os dados
    estiverem corrompidos, o deploy falha em vez de publicar lixo.
 
@@ -118,7 +117,6 @@ scripts/
   check-i18n.mjs   garante que toda chave data-i18n existe no dicionário
   make-og-card.py  gera o og-image.png (1200×630)
 .github/workflows/ refresh-edition.yml (coleta 15min) + checks.yml (CI)
-CONTINUIDADE_*.md  diário de decisões e pendências entre sessões
 ```
 
 ## Desenvolvimento
@@ -133,8 +131,6 @@ python -m http.server -d public 8778
 
 ## Regras de integridade
 
-- Commits e deploys sempre assinados como Arthur Fortuna (e-mail noreply do
-  GitHub — corporativo é bloqueado pela Vercel).
 - Distinção obrigatória entre dado observado, indicador técnico, consenso de
   analistas e projeção ilustrativa — nada é vendido como previsão.
 - Sem chaves de API no código e sem dependência de serviço pago.
