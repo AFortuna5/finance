@@ -50,3 +50,14 @@
 .mkt.stale{opacity:.55}
 .charts-empty{grid-column:1/-1;padding:45px 0;color:var(--muted);line-height:1.8}
 @media(max-width:900px){.charts{grid-template-columns:1fr}}
+
+.chart-wrap{position:relative}
+.hover-catch{fill:transparent;cursor:crosshair}
+.crosshair{stroke:var(--muted);stroke-width:.7;stroke-dasharray:3 3}
+.hover-dot{fill:var(--paper);stroke:var(--green);stroke-width:2}
+.hover-dot-2{fill:var(--paper);stroke:var(--accent);stroke-width:2}
+.chart-tip{position:absolute;left:0;top:0;background:var(--ink);color:var(--paper);padding:6px 10px;font-size:10px;letter-spacing:.4px;line-height:1.5;pointer-events:none;opacity:0;transition:opacity .1s;z-index:6;white-space:nowrap}
+.chart-tip.on{opacity:1}
+.tip-row{display:flex;gap:12px;align-items:baseline}
+.tip-row small{color:var(--paper);opacity:.7;font-size:9px}
+.tip-row b{margin-left:auto;font-size:11px}

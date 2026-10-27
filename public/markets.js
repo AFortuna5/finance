@@ -69,6 +69,46 @@ function linearProjection(series, days = 7) {
   });
 }
 
+function withHover(svg, seriesList, x, y, fmtPoint) {
+  const wrap = node('div', null, 'chart-wrap');
+  const tip = node('div', null, 'chart-tip');
+  const t0 = seriesList[0].pts[0].t, t1 = seriesList[0].pts.at(-1).t;
+  const ch = el('line', {class: 'crosshair', x1: 0, x2: 0, y1: PAD.t - 6, y2: H - PAD.b, visibility: 'hidden'}, svg);
+  const dots = seriesList.map(s => el('circle', {class: s.dotClass || 'hover-dot', r: 4.5, visibility: 'hidden'}, svg));
+  const zone = el('rect', {class: 'hover-catch', x: PAD.l, y: 0, width: W - PAD.l - PAD.r, height: H}, svg);
+  const hide = () => { ch.setAttribute('visibility', 'hidden'); for (const d of dots) d.setAttribute('visibility', 'hidden'); tip.classList.remove('on'); };
+  const show = e => {
+    const r = svg.getBoundingClientRect();
+    const vx = (e.clientX - r.left) / r.width * W;
+    const t = t0 + Math.max(0, Math.min(1, (vx - PAD.l) / (W - PAD.l - PAD.r))) * (t1 - t0);
+    let cx = null, topY = null;
+    const rows = [];
+    for (const [i, s] of seriesList.entries()) {
+      let p = s.pts[0];
+      for (const q of s.pts) if (Math.abs(q.t - t) < Math.abs(p.t - t)) p = q;
+      const px = x(p.t), py = y(p.v);
+      if (cx === null) cx = px;
+      if (topY === null || py < topY) topY = py;
+      dots[i].setAttribute('cx', px); dots[i].setAttribute('cy', py); dots[i].removeAttribute('visibility');
+      const row = node('div', null, 'tip-row');
+      row.append(node('small', (s.name ? s.name + ' · ' : '') + p.label), node('b', fmtPoint(p.v)));
+      rows.push(row);
+    }
+    ch.setAttribute('x1', cx); ch.setAttribute('x2', cx); ch.removeAttribute('visibility');
+    tip.replaceChildren(...rows);
+    tip.style.left = (cx / W * 100) + '%';
+    tip.style.top = (topY / H * 100) + '%';
+    const tx = cx / W > 0.7 ? -92 : cx / W < 0.2 ? -8 : -50;
+    tip.style.transform = `translate(${tx}%,${topY / H < 0.3 ? 30 : -115}%)`;
+    tip.classList.add('on');
+  };
+  zone.addEventListener('pointermove', show);
+  zone.addEventListener('pointerdown', show);
+  svg.addEventListener('pointerleave', hide);
+  wrap.append(svg, tip);
+  return wrap;
+}
+
 function chart(asset, elections) {
   const series = asset.series;
   const projection = linearProjection(series);
@@ -107,7 +147,7 @@ function chart(asset, elections) {
 
   const firstLabel = el('text', {class: 'axis', x: PAD.l, y: H - 8}, svg); firstLabel.textContent = fmtDate(series[0].date);
   const lastLabel = el('text', {class: 'axis', x: Math.min(x(lastT), W - PAD.r - 22), y: H - 8, 'text-anchor': 'middle'}, svg); lastLabel.textContent = fmtDate(series.at(-1).date);
-  return svg;
+  return withHover(svg, [{pts: series.map(p => ({t: ts(p.date), v: p.value, label: fmtDate(p.date)}))}], x, y, v => fmt(v, asset.unit));
 }
 
 function delta(label, value) {
