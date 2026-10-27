@@ -88,7 +88,7 @@ fetchEdition('/api/news?history=1').catch(()=>fetchEdition('history.json')).then
 $('#hist-prev').onclick=()=>histGo(1);
 $('#hist-next').onclick=()=>histGo(-1);
 $('#history').onchange=async()=>{histNav();try{await loadEdition($('#history').value);}catch{$('#edition-note').textContent=pick('Não foi possível abrir esta edição. Tente novamente.','Could not open this edition. Try again.');}};
-const NEWSLETTER_URL = '';
+const NEWSLETTER_URL = 'https://3fcf0f19.sibforms.com/serve/MUIFALBTA_9SlhojWEr6aqNmKK2Z285VZqvvyEZ4yCNW-4alstWgqjGAoXf-pZz_0qBEwi8-pBB3DQy1TSdXcwH3IiuS0SsthYYsM4R0vUgPIBqAOVdEmk-9Eui4ntMfS8KbxDKIHuv-dBLh_wlgFBt1mutsDofdJ3kEWU_gkqsyuQfVeyTcO8uZse1mAuW_s91iXX0l4LzcH6i0tA==';
 const nlForm = $('#nl-form');
 if (nlForm) nlForm.addEventListener('submit', async e => {
   e.preventDefault();
@@ -98,7 +98,9 @@ if (nlForm) nlForm.addEventListener('submit', async e => {
   if (!NEWSLETTER_URL) { msg.textContent = pick('Inscrições por e-mail em breve.','Email subscriptions opening soon.'); return; }
   btn.disabled = true;
   try {
-    await fetch(NEWSLETTER_URL, {method: 'POST', mode: 'no-cors', body: new FormData(nlForm)});
+    const body = new URLSearchParams(new FormData(nlForm));
+    body.set('locale', EN() ? 'en' : 'pt');
+    await fetch(NEWSLETTER_URL, {method: 'POST', mode: 'no-cors', body});
     msg.textContent = pick('Inscrição recebida — confira seu e-mail para confirmar.','Subscription received — check your inbox to confirm.');
     nlForm.reset();
   } catch {
