@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meridiano — edição do dia</title>
+</head>
+<body style="margin:0;padding:0;background-color:#e7e9dc;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#e7e9dc;">
+<tr><td align="center" style="padding:24px 12px;">
+
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3f0e8;width:100%;max-width:600px;">
+
+  <tr><td style="padding:0;">
+    <img src="https://meridiano-news.vercel.app/logo-email.png" width="600" alt="Meridiano — edição do dia" style="display:block;width:100%;height:auto;border:0;">
+  </td></tr>
+
+  <tr><td style="padding:13px 36px;border-bottom:1px solid #cecfc2;font-family:Arial,Helvetica,sans-serif;font-size:10px;letter-spacing:2px;color:#5f665c;">
+    EDIÇÃO DE {{feed.date|time_parse "02/01/2006"}} · ATUALIZADO A CADA 15 MINUTOS NO SITE
+  </td></tr>
+
+  {% for item in params.items | slice:".10" %}
+  <tr><td style="padding:24px 36px;border-bottom:1px solid #cecfc2;">
+    <a href="{item.LINK}" style="font-family:Georgia,'Times New Roman',serif;font-size:21px;line-height:1.35;color:#202a25;text-decoration:none;">{item.TITLE}</a>
+    <div style="font-family:Arial,Helvetica,sans-serif;font-size:9px;letter-spacing:2px;color:#194c3c;padding-top:9px;font-weight:bold;">{item.SOURCE}</div>
+    <div style="font-family:Georgia,'Times New Roman',serif;font-size:14px;line-height:1.65;color:#5f665c;padding-top:10px;">{item.DESCRIPTION | safe}</div>
+    <div style="padding-top:12px;"><a href="{item.LINK}" style="font-family:Arial,Helvetica,sans-serif;font-size:10px;letter-spacing:1.8px;color:#194c3c;text-decoration:none;font-weight:bold;">LER NA FONTE&nbsp;&nbsp;→</a></div>
+  </td></tr>
+  {% endfor %}
+
+  <tr><td style="padding:28px 36px;text-align:center;border-top:3px double #202a25;">
+    <div style="font-family:Georgia,'Times New Roman',serif;font-size:18px;color:#202a25;letter-spacing:4px;">meridiano</div>
+    <div style="font-family:Arial,Helvetica,sans-serif;font-size:9px;letter-spacing:1.6px;color:#5f665c;padding-top:8px;">UM JORNAL PARA ENTENDER, ANTES DE DECIDIR.</div>
+    <div style="font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#5f665c;padding-top:14px;line-height:1.7;">
+      <a href="https://meridiano-news.vercel.app" style="color:#194c3c;text-decoration:none;font-weight:bold;">Ler a edição completa</a>
+      &nbsp;·&nbsp;<a href="https://meridiano-news.vercel.app/mercados.html" style="color:#194c3c;text-decoration:none;">Mercados</a>
+      &nbsp;·&nbsp;<a href="https://meridiano-news.vercel.app/governo.html" style="color:#194c3c;text-decoration:none;">Governo</a>
+      &nbsp;·&nbsp;<a href="https://meridiano-news.vercel.app/feed.xml" style="color:#194c3c;text-decoration:none;">RSS</a>
+    </div>
+  </td></tr>
+
+</table>
+
+</td></tr></table>
+</body>
+</html>
