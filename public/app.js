@@ -88,3 +88,22 @@ fetchEdition('/api/news?history=1').catch(()=>fetchEdition('history.json')).then
 $('#hist-prev').onclick=()=>histGo(1);
 $('#hist-next').onclick=()=>histGo(-1);
 $('#history').onchange=async()=>{histNav();try{await loadEdition($('#history').value);}catch{$('#edition-note').textContent=pick('Não foi possível abrir esta edição. Tente novamente.','Could not open this edition. Try again.');}};
+const NEWSLETTER_URL = '';
+const nlForm = $('#nl-form');
+if (nlForm) nlForm.addEventListener('submit', async e => {
+  e.preventDefault();
+  const msg = $('#nl-msg'), btn = nlForm.querySelector('button');
+  if (!$('#nl-email').value.trim()) return;
+  msg.className = '';
+  if (!NEWSLETTER_URL) { msg.textContent = pick('Inscrições por e-mail em breve.','Email subscriptions opening soon.'); return; }
+  btn.disabled = true;
+  try {
+    await fetch(NEWSLETTER_URL, {method: 'POST', mode: 'no-cors', body: new FormData(nlForm)});
+    msg.textContent = pick('Inscrição recebida — confira seu e-mail para confirmar.','Subscription received — check your inbox to confirm.');
+    nlForm.reset();
+  } catch {
+    msg.textContent = pick('Não foi possível enviar agora. Tente de novo.','Could not subscribe right now. Try again.');
+    msg.className = 'err';
+  }
+  btn.disabled = false;
+});
