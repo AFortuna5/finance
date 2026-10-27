@@ -144,6 +144,45 @@ function multiChart(card) {
   return withHover(svg, lines.map((l, i) => ({pts: l.series.map(p => ({t: ts(p.date), v: p.value, label: fmtDate(p.date)})), name: (EN() && l.labelEn) || l.label, dotClass: i ? 'hover-dot-2' : 'hover-dot'})), sc.x, sc.y, v => fmtV(v, card.unit));
 }
 
+const MONTH_MS = 2629800000;
+function trendOf(s) {
+  const k = Math.min(6, s.length);
+  if (k < 3) return null;
+  const tail = s.slice(-k);
+  const t0 = ts(tail[0].date);
+  const xs = tail.map(p => (ts(p.date) - t0) / MONTH_MS), ys = tail.map(p => p.value);
+  const mx = xs.reduce((a, b) => a + b, 0) / k, my = ys.reduce((a, b) => a + b, 0) / k;
+  let num = 0, den = 0;
+  for (let i = 0; i < k; i++) { num += (xs[i] - mx) * (ys[i] - my); den += (xs[i] - mx) ** 2; }
+  const slope = den ? num / den : 0;
+  const change = slope * xs.at(-1);
+  const range = Math.max(...ys) - Math.min(...ys);
+  const dir = range > 0 && Math.abs(change) / range > 0.5 ? Math.sign(change) : 0;
+  return {dir, change, span: Math.max(1, Math.round(xs.at(-1)))};
+}
+
+function trendBlock(card) {
+  const lists = card.mode === 'multi' && card.lines?.length
+    ? card.lines.map(l => ({name: (EN() && l.labelEn) || l.label, s: l.series}))
+    : card.series?.length ? [{s: card.series}] : [];
+  const rows = lists.map(x => ({name: x.name, t: trendOf(x.s)})).filter(x => x.t);
+  if (!rows.length) return null;
+  const box = node('div', null, 'trend');
+  box.append(node('span', pick('TENDÊNCIA','TREND'), 'trend-label'));
+  for (const r of rows) {
+    const dir = r.t.dir;
+    const arrow = dir > 0 ? '▲' : dir < 0 ? '▼' : '→';
+    const word = dir > 0 ? pick('EM ALTA','RISING') : dir < 0 ? pick('EM QUEDA','FALLING') : pick('SEM TENDÊNCIA CLARA','NO CLEAR TREND');
+    const mag = Math.abs(r.t.change).toLocaleString(LOC(), {maximumFractionDigits: 1});
+    const txt = dir === 0 ? word
+      : `${word} ${r.t.change > 0 ? '+' : '−'}${mag}${card.unit.startsWith('%') ? ' p.p.' : ''} ${pick('em','over')} ${r.t.span} ${pick('meses','months')}`;
+    const chip = node('span', null, 'trend-chip');
+    chip.append(node('b', arrow + ' '), document.createTextNode((r.name ? r.name + ': ' : '') + txt));
+    box.append(chip);
+  }
+  return box;
+}
+
 function cardEl(card) {
   const box = node('article', null, 'mkt gov' + (card.status === 'cached' ? ' stale' : ''));
   const top = node('div', null, 'mkt-top');
@@ -160,6 +199,8 @@ function cardEl(card) {
                node('small', (lastDate ? 'ref. ' + fmtDate(lastDate) : '') + (card.source ? ' · ' + card.source : '') + (card.status === 'cached' ? pick(' · cache',' · cached') : '')));
   top.append(left, right);
   box.append(top);
+  const tr = trendBlock(card);
+  if (tr) box.append(tr);
   if (card.mode === 'multi' && card.lines?.length) {
     const legend = node('div', null, 'gov-legend');
     for (const [i, l] of card.lines.entries()) {

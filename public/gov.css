@@ -16,3 +16,8 @@
 .mkt .bar.neg{fill:var(--accent);opacity:.75}
 .mkt .tick{stroke:var(--muted);stroke-width:.7;opacity:.6}
 @media(max-width:700px){.tchip{min-width:0;flex:1}}
+
+.trend{display:flex;flex-wrap:wrap;gap:5px 16px;align-items:baseline;margin:2px 0 10px}
+.trend-label{font-size:8px;letter-spacing:1.4px;color:var(--muted)}
+.trend-chip{font-size:10px;letter-spacing:.4px;color:var(--muted)}
+.trend-chip b{color:var(--ink);font-weight:700}
