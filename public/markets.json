@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T00:49:54.560052+00:00",
+  "updatedAt": "2026-10-31T06:52:03.841214+00:00",
   "elections": [
     {
       "date": "2026-10-04",
@@ -279,14 +279,14 @@
         },
         {
           "date": "2026-10-30",
-          "value": 167921.7969
+          "value": 167922.0
         }
       ],
-      "last": 167921.7969,
+      "last": 167922.0,
       "lastDate": "2026-10-30",
       "changeFirstRound": -12.59,
       "changeSecondRound": -18.12,
-      "change30d": -9.88,
+      "change30d": -10.3,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
@@ -577,7 +577,7 @@
       "lastDate": "2026-10-29",
       "changeFirstRound": 3.1,
       "changeSecondRound": 8.56,
-      "change30d": 3.97,
+      "change30d": 3.11,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
@@ -868,7 +868,7 @@
       "lastDate": "2026-10-29",
       "changeFirstRound": 2.51,
       "changeSecondRound": 8.73,
-      "change30d": 2.57,
+      "change30d": 2.45,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
@@ -1155,7 +1155,7 @@
       "lastDate": "2026-10-30",
       "changeFirstRound": -1.85,
       "changeSecondRound": -0.57,
-      "change30d": -0.93,
+      "change30d": -1.13,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
@@ -1435,14 +1435,14 @@
         },
         {
           "date": "2026-10-30",
-          "value": 25436.998
+          "value": 25437.0
         }
       ],
-      "last": 25436.998,
+      "last": 25437.0,
       "lastDate": "2026-10-30",
       "changeFirstRound": -6.45,
       "changeSecondRound": -2.0,
-      "change30d": -5.3,
+      "change30d": -5.34,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
@@ -1830,24 +1830,24 @@
         },
         {
           "date": "2026-10-30",
-          "value": 77349.9922
+          "value": 77302.3984
         }
       ],
-      "last": 77349.9922,
+      "last": 77302.3984,
       "lastDate": "2026-10-30",
-      "changeFirstRound": -9.83,
-      "changeSecondRound": -3.32,
-      "change30d": -8.84,
+      "changeFirstRound": -9.89,
+      "changeSecondRound": -3.38,
+      "change30d": -8.51,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
         "rating": -0.31212121212121213,
         "ratingMA": -0.5333333333333333,
         "ratingOsc": -0.09090909090909091,
-        "rsi": 35.091087132575794,
-        "ema50": 80378.5949615198,
-        "ema200": 76423.29387039196,
-        "volatility": 0.3256198705173974,
+        "rsi": 34.763072383068106,
+        "ema50": 80376.06398112765,
+        "ema200": 76422.65168133724,
+        "volatility": 0.6939288985696297,
         "source": "TradingView"
       }
     },
@@ -1859,10 +1859,6 @@
       "board": "Commodity · global",
       "boardEn": "Commodity · global",
       "series": [
-        {
-          "date": "2026-07-30",
-          "value": 4100.1001
-        },
         {
           "date": "2026-07-31",
           "value": 4107.0
@@ -2121,14 +2117,14 @@
         },
         {
           "date": "2026-10-30",
-          "value": 3884.8999
+          "value": 3898.8999
         }
       ],
-      "last": 3884.8999,
+      "last": 3898.8999,
       "lastDate": "2026-10-30",
-      "changeFirstRound": -6.66,
-      "changeSecondRound": -3.07,
-      "change30d": -7.21,
+      "changeFirstRound": -6.33,
+      "changeSecondRound": -2.72,
+      "change30d": -7.22,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
@@ -2150,10 +2146,6 @@
       "board": "Commodity · global",
       "boardEn": "Commodity · global",
       "series": [
-        {
-          "date": "2026-07-30",
-          "value": 83.59
-        },
         {
           "date": "2026-07-31",
           "value": 84.67
@@ -2412,14 +2404,14 @@
         },
         {
           "date": "2026-10-30",
-          "value": 102.95
+          "value": 104.12
         }
       ],
-      "last": 102.95,
+      "last": 104.12,
       "lastDate": "2026-10-30",
-      "changeFirstRound": 13.0,
-      "changeSecondRound": -0.31,
-      "change30d": 13.86,
+      "changeFirstRound": 14.28,
+      "changeSecondRound": 0.82,
+      "change30d": 12.11,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
