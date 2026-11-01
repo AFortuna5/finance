@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01T18:49:34.147551+00:00",
+  "updatedAt": "2026-11-01T22:40:31.114696+00:00",
   "elections": [
     {
       "date": "2026-10-04",
@@ -866,23 +866,27 @@
         {
           "date": "2026-10-29",
           "value": 6.0193
+        },
+        {
+          "date": "2026-11-01",
+          "value": 6.0131
         }
       ],
-      "last": 6.0193,
-      "lastDate": "2026-10-29",
-      "changeFirstRound": 2.51,
-      "changeSecondRound": 8.73,
-      "change30d": 2.45,
+      "last": 6.0131,
+      "lastDate": "2026-11-01",
+      "changeFirstRound": 2.4,
+      "changeSecondRound": 8.62,
+      "change30d": 2.35,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
-        "rating": 0.5292207792207793,
+        "rating": 0.30194805194805197,
         "ratingMA": 0.7857142857142857,
-        "ratingOsc": 0.2727272727272727,
-        "rsi": 66.90196263474559,
-        "ema50": 5.828486182898287,
-        "ema200": 5.942065568523562,
-        "volatility": 1.4393636847710334,
+        "ratingOsc": -0.18181818181818182,
+        "rsi": 61.5038624682825,
+        "ema50": 5.835733783568942,
+        "ema200": 5.94277436883676,
+        "volatility": 1.1857050205378066,
         "source": "TradingView"
       }
     },
@@ -1838,23 +1842,23 @@
         },
         {
           "date": "2026-10-31",
-          "value": 77815.2109
+          "value": 77669.9688
         }
       ],
-      "last": 77815.2109,
+      "last": 77669.9688,
       "lastDate": "2026-10-31",
-      "changeFirstRound": -9.29,
-      "changeSecondRound": -2.74,
-      "change30d": -8.2,
+      "changeFirstRound": -9.46,
+      "changeSecondRound": -2.92,
+      "change30d": -8.37,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
-        "rating": -0.08787878787878788,
-        "ratingMA": -0.26666666666666666,
+        "rating": -0.15454545454545454,
+        "ratingMA": -0.4,
         "ratingOsc": 0.09090909090909091,
-        "rsi": 37.54073803615938,
-        "ema50": 80281.67921908418,
-        "ema200": 76438.08743253406,
+        "rsi": 36.820167460310685,
+        "ema50": 80276.13921908419,
+        "ema200": 76436.68176089226,
         "volatility": 0.9770065917022147,
         "source": "TradingView"
       }
