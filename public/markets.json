@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-02T09:13:36.690113+00:00",
+  "updatedAt": "2026-11-02T19:36:11.613361+00:00",
   "elections": [
     {
       "date": "2026-10-04",
@@ -570,24 +570,24 @@
         },
         {
           "date": "2026-11-02",
-          "value": 5.4406
+          "value": 5.4373
         }
       ],
-      "last": 5.4406,
+      "last": 5.4373,
       "lastDate": "2026-11-02",
-      "changeFirstRound": 4.16,
-      "changeSecondRound": 9.69,
-      "change30d": 4.17,
+      "changeFirstRound": 4.1,
+      "changeSecondRound": 9.62,
+      "change30d": 4.11,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
         "rating": 0.48376623376623373,
         "ratingMA": 0.7857142857142857,
         "ratingOsc": 0.18181818181818182,
-        "rsi": 70.01948914055605,
-        "ema50": 5.1566921834883415,
-        "ema200": 5.173842003771282,
-        "volatility": 0.02206125675625745,
+        "rsi": 69.73461347846938,
+        "ema50": 5.156562771723635,
+        "ema200": 5.173809167950386,
+        "volatility": 0.06069188751770737,
         "source": "TradingView"
       }
     },
@@ -861,24 +861,24 @@
         },
         {
           "date": "2026-11-02",
-          "value": 6.1027
+          "value": 6.0893
         }
       ],
-      "last": 6.1027,
+      "last": 6.0893,
       "lastDate": "2026-11-02",
-      "changeFirstRound": 3.93,
-      "changeSecondRound": 10.24,
-      "change30d": 3.87,
+      "changeFirstRound": 3.7,
+      "changeSecondRound": 9.99,
+      "change30d": 3.64,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
         "rating": 0.48376623376623373,
         "ratingMA": 0.7857142857142857,
         "ratingOsc": 0.18181818181818182,
-        "rsi": 68.02376629519472,
-        "ema50": 5.8395926070983535,
-        "ema200": 5.943753473314373,
-        "volatility": 1.632992433690867,
+        "rsi": 67.14398202506948,
+        "ema50": 5.838722018863059,
+        "ema200": 5.943532577791984,
+        "volatility": 1.6546104597987996,
         "source": "TradingView"
       }
     },
@@ -890,10 +890,6 @@
       "board": "Wall Street · EUA",
       "boardEn": "Wall Street · US",
       "series": [
-        {
-          "date": "2026-07-31",
-          "value": 7489.7202
-        },
         {
           "date": "2026-08-03",
           "value": 7600.5
@@ -1149,23 +1145,27 @@
         {
           "date": "2026-10-30",
           "value": 7580.0698
+        },
+        {
+          "date": "2026-11-02",
+          "value": 7569.9702
         }
       ],
-      "last": 7580.0698,
-      "lastDate": "2026-10-30",
-      "changeFirstRound": -1.85,
-      "changeSecondRound": -0.57,
-      "change30d": -1.85,
+      "last": 7569.9702,
+      "lastDate": "2026-11-02",
+      "changeFirstRound": -1.98,
+      "changeSecondRound": -0.7,
+      "change30d": -1.98,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
-        "rating": -0.46969696969696967,
+        "rating": -0.3787878787878788,
         "ratingMA": -0.6666666666666666,
-        "ratingOsc": -0.2727272727272727,
-        "rsi": 40.10601971265794,
-        "ema50": 7682.751716759789,
-        "ema200": 7348.649034576863,
-        "volatility": 2.561653444143918,
+        "ratingOsc": -0.09090909090909091,
+        "rsi": 39.20765670727676,
+        "ema50": 7678.168512180973,
+        "ema200": 7350.810536720377,
+        "volatility": 1.2734804147039003,
         "source": "TradingView"
       }
     },
@@ -1177,10 +1177,6 @@
       "board": "Tecnologia · EUA",
       "boardEn": "Tech · US",
       "series": [
-        {
-          "date": "2026-07-31",
-          "value": 25373.8496
-        },
         {
           "date": "2026-08-03",
           "value": 25913.9004
@@ -1436,23 +1432,27 @@
         {
           "date": "2026-10-30",
           "value": 25437.0
+        },
+        {
+          "date": "2026-11-02",
+          "value": 25322.9922
         }
       ],
-      "last": 25437.0,
-      "lastDate": "2026-10-30",
-      "changeFirstRound": -6.45,
-      "changeSecondRound": -2.0,
-      "change30d": -6.45,
+      "last": 25322.9922,
+      "lastDate": "2026-11-02",
+      "changeFirstRound": -6.87,
+      "changeSecondRound": -2.44,
+      "change30d": -6.87,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
-        "rating": -0.5151515151515151,
+        "rating": -0.4242424242424242,
         "ratingMA": -0.6666666666666666,
-        "ratingOsc": -0.36363636363636365,
-        "rsi": 34.90002970097849,
-        "ema50": 29718.45219859319,
-        "ema200": 28153.12940569411,
-        "volatility": 4.660420681199342,
+        "ratingOsc": -0.18181818181818182,
+        "rsi": 33.54528841551806,
+        "ema50": 29659.15319080522,
+        "ema200": 28153.658739965813,
+        "volatility": 1.9416919929673326,
         "source": "TradingView"
       }
     },
@@ -1834,24 +1834,24 @@
         },
         {
           "date": "2026-11-01",
-          "value": 78209.1172
+          "value": 76764.8125
         }
       ],
-      "last": 78209.1172,
+      "last": 76764.8125,
       "lastDate": "2026-11-01",
-      "changeFirstRound": -8.83,
-      "changeSecondRound": -2.25,
-      "change30d": -9.56,
+      "changeFirstRound": -10.52,
+      "changeSecondRound": -4.05,
+      "change30d": -11.23,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
-        "rating": -0.08787878787878788,
-        "ratingMA": -0.26666666666666666,
-        "ratingOsc": 0.09090909090909091,
-        "rsi": 39.410594498517284,
-        "ema50": 80215.27198712315,
-        "ema200": 76459.62054234813,
-        "volatility": 1.241105670724601,
+        "rating": -0.2909090909090909,
+        "ratingMA": -0.4,
+        "ratingOsc": -0.18181818181818182,
+        "rsi": 35.23787383073214,
+        "ema50": 80159.75708516236,
+        "ema200": 76445.53467170136,
+        "volatility": 2.679603884189761,
         "source": "TradingView"
       }
     },
@@ -2121,24 +2121,24 @@
         },
         {
           "date": "2026-11-02",
-          "value": 3908.8999
+          "value": 3958.2
         }
       ],
-      "last": 3908.8999,
+      "last": 3958.2,
       "lastDate": "2026-11-02",
-      "changeFirstRound": -6.09,
-      "changeSecondRound": -2.47,
-      "change30d": -6.09,
+      "changeFirstRound": -4.9,
+      "changeSecondRound": -1.24,
+      "change30d": -4.9,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
-        "rating": -0.41883116883116883,
-        "ratingMA": -0.9285714285714286,
-        "ratingOsc": 0.09090909090909091,
-        "rsi": 32.33866898510776,
-        "ema50": 4172.577006770058,
-        "ema200": 4264.628765287763,
-        "volatility": 1.1615001419611284,
+        "rating": -0.39285714285714285,
+        "ratingMA": -0.7857142857142857,
+        "ratingOsc": 0,
+        "rsi": 36.83019666121188,
+        "ema50": 4174.305634221038,
+        "ema200": 4265.067372252937,
+        "volatility": 2.478899414087705,
         "source": "TradingView"
       }
     },
@@ -2408,24 +2408,24 @@
         },
         {
           "date": "2026-11-02",
-          "value": 99.88
+          "value": 96.53
         }
       ],
-      "last": 99.88,
+      "last": 96.53,
       "lastDate": "2026-11-02",
-      "changeFirstRound": 9.63,
-      "changeSecondRound": -3.28,
-      "change30d": 9.63,
+      "changeFirstRound": 5.95,
+      "changeSecondRound": -6.53,
+      "change30d": 5.95,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
-        "rating": 0.26666666666666666,
-        "ratingMA": 0.5333333333333333,
+        "rating": 0,
+        "ratingMA": 0,
         "ratingOsc": 0,
-        "rsi": 54.88157485613273,
-        "ema50": 94.48827768599772,
-        "ema200": 85.49481463078772,
-        "volatility": 4.328657314629266,
+        "rsi": 48.83282102456936,
+        "ema50": 94.35533650952713,
+        "ema200": 85.46108328750412,
+        "volatility": 9.427220178665264,
         "source": "TradingView"
       }
     }
