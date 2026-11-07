@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T20:56:57.298141+00:00",
+  "updatedAt": "2026-11-07T00:51:28.317111+00:00",
   "charts": [
     {
       "id": "selic",
@@ -1326,6 +1326,13 @@
     }
   ],
   "tesouro": [
+    {
+      "label": "Resultado primário acumulado",
+      "labelEn": "Accumulated primary result",
+      "value": "R$-81 bi",
+      "hint": "Governo gasta acima do que arrecada quando negativo",
+      "hintEn": "The government spends above revenue when negative"
+    },
     {
       "label": "Receita primária líquida",
       "labelEn": "Net primary revenue",
