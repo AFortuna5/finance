@@ -1,9 +1,124 @@
 {
-  "updatedAt": "2026-11-07T22:20:48.170150+00:00",
+  "updatedAt": "2026-11-08T01:44:29.158626+00:00",
   "editionId": "2026-11-07",
   "failedFeeds": [],
   "translationFailures": 0,
   "articles": [
+    {
+      "title": "Presidente de Israel indica rival de Netanyahu para formar governo",
+      "titleOriginal": "Presidente de Israel indica rival de Netanyahu para formar governo",
+      "url": "https://www.poder360.com.br/poder-internacional/presidente-de-israel-indica-rival-de-netanyahu-para-formar-governo/",
+      "category": "Eleições",
+      "source": "Poder360",
+      "publishedAt": "2026-11-08T01:37:20+00:00",
+      "language": "pt",
+      "description": "Gadi Eisenkot recebeu apoio de 67 parlamentares, mas enfrenta divergências na oposição para construir uma coalizão",
+      "translationStatus": "original",
+      "summary": "Gadi Eisenkot recebeu apoio de 67 parlamentares, mas enfrenta divergências na oposição para construir uma coalizão",
+      "topic": "Eleições e política",
+      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
+      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
+      "topicEn": "Elections and politics",
+      "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
+      "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
+      "score": 41.94
+    },
+    {
+      "title": "Ueno Bank patrocinou evento com Eduardo Bolsonaro nos EUA",
+      "titleOriginal": "Ueno Bank patrocinou evento com Eduardo Bolsonaro nos EUA",
+      "url": "https://www.poder360.com.br/poder-internacional/ueno-bank-patrocinou-evento-com-eduardo-bolsonaro-nos-eua/",
+      "category": "Eleições",
+      "source": "Poder360",
+      "publishedAt": "2026-11-07T23:48:13+00:00",
+      "language": "pt",
+      "description": "Banco foi um dos financiadores do Hispanic Prosperity Gala, realizado em fevereiro, em resort de Donald Trump na Flórida",
+      "translationStatus": "original",
+      "summary": "Banco foi um dos financiadores do Hispanic Prosperity Gala, realizado em fevereiro, em resort de Donald Trump na Flórida",
+      "topic": "Empresas e mercados",
+      "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
+      "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
+      "topicEn": "Companies and markets",
+      "contextEn": "Earnings, funding conditions and expectations change how companies are valued. A stock rising does not prove structural improvement; check the headline against profits, debt and cash generation.",
+      "questionEn": "What changed in results or expectations, and over which horizon?",
+      "score": 41.03
+    },
+    {
+      "title": "Trump oferece cargo de secretário de imprensa ao chefe do UFC, Dana White",
+      "titleOriginal": "Trump offers UFC chief Dana White press secretary job",
+      "url": "https://www.cnbc.com/2026/11/07/trump-ufc-dana-white-press-secretary-offer.html",
+      "category": "Mercados",
+      "source": "CNBC",
+      "publishedAt": "2026-11-07T23:13:38+00:00",
+      "language": "en",
+      "description": "President Donald Trump offered the job of press secretary to UFC president and CEO Dana White on Saturday.",
+      "summary": "O presidente Donald Trump ofereceu o cargo de secretário de imprensa ao presidente e CEO do UFC, Dana White, no sábado.",
+      "translationStatus": "translated",
+      "topic": "Eleições e política",
+      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
+      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
+      "topicEn": "Elections and politics",
+      "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
+      "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
+      "score": 40.74
+    },
+    {
+      "title": "Trump oferece cargo de porta-voz da Casa Branca ao presidente do UFC",
+      "titleOriginal": "Trump oferece cargo de porta-voz da Casa Branca ao presidente do UFC",
+      "url": "https://www.poder360.com.br/poder-internacional/trump-oferece-cargo-de-porta-voz-da-casa-branca-ao-presidente-do-ufc/",
+      "category": "Eleições",
+      "source": "Poder360",
+      "publishedAt": "2026-11-07T23:02:47+00:00",
+      "language": "pt",
+      "description": "Dana White sinalizou que aceitará o convite; republicano também citou lutadores para integrar a equipe",
+      "translationStatus": "original",
+      "summary": "Dana White sinalizou que aceitará o convite; republicano também citou lutadores para integrar a equipe",
+      "topic": "Eleições e política",
+      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
+      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
+      "topicEn": "Elections and politics",
+      "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
+      "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
+      "score": 40.65
+    },
+    {
+      "title": "O hype do Labubu parecia imparável, agora a mania do monstro fofo está morrendo",
+      "titleOriginal": "Labubu hype seemed unstoppable, now the fluffy monster mania is dying",
+      "url": "https://www.bbc.co.uk/news/articles/cmvg652l927lo",
+      "category": "Mundo",
+      "source": "BBC News",
+      "publishedAt": "2026-11-07T23:02:35+00:00",
+      "language": "en",
+      "description": "Parent company Pop Mart's revenue has fallen as appetite for the quirky collectible monsters wanes.",
+      "summary": "A receita da empresa-mãe Pop Mart caiu à medida que o apetite pelos monstros colecionáveis peculiares diminui.",
+      "translationStatus": "translated",
+      "translationProvider": "MyMemory",
+      "topic": "Fiscal e atividade",
+      "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
+      "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
+      "topicEn": "Fiscal and activity",
+      "contextEn": "Activity and public accounts influence tax revenue, credit demand and risk perception. Compare real and nominal values, the reference period and revisions before calling a trend.",
+      "questionEn": "Is the move a one-off or does it show up in a comparable data series?",
+      "score": 10.65
+    },
+    {
+      "title": "MP do Paraguai acusa Peña por caso envolvendo Ueno Bank",
+      "titleOriginal": "MP do Paraguai acusa Peña por caso envolvendo Ueno Bank",
+      "url": "https://www.poder360.com.br/poder-internacional/mp-do-paraguai-acusa-pena-por-caso-envolvendo-ueno-bank/",
+      "category": "Eleições",
+      "source": "Poder360",
+      "publishedAt": "2026-11-07T22:29:14+00:00",
+      "language": "pt",
+      "description": "Órgão também denuncia o ex-chefe do Banco Central e pede manutenção da prisão preventiva por suspeitas de irregularidades",
+      "translationStatus": "original",
+      "summary": "Órgão também denuncia o ex-chefe do Banco Central e pede manutenção da prisão preventiva por suspeitas de irregularidades",
+      "topic": "Empresas e mercados",
+      "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
+      "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
+      "topicEn": "Companies and markets",
+      "contextEn": "Earnings, funding conditions and expectations change how companies are valued. A stock rising does not prove structural improvement; check the headline against profits, debt and cash generation.",
+      "questionEn": "What changed in results or expectations, and over which horizon?",
+      "score": 40.37
+    },
     {
       "title": "O risco de escalada da guerra no Irão permanece elevado, apesar da vitória democrata nas eleições intercalares dos EUA",
       "titleOriginal": "Risk of Iran war escalation remains high despite Democratic sweep in U.S. midterm elections",
@@ -21,26 +136,7 @@
       "topicEn": "Elections and politics",
       "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
       "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
-      "score": 41.98
-    },
-    {
-      "title": "Trump oferece cargo de secretário de imprensa ao chefe do UFC, Dana White",
-      "titleOriginal": "Trump offers UFC chief Dana White press secretary job",
-      "url": "https://www.cnbc.com/2026/11/07/trump-ufc-dana-white-press-secretary-offer.html",
-      "category": "Mercados",
-      "source": "CNBC",
-      "publishedAt": "2026-11-07T22:03:06+00:00",
-      "language": "en",
-      "description": "President Donald Trump offered the job of press secretary to UFC president and CEO Dana White on Saturday.",
-      "summary": "O presidente Donald Trump ofereceu o cargo de secretário de imprensa ao presidente e CEO do UFC, Dana White, no sábado.",
-      "translationStatus": "translated",
-      "topic": "Eleições e política",
-      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
-      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "topicEn": "Elections and politics",
-      "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
-      "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
-      "score": 41.85
+      "score": 40.28
     },
     {
       "title": "Trump visa Slotkin em pedido de investigação do DOJ sobre supostas ameaças democratas aos republicanos",
@@ -59,7 +155,7 @@
       "topicEn": "Elections and politics",
       "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
       "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
-      "score": 41.82
+      "score": 40.12
     },
     {
       "title": "Veja o grid de largada do GP de SP: Norris na pole, Câmara em 11º e Bortoleto em 19º",
@@ -78,7 +174,7 @@
       "topicEn": "Elections and politics",
       "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
       "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
-      "score": 48.65
+      "score": 46.95
     },
     {
       "title": "Relações Exteriores do Paraguai diz que país “sai fortalecido” de crise do Ueno Bank",
@@ -97,26 +193,7 @@
       "topicEn": "Companies and markets",
       "contextEn": "Earnings, funding conditions and expectations change how companies are valued. A stock rising does not prove structural improvement; check the headline against profits, debt and cash generation.",
       "questionEn": "What changed in results or expectations, and over which horizon?",
-      "score": 48.53
-    },
-    {
-      "title": "AGU leva ao STF pedido de R$ 533 milhões extras para Judiciário e MP",
-      "titleOriginal": "AGU leva ao STF pedido de R$ 533 milhões extras para Judiciário e MP",
-      "url": "https://www.poder360.com.br/poder-justica/agu-leva-ao-stf-pedido-de-r-533-milhoes-extras-para-judiciario-e-mp/",
-      "category": "Eleições",
-      "source": "Poder360",
-      "publishedAt": "2026-11-07T20:45:05+00:00",
-      "language": "pt",
-      "description": "Conselho da Justiça Federal e Procuradoria Geral da República alegam falta de recursos para cumprir decisão do Supremo sobre benefícios remuneratórios",
-      "translationStatus": "original",
-      "summary": "Conselho da Justiça Federal e Procuradoria Geral da República alegam falta de recursos para cumprir decisão do Supremo sobre benefícios remuneratórios",
-      "topic": "Eleições e política",
-      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
-      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "topicEn": "Elections and politics",
-      "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
-      "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
-      "score": 41.2
+      "score": 46.83
     },
     {
       "title": "Questionando meu consultor: uma anuidade é a medida certa neste mercado?",
@@ -135,26 +212,7 @@
       "topicEn": "Companies and markets",
       "contextEn": "Earnings, funding conditions and expectations change how companies are valued. A stock rising does not prove structural improvement; check the headline against profits, debt and cash generation.",
       "questionEn": "What changed in results or expectations, and over which horizon?",
-      "score": 41.13
-    },
-    {
-      "title": "Trump pede ao chefe do UFC, Dana White, para ser o novo secretário de imprensa",
-      "titleOriginal": "Trump asks UFC boss Dana White to be new press secretary",
-      "url": "https://www.ft.com/content/52c3c7ac-f0ee-4b90-a2c8-68e76d120a79?syn-25a6b1a6=1",
-      "category": "Mercados",
-      "source": "Financial Times",
-      "publishedAt": "2026-11-07T20:33:52+00:00",
-      "language": "en",
-      "description": "US president signals combative approach in wake of midterms drubbing of his party",
-      "summary": "Presidente dos EUA sinaliza abordagem combativa após derrota em seu partido nas eleições intermediárias",
-      "translationStatus": "translated",
-      "topic": "Eleições e política",
-      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
-      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "topicEn": "Elections and politics",
-      "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
-      "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
-      "score": 41.11
+      "score": 39.43
     },
     {
       "title": "Trump diz que ordenou investigação contra democratas e os acusa de extorsão",
@@ -173,64 +231,7 @@
       "topicEn": "Elections and politics",
       "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
       "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
-      "score": 48.08
-    },
-    {
-      "title": "EUA declaram apoio a Pedro Alliana, novo presidente do Paraguai",
-      "titleOriginal": "EUA declaram apoio a Pedro Alliana, novo presidente do Paraguai",
-      "url": "https://www.poder360.com.br/poder-internacional/eua-declaram-apoio-a-pedro-alliana-novo-presidente-do-paraguai/",
-      "category": "Eleições",
-      "source": "Poder360",
-      "publishedAt": "2026-11-07T20:29:53+00:00",
-      "language": "pt",
-      "description": "Alliana tomou posse na 6ª feira (6.nov) depois da destituição de Santiago Peña por causa da crise do banco Ueno",
-      "translationStatus": "original",
-      "summary": "Alliana tomou posse na 6ª feira (6.nov) depois da destituição de Santiago Peña por causa da crise do banco Ueno",
-      "topic": "Eleições e política",
-      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
-      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "topicEn": "Elections and politics",
-      "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
-      "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
-      "score": 41.08
-    },
-    {
-      "title": "Flávio diz que Trump considera Brasil uma democracia incompleta",
-      "titleOriginal": "Flávio diz que Trump considera Brasil uma democracia incompleta",
-      "url": "https://www.poder360.com.br/poder-brasil/flavio-diz-que-trump-considera-brasil-uma-democracia-incompleta/",
-      "category": "Eleições",
-      "source": "Poder360",
-      "publishedAt": "2026-11-07T20:17:50+00:00",
-      "language": "pt",
-      "description": "Senador afirma que presidente dos EUA questiona instituições brasileiras; declaração foi dada em entrevista ao \"Washington Post\"",
-      "translationStatus": "original",
-      "summary": "Senador afirma que presidente dos EUA questiona instituições brasileiras; declaração foi dada em entrevista ao \"Washington Post\"",
-      "topic": "Eleições e política",
-      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
-      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "topicEn": "Elections and politics",
-      "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
-      "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
-      "score": 40.98
-    },
-    {
-      "title": "“Não sabe do que fala”, diz Flávio sobre aval de Nunes Marques à eleição",
-      "titleOriginal": "“Não sabe do que fala”, diz Flávio sobre aval de Nunes Marques à eleição",
-      "url": "https://www.poder360.com.br/poder-eleicoes-2026/nao-sabe-do-que-fala-diz-flavio-sobre-aval-de-nunes-marques-a-eleicao/",
-      "category": "Eleições",
-      "source": "Poder360",
-      "publishedAt": "2026-11-07T20:07:10+00:00",
-      "language": "pt",
-      "description": "Senador questiona avaliação do presidente do TSE e volta a levantar suspeitas de fraude sem apresentar provas",
-      "translationStatus": "original",
-      "summary": "Senador questiona avaliação do presidente do TSE e volta a levantar suspeitas de fraude sem apresentar provas",
-      "topic": "Eleições e política",
-      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
-      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "topicEn": "Elections and politics",
-      "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
-      "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
-      "score": 40.89
+      "score": 46.38
     },
     {
       "title": "Trump convida CEO do UFC para secretário de imprensa e Amanda Nunes para assistente",
@@ -249,7 +250,7 @@
       "topicEn": "Elections and politics",
       "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
       "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
-      "score": 47.78
+      "score": 46.08
     },
     {
       "title": "Aqui estão as taxas de imposto sobre ganhos de capital de 2027 para cada nível de renda",
@@ -268,7 +269,7 @@
       "topicEn": "Fiscal and activity",
       "contextEn": "Activity and public accounts influence tax revenue, credit demand and risk perception. Compare real and nominal values, the reference period and revisions before calling a trend.",
       "questionEn": "Is the move a one-off or does it show up in a comparable data series?",
-      "score": 40.73
+      "score": 39.03
     },
     {
       "title": "Ex-presidente do Paraguai acusado após colapso de banco",
@@ -287,7 +288,7 @@
       "topicEn": "Companies and markets",
       "contextEn": "Earnings, funding conditions and expectations change how companies are valued. A stock rising does not prove structural improvement; check the headline against profits, debt and cash generation.",
       "questionEn": "What changed in results or expectations, and over which horizon?",
-      "score": 40.47
+      "score": 38.77
     },
     {
       "title": "Ueno Bank: BC já devolveu US$ 158 milhões, mas 669 mil contas aguardam",
@@ -306,45 +307,27 @@
       "topicEn": "Companies and markets",
       "contextEn": "Earnings, funding conditions and expectations change how companies are valued. A stock rising does not prove structural improvement; check the headline against profits, debt and cash generation.",
       "questionEn": "What changed in results or expectations, and over which horizon?",
-      "score": 47.46
+      "score": 45.76
     },
     {
-      "title": "Investidor que ganha dinheiro é o que se adapta além da polarização, diz CEO da Arko",
-      "titleOriginal": "Investidor que ganha dinheiro é o que se adapta além da polarização, diz CEO da Arko",
-      "url": "https://www.infomoney.com.br/onde-investir/investidor-que-ganha-dinheiro-e-o-que-se-adapta-alem-da-polarizacao-diz-ceo-da-arko/",
-      "category": "Brasil",
-      "source": "InfoMoney",
-      "publishedAt": "2026-11-07T19:00:00+00:00",
-      "language": "pt",
-      "description": "Thiago de Aragão, durante participação na Conferência MBA Brasil, analisou como a polarização afeta a tomada de decisão",
-      "translationStatus": "original",
-      "summary": "Thiago de Aragão, durante participação na Conferência MBA Brasil, analisou como a polarização afeta a tomada de decisão",
-      "topic": "Empresas e mercados",
-      "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
-      "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
-      "topicEn": "Companies and markets",
-      "contextEn": "Earnings, funding conditions and expectations change how companies are valued. A stock rising does not prove structural improvement; check the headline against profits, debt and cash generation.",
-      "questionEn": "What changed in results or expectations, and over which horizon?",
-      "score": 47.33
-    },
-    {
-      "title": "EUA oferecem recompensa de US$ 20 milhões por informações sobre programa nuclear do Irã",
+      "title": "EUA oferecem recompensa de $ 20 milhões por informações sobre o programa nuclear do Irã",
       "titleOriginal": "US offers $20m reward for information about Iran's nuclear programme",
       "url": "https://www.bbc.co.uk/news/articles/c6d091ev3p0jo",
       "category": "Geopolítica",
       "source": "BBC News",
       "publishedAt": "2026-11-07T18:14:38+00:00",
       "language": "en",
-      "description": "Donald Trump has repeatedly raised the prospecting of renewing strikes against Iran's nuclear facilities.",
-      "summary": "Donald Trump levantou repetidamente a possibilidade de novos ataques contra as instalações nucleares do Irão.",
+      "description": "Donald Trump has repeatedly raised the prospect of renewing strikes against Iran's nuclear facilities.",
+      "summary": "Donald Trump tem levantado repetidamente a perspectiva de renovar os ataques contra as instalações nucleares do Irã.",
       "translationStatus": "translated",
+      "translationProvider": "MyMemory",
       "topic": "Comércio e geopolítica",
       "context": "Conflitos e barreiras comerciais podem alterar cadeias de suprimentos, fretes e fluxos de capital. Um risco político só se traduz em efeito econômico conforme sua duração, escala e exposição dos países.",
       "question": "Qual é o canal econômico concreto: energia, comércio, moeda ou financiamento?",
       "topicEn": "Trade and geopolitics",
       "contextEn": "Conflicts and trade barriers can alter supply chains, freight and capital flows. A political risk only becomes an economic effect through its duration, scale and exposure.",
       "questionEn": "What is the concrete economic channel: energy, trade, currency or financing?",
-      "score": 39.95
+      "score": 38.25
     },
     {
       "title": "A grande vitória eleitoral dos democratas revive uma difícil questão da Segurança Social: quem paga?",
@@ -363,7 +346,7 @@
       "topicEn": "Elections and politics",
       "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
       "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
-      "score": 39.69
+      "score": 37.99
     },
     {
       "title": "As faixas de impostos de 2027 foram eliminadas. Veja quais serão as deduções padrão e os incentivos fiscais do SALT.",
@@ -382,7 +365,7 @@
       "topicEn": "Fiscal and activity",
       "contextEn": "Activity and public accounts influence tax revenue, credit demand and risk perception. Compare real and nominal values, the reference period and revisions before calling a trend.",
       "questionEn": "Is the move a one-off or does it show up in a comparable data series?",
-      "score": 39.08
+      "score": 37.38
     },
     {
       "title": "Por que o prognóstico para as ações de saúde é incerto antes da nova composição do Congresso",
@@ -401,7 +384,7 @@
       "topicEn": "Elections and politics",
       "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
       "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
-      "score": 38.85
+      "score": 37.15
     },
     {
       "title": "Nenhum vencedor claro após eleições gerais acirradas na Nova Zelândia",
@@ -420,7 +403,7 @@
       "topicEn": "Elections and politics",
       "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
       "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
-      "score": 38.8
+      "score": 37.1
     },
     {
       "title": "Berkshire Hathaway mais que dobra as recompras no terceiro trimestre à medida que os lucros diminuem",
@@ -439,7 +422,7 @@
       "topicEn": "Companies and markets",
       "contextEn": "Earnings, funding conditions and expectations change how companies are valued. A stock rising does not prove structural improvement; check the headline against profits, debt and cash generation.",
       "questionEn": "What changed in results or expectations, and over which horizon?",
-      "score": 38.53
+      "score": 36.83
     },
     {
       "title": "'Imposto do pecado' não é invenção brasileira: álcool e tabaco são taxados nos 38 países da OCDE, grupo de nações ricas",
@@ -458,7 +441,7 @@
       "topicEn": "Fiscal and activity",
       "contextEn": "Activity and public accounts influence tax revenue, credit demand and risk perception. Compare real and nominal values, the reference period and revisions before calling a trend.",
       "questionEn": "Is the move a one-off or does it show up in a comparable data series?",
-      "score": 45.44
+      "score": 43.74
     },
     {
       "title": "Entra Itaú (ITUB4) e Axia Energia (AXIA3): 5 ações para bater o Ibovespa na semana, segundo a Terra Investimentos",
@@ -477,7 +460,7 @@
       "topicEn": "Energy and commodities",
       "contextEn": "Energy and raw materials feed into transport and production costs. Supply shocks can affect inflation and the income of exporters and importers in different ways.",
       "questionEn": "Does the move come from supply, demand or disruption risk?",
-      "score": 45.24
+      "score": 43.55
     },
     {
       "title": "Quer dividendos em novembro? XP revela suas 11 ações favoritas para o mês",
@@ -496,7 +479,7 @@
       "topicEn": "Companies and markets",
       "contextEn": "Earnings, funding conditions and expectations change how companies are valued. A stock rising does not prove structural improvement; check the headline against profits, debt and cash generation.",
       "questionEn": "What changed in results or expectations, and over which horizon?",
-      "score": 44.91
+      "score": 43.21
     },
     {
       "title": "BC paraguaio diz que devolveu dinheiro de 1,2 milhão de correntistas do banco Ueno",
@@ -515,7 +498,46 @@
       "topicEn": "Companies and markets",
       "contextEn": "Earnings, funding conditions and expectations change how companies are valued. A stock rising does not prove structural improvement; check the headline against profits, debt and cash generation.",
       "questionEn": "What changed in results or expectations, and over which horizon?",
-      "score": 44.83
+      "score": 43.13
+    },
+    {
+      "title": "As eleições desta semana darão início a um presidente democrata em 2028?",
+      "titleOriginal": "Will this week's blue wave election usher in a Democratic president in 2028?",
+      "url": "https://www.cnbc.com/2026/11/07/2026-midterm-election-blue-wave-2028-president.html",
+      "category": "Mercados",
+      "source": "CNBC",
+      "publishedAt": "2026-11-07T14:00:01+00:00",
+      "language": "en",
+      "description": "A CNBC analysis of historical election data finds wave elections don't necessarily spell trouble for the party in power during the next presidential year.",
+      "summary": "Uma análise da CNBC de dados eleitorais históricos descobriu que as eleições de ondas não significam necessariamente problemas para o partido no poder durante o próximo ano presidencial.",
+      "translationStatus": "translated",
+      "translationProvider": "MyMemory",
+      "topic": "Eleições e política",
+      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
+      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
+      "topicEn": "Elections and politics",
+      "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
+      "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
+      "score": 36.13
+    },
+    {
+      "title": "Ueno Bank: escândalo que levou à queda do presidente do Paraguai pode ser comparado ao do Banco Master?",
+      "titleOriginal": "Ueno Bank: escândalo que levou à queda do presidente do Paraguai pode ser comparado ao do Banco Master?",
+      "url": "https://g1.globo.com/mundo/noticia/2026/11/07/ueno-bank-escandalo-que-levou-a-queda-do-presidente-do-paraguai-pode-ser-comparado-ao-do-banco-master.ghtml",
+      "category": "Brasil",
+      "source": "G1 Economia",
+      "publishedAt": "2026-11-07T13:40:26+00:00",
+      "language": "pt",
+      "description": "Ueno Bank: escândalo que levou à queda do presidente do Paraguai pode ser comparado ao do Banco Master? Bloomberg via Getty Images, via BBC A liquidação do banco Ueno desencadeou",
+      "translationStatus": "original",
+      "summary": "Ueno Bank: escândalo que levou à queda do presidente do Paraguai pode ser comparado ao do Banco Master? Bloomberg via Getty Images, via BBC A liquidação do banco Ueno desencadeou",
+      "topic": "Eleições e política",
+      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
+      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
+      "topicEn": "Elections and politics",
+      "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
+      "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
+      "score": 42.97
     },
     {
       "title": "Ataques russos feriram nove pessoas e danificaram a rede de energia da Ucrânia antes das negociações",
@@ -534,7 +556,7 @@
       "topicEn": "Trade and geopolitics",
       "contextEn": "Conflicts and trade barriers can alter supply chains, freight and capital flows. A political risk only becomes an economic effect through its duration, scale and exposure.",
       "questionEn": "What is the concrete economic channel: energy, trade, currency or financing?",
-      "score": 37.24
+      "score": 35.54
     },
     {
       "title": "Gonet pede ao STF suspensão de ações contra MP do fim das bets até Corte decidir sobre proibição",
@@ -553,26 +575,7 @@
       "topicEn": "Elections and politics",
       "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
       "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
-      "score": 37.0
-    },
-    {
-      "title": "É #FAKE que votos de Lula nas eleições superaram total de habitantes em cidades do Brasil; vídeo foi fabricado com IA",
-      "titleOriginal": "É #FAKE que votos de Lula nas eleições superaram total de habitantes em cidades do Brasil; vídeo foi fabricado com IA",
-      "url": "https://g1.globo.com/fato-ou-fake/eleicoes/noticia/2026/11/06/e-fake-que-votos-de-lula-nas-eleicoes-superaram-total-de-habitantes-em-cidades-do-brasil-video-foi-fabricado-com-ia.ghtml",
-      "category": "Eleições",
-      "source": "G1 Política",
-      "publishedAt": "2026-11-06T22:44:14+00:00",
-      "language": "pt",
-      "description": "É #FAKE que Lula teve mais votos do que o total de habitantes em cidades mencionadas em vídeo Reprodução Circula nas redes sociais um vídeo com uma suposta reportagem de",
-      "translationStatus": "original",
-      "summary": "É #FAKE que Lula teve mais votos do que o total de habitantes em cidades mencionadas em vídeo Reprodução Circula nas redes sociais um vídeo com uma suposta reportagem de",
-      "topic": "Eleições e política",
-      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
-      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "topicEn": "Elections and politics",
-      "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
-      "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
-      "score": 30.2
+      "score": 35.3
     },
     {
       "title": "Ações de IA sobem depois que trilhões foram eliminados dos valores de mercado",
@@ -630,25 +633,6 @@
       "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
       "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
       "score": 30.0
-    },
-    {
-      "title": "Como isso me afetará se os preços das ações caírem?",
-      "titleOriginal": "How does it affect me if share prices fall?",
-      "url": "https://www.bbc.co.uk/news/articles/c33zdz2m1e2o",
-      "category": "Mundo",
-      "source": "BBC News",
-      "publishedAt": "2026-11-06T09:21:50+00:00",
-      "language": "en",
-      "description": "Changes in the FTSE 100 and other indexes are not just for financial experts, they can affect our lives.",
-      "summary": "As alterações no FTSE 100 e noutros índices não são apenas para especialistas financeiros, podem afectar as nossas vidas.",
-      "translationStatus": "translated",
-      "topic": "Fiscal e atividade",
-      "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
-      "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
-      "topicEn": "Fiscal and activity",
-      "contextEn": "Activity and public accounts influence tax revenue, credit demand and risk perception. Compare real and nominal values, the reference period and revisions before calling a trend.",
-      "questionEn": "Is the move a one-off or does it show up in a comparable data series?",
-      "score": 0.0
     },
     {
       "title": "Lula quer “economia arrumada” para atrair investimentos",
@@ -763,12 +747,31 @@
       "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
       "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
       "score": 30.0
+    },
+    {
+      "title": "Exames do presidente Lula estão dentro da normalidade, diz boletim",
+      "titleOriginal": "Exames do presidente Lula estão dentro da normalidade, diz boletim",
+      "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-11/exames-do-presidente-lula-estao-dentro-da-normalidade-diz-boletim",
+      "category": "Eleições",
+      "source": "Agência Brasil",
+      "publishedAt": "2026-11-04T11:27:00+00:00",
+      "language": "pt",
+      "description": "Boletim médico publicado às 23h desta terça-feira (3) informa que os exames do presidente Lula estão “dentro da normalidade”. Lula viajou para São Paulo ontem e foi internado no Hospital",
+      "translationStatus": "original",
+      "summary": "Boletim médico publicado às 23h desta terça-feira (3) informa que os exames do presidente Lula estão “dentro da normalidade”. Lula viajou para São Paulo ontem e foi internado no Hospital",
+      "topic": "Eleições e política",
+      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
+      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
+      "topicEn": "Elections and politics",
+      "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
+      "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
+      "score": 30.0
     }
   ],
   "briefing": [
-    "https://www.cnbc.com/2026/11/07/iran-war-midterm-election-oil-price-trump.html",
-    "https://www.infomoney.com.br/mundo/relacoes-exteriores-do-paraguai-diz-que-pais-sai-fortalecido-de-crise-do-ueno-bank/",
-    "https://www.marketwatch.com/story/here-are-the-2027-capital-gains-tax-rates-for-each-income-level-166fc306?mod=mw_rss_topstories",
+    "https://www.poder360.com.br/poder-internacional/presidente-de-israel-indica-rival-de-netanyahu-para-formar-governo/",
+    "https://www.poder360.com.br/poder-internacional/ueno-bank-patrocinou-evento-com-eduardo-bolsonaro-nos-eua/",
+    "https://www.bbc.co.uk/news/articles/cmvg652l927lo",
     "https://www.bbc.co.uk/news/articles/c6d091ev3p0jo",
     "https://www.moneytimes.com.br/entra-itau-itub4-e-axia-energia-axia3-5-acoes-para-bater-o-ibovespa-na-semana-lmrs/"
   ],
@@ -792,7 +795,7 @@
       "referenceDate": "06/11/2026",
       "source": "Banco Central · SGS",
       "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados/ultimos/10?formato=json",
-      "checkedAt": "2026-11-07T22:20:48.930028+00:00",
+      "checkedAt": "2026-11-08T01:44:29.423014+00:00",
       "status": "ok"
     },
     {
@@ -803,7 +806,7 @@
       "referenceDate": "01/09/2026",
       "source": "Banco Central · SGS",
       "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.433/dados/ultimos/10?formato=json",
-      "checkedAt": "2026-11-07T22:20:48.940848+00:00",
+      "checkedAt": "2026-11-08T01:44:29.998358+00:00",
       "status": "ok"
     },
     {
@@ -814,7 +817,7 @@
       "referenceDate": "01/09/2026",
       "source": "Banco Central · SGS",
       "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.13522/dados/ultimos/10?formato=json",
-      "checkedAt": "2026-11-07T22:20:48.919336+00:00",
+      "checkedAt": "2026-11-08T01:44:29.423492+00:00",
       "status": "ok"
     }
   ],
@@ -893,7 +896,7 @@
         "url": "https://www.bls.gov/schedule/"
       }
     ],
-    "checkedAt": "2026-11-07T22:20:49.186809+00:00"
+    "checkedAt": "2026-11-08T01:44:30.177333+00:00"
   },
   "method": "Seleção automática por atualidade, relevância temática e diversidade; resumo extraído da descrição RSS, com tradução automática quando disponível. Contexto educativo por tema, sem previsão de preços."
 }
