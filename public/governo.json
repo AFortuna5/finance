@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T19:54:41.824680+00:00",
+  "updatedAt": "2026-11-08T23:34:17.220247+00:00",
   "charts": [
     {
       "id": "selic",
@@ -80,10 +80,6 @@
       "mode": "line",
       "status": "ok",
       "series": [
-        {
-          "date": "2020-10-01",
-          "value": 3.92
-        },
         {
           "date": "2020-11-01",
           "value": 4.31
@@ -369,7 +365,7 @@
           "value": 4.58
         }
       ],
-      "source": "IBGE · SIDRA"
+      "source": "Banco Central · SGS"
     },
     {
       "id": "ipca",
