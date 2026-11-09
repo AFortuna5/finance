@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T11:39:39.044407+00:00",
+  "updatedAt": "2026-11-09T21:38:37.981222+00:00",
   "elections": [
     {
       "date": "2026-10-04",
@@ -21,14 +21,6 @@
       "board": "B3 · Brasil",
       "boardEn": "B3 · Brazil",
       "series": [
-        {
-          "date": "2026-08-06",
-          "value": 175546.0
-        },
-        {
-          "date": "2026-08-07",
-          "value": 172513.0
-        },
         {
           "date": "2026-08-10",
           "value": 172180.0
@@ -276,23 +268,27 @@
         {
           "date": "2026-11-06",
           "value": 168499.0
+        },
+        {
+          "date": "2026-11-09",
+          "value": 172236.0469
         }
       ],
-      "last": 168499.0,
-      "lastDate": "2026-11-06",
-      "changeFirstRound": -12.29,
-      "changeSecondRound": -17.84,
-      "change30d": -19.4,
+      "last": 172236.0469,
+      "lastDate": "2026-11-09",
+      "changeFirstRound": -10.35,
+      "changeSecondRound": -16.02,
+      "change30d": -17.62,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
-        "rating": -0.30194805194805197,
-        "ratingMA": -0.7857142857142857,
+        "rating": -0.23051948051948054,
+        "ratingMA": -0.6428571428571429,
         "ratingOsc": 0.18181818181818182,
-        "rsi": 30.580526262859053,
-        "ema50": 184969.53291180142,
-        "ema200": 177136.62565890639,
-        "volatility": 1.9066391159434146,
+        "rsi": 36.51667887081691,
+        "ema50": 184470.1806407504,
+        "ema200": 177087.8637120516,
+        "volatility": 2.2181806420177614,
         "source": "TradingView"
       }
     },
@@ -566,24 +562,24 @@
         },
         {
           "date": "2026-11-09",
-          "value": 5.5047
+          "value": 5.5074
         }
       ],
-      "last": 5.5047,
+      "last": 5.5074,
       "lastDate": "2026-11-09",
-      "changeFirstRound": 5.39,
-      "changeSecondRound": 10.98,
-      "change30d": 9.71,
+      "changeFirstRound": 5.44,
+      "changeSecondRound": 11.03,
+      "change30d": 9.76,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
-        "rating": 0.3474025974025974,
+        "rating": 0.4383116883116883,
         "ratingMA": 0.7857142857142857,
-        "ratingOsc": -0.09090909090909091,
-        "rsi": 70.82498536235468,
-        "ema50": 5.217546850884379,
-        "ema200": 5.189350199447845,
-        "volatility": 0.08177209209355038,
+        "ratingOsc": 0.09090909090909091,
+        "rsi": 71.03337993349689,
+        "ema50": 5.21765273323732,
+        "ema200": 5.189377065119486,
+        "volatility": 0.7214560294412374,
         "source": "TradingView"
       }
     },
@@ -857,24 +853,24 @@
         },
         {
           "date": "2026-11-09",
-          "value": 6.1623
+          "value": 6.1796
         }
       ],
-      "last": 6.1623,
+      "last": 6.1796,
       "lastDate": "2026-11-09",
-      "changeFirstRound": 4.94,
-      "changeSecondRound": 11.31,
-      "change30d": 9.61,
+      "changeFirstRound": 5.24,
+      "changeSecondRound": 11.63,
+      "change30d": 9.92,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
         "rating": 0.3474025974025974,
         "ratingMA": 0.7857142857142857,
         "ratingOsc": -0.09090909090909091,
-        "rsi": 67.28042410400279,
-        "ema50": 5.894609474062637,
-        "ema200": 5.953437641052245,
-        "volatility": 0.5578846059736102,
+        "rsi": 68.15209759121306,
+        "ema50": 5.895380331425189,
+        "ema200": 5.953633552044547,
+        "volatility": 0.9722199566089694,
         "source": "TradingView"
       }
     },
@@ -886,10 +882,6 @@
       "board": "Wall Street · EUA",
       "boardEn": "Wall Street · US",
       "series": [
-        {
-          "date": "2026-08-07",
-          "value": 7757.6401
-        },
         {
           "date": "2026-08-10",
           "value": 7753.1099
@@ -1145,23 +1137,27 @@
         {
           "date": "2026-11-06",
           "value": 7376.8599
+        },
+        {
+          "date": "2026-11-09",
+          "value": 7549.9399
         }
       ],
-      "last": 7376.8599,
-      "lastDate": "2026-11-06",
-      "changeFirstRound": -4.48,
-      "changeSecondRound": -3.24,
-      "change30d": -5.56,
+      "last": 7549.9399,
+      "lastDate": "2026-11-09",
+      "changeFirstRound": -2.24,
+      "changeSecondRound": -0.97,
+      "change30d": -3.35,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
-        "rating": -0.28787878787878785,
-        "ratingMA": -0.6666666666666666,
+        "rating": -0.2212121212121212,
+        "ratingMA": -0.5333333333333333,
         "ratingOsc": 0.09090909090909091,
-        "rsi": 35.11085665991776,
-        "ema50": 7649.8889305564435,
-        "ema200": 7356.265296856103,
-        "volatility": 1.227619054080646,
+        "rsi": 45.76797040283688,
+        "ema50": 7645.969364652269,
+        "ema200": 7358.192408330172,
+        "volatility": 2.701745025760426,
         "source": "TradingView"
       }
     },
@@ -1173,10 +1169,6 @@
       "board": "Tecnologia · EUA",
       "boardEn": "Tech · US",
       "series": [
-        {
-          "date": "2026-08-07",
-          "value": 26690.6191
-        },
         {
           "date": "2026-08-10",
           "value": 26605.3594
@@ -1432,23 +1424,27 @@
         {
           "date": "2026-11-06",
           "value": 24579.4297
+        },
+        {
+          "date": "2026-11-09",
+          "value": 25253.1387
         }
       ],
-      "last": 24579.4297,
-      "lastDate": "2026-11-06",
-      "changeFirstRound": -9.6,
-      "changeSecondRound": -5.3,
-      "change30d": -10.18,
+      "last": 25253.1387,
+      "lastDate": "2026-11-09",
+      "changeFirstRound": -7.13,
+      "changeSecondRound": -2.71,
+      "change30d": -7.72,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
-        "rating": -0.37575757575757573,
-        "ratingMA": -0.9333333333333333,
+        "rating": -0.3090909090909091,
+        "ratingMA": -0.8,
         "ratingOsc": 0.18181818181818182,
-        "rsi": 31.391269443182637,
-        "ema50": 29337.43317467057,
-        "ema200": 28128.020327303526,
-        "volatility": 2.552407174184913,
+        "rsi": 41.10381137086253,
+        "ema50": 29281.362269781526,
+        "ema200": 28125.82733996717,
+        "volatility": 3.8041745500010062,
         "source": "TradingView"
       }
     },
@@ -1830,23 +1826,23 @@
         },
         {
           "date": "2026-11-08",
-          "value": 74524.5625
+          "value": 74780.4766
         }
       ],
-      "last": 74524.5625,
+      "last": 74780.4766,
       "lastDate": "2026-11-08",
-      "changeFirstRound": -13.13,
-      "changeSecondRound": -6.85,
-      "change30d": -10.94,
+      "changeFirstRound": -12.83,
+      "changeSecondRound": -6.53,
+      "change30d": -10.63,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
-        "rating": -0.3333333333333333,
+        "rating": -0.2424242424242424,
         "ratingMA": -0.6666666666666666,
-        "ratingOsc": 0,
-        "rsi": 35.32812690841402,
-        "ema50": 79198.88888649081,
-        "ema200": 76436.35088963815,
+        "ratingOsc": 0.18181818181818182,
+        "rsi": 35.92732156016628,
+        "ema50": 79209.97963873306,
+        "ema200": 76439.17633079569,
         "volatility": 2.531370525286545,
         "source": "TradingView"
       }
@@ -2117,24 +2113,24 @@
         },
         {
           "date": "2026-11-09",
-          "value": 4113.8999
+          "value": 4146.7002
         }
       ],
-      "last": 4113.8999,
+      "last": 4146.7002,
       "lastDate": "2026-11-09",
-      "changeFirstRound": -1.16,
-      "changeSecondRound": 2.64,
-      "change30d": -2.43,
+      "changeFirstRound": -0.37,
+      "changeSecondRound": 3.46,
+      "change30d": -1.65,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
-        "rating": 0.0551948051948052,
-        "ratingMA": -0.07142857142857142,
+        "rating": 0.12662337662337664,
+        "ratingMA": 0.07142857142857142,
         "ratingOsc": 0.18181818181818182,
-        "rsi": 51.35309591384017,
-        "ema50": 4152.58517856002,
-        "ema200": 4254.6901954278155,
-        "volatility": 1.9655256101387022,
+        "rsi": 53.43165459244506,
+        "ema50": 4153.657779098276,
+        "ema200": 4254.961795982256,
+        "volatility": 2.3211808741325797,
         "source": "TradingView"
       }
     },
@@ -2404,24 +2400,24 @@
         },
         {
           "date": "2026-11-09",
-          "value": 88.33
+          "value": 87.07
         }
       ],
-      "last": 88.33,
+      "last": 87.07,
       "lastDate": "2026-11-09",
-      "changeFirstRound": -3.05,
-      "changeSecondRound": -14.47,
-      "change30d": -3.83,
+      "changeFirstRound": -4.43,
+      "changeSecondRound": -15.69,
+      "change30d": -5.2,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
-        "rating": -0.2,
-        "ratingMA": -0.4,
-        "ratingOsc": 0,
-        "rsi": 38.810315098668234,
-        "ema50": 93.68666080533498,
-        "ema200": 85.71866149781853,
-        "volatility": 4.432259538496682,
+        "rating": -0.31212121212121213,
+        "ratingMA": -0.5333333333333333,
+        "ratingOsc": -0.09090909090909091,
+        "rsi": 37.407186822985956,
+        "ema50": 93.63842551121733,
+        "ema200": 85.70642269184837,
+        "volatility": 7.527640555163498,
         "source": "TradingView"
       }
     }
@@ -2431,30 +2427,30 @@
       {
         "indicator": "Câmbio",
         "year": 2026,
-        "median": 5.3428,
-        "date": "2026-10-30",
-        "respondents": 120
+        "median": 5.35,
+        "date": "2026-11-06",
+        "respondents": 122
       },
       {
         "indicator": "Selic",
         "year": 2026,
-        "median": 13.5,
-        "date": "2026-10-30",
-        "respondents": 143
+        "median": 13.75,
+        "date": "2026-11-06",
+        "respondents": 144
       },
       {
         "indicator": "IPCA",
         "year": 2026,
-        "median": 5.2166,
-        "date": "2026-10-30",
-        "respondents": 144
+        "median": 5.2195,
+        "date": "2026-11-06",
+        "respondents": 146
       },
       {
         "indicator": "PIB Total",
         "year": 2026,
-        "median": 1.7607,
-        "date": "2026-10-30",
-        "respondents": 117
+        "median": 1.7546,
+        "date": "2026-11-06",
+        "respondents": 118
       }
     ],
     "source": "Banco Central · Boletim Focus",
