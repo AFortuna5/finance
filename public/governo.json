@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-11T22:12:19.146499+00:00",
+  "updatedAt": "2026-11-12T03:07:19.096362+00:00",
   "charts": [
     {
       "id": "selic",
@@ -1332,6 +1332,13 @@
       "value": "R$-81 bi",
       "hint": "Governo gasta acima do que arrecada quando negativo",
       "hintEn": "The government spends above revenue when negative"
+    },
+    {
+      "label": "Receita primária líquida",
+      "labelEn": "Net primary revenue",
+      "value": "R$1,48 tri",
+      "hint": "O que entra no caixa, sem juros",
+      "hintEn": "What flows into the till, before interest"
     },
     {
       "label": "Despesa primária total",
