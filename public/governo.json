@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12T11:22:31.763904+00:00",
+  "updatedAt": "2026-11-12T19:04:34.524020+00:00",
   "charts": [
     {
       "id": "selic",
@@ -363,6 +363,10 @@
         {
           "date": "2026-09-01",
           "value": 4.58
+        },
+        {
+          "date": "2026-10-01",
+          "value": 4.63
         }
       ],
       "source": "Banco Central · SGS"
@@ -377,10 +381,6 @@
       "mode": "bars",
       "status": "ok",
       "series": [
-        {
-          "date": "2023-10-01",
-          "value": 0.24
-        },
         {
           "date": "2023-11-01",
           "value": 0.28
@@ -520,6 +520,10 @@
         {
           "date": "2026-09-01",
           "value": 0.82
+        },
+        {
+          "date": "2026-10-01",
+          "value": 0.14
         }
       ],
       "source": "Banco Central · SGS"
