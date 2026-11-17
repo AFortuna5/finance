@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T17:06:26.386472+00:00",
+  "updatedAt": "2026-11-17T23:51:41.029381+00:00",
   "elections": [
     {
       "date": "2026-10-04",
@@ -275,23 +275,23 @@
         },
         {
           "date": "2026-11-17",
-          "value": 170764.5625
+          "value": 169816.6406
         }
       ],
-      "last": 170764.5625,
+      "last": 169816.6406,
       "lastDate": "2026-11-17",
-      "changeFirstRound": -11.11,
-      "changeSecondRound": -16.73,
-      "change30d": -16.87,
+      "changeFirstRound": -11.61,
+      "changeSecondRound": -17.2,
+      "change30d": -17.34,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
-        "rating": -0.39285714285714285,
-        "ratingMA": -0.7857142857142857,
+        "rating": -0.4642857142857143,
+        "ratingMA": -0.9285714285714286,
         "ratingOsc": 0,
-        "rsi": 37.679363539291735,
-        "ema50": 181634.3105598236,
-        "ema200": 176745.32523933385,
+        "rsi": 35.869352397698265,
+        "ema50": 181595.355265706,
+        "ema200": 176735.44106022935,
         "volatility": 1.4495545164157757,
         "source": "TradingView"
       }
@@ -570,24 +570,24 @@
         },
         {
           "date": "2026-11-16",
-          "value": 5.7866
+          "value": 5.7778
         }
       ],
-      "last": 5.7866,
+      "last": 5.7778,
       "lastDate": "2026-11-16",
-      "changeFirstRound": 10.79,
-      "changeSecondRound": 16.66,
-      "change30d": 14.29,
+      "changeFirstRound": 10.62,
+      "changeSecondRound": 16.48,
+      "change30d": 14.12,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
-        "rating": 0.5097402597402597,
-        "ratingMA": 0.9285714285714286,
-        "ratingOsc": 0.09090909090909091,
-        "rsi": 82.1137041009952,
-        "ema50": 5.316101186627527,
-        "ema200": 5.217650199116145,
-        "volatility": 0.9011981246744197,
+        "rating": 0.3474025974025974,
+        "ratingMA": 0.7857142857142857,
+        "ratingOsc": -0.09090909090909091,
+        "rsi": 81.29233372170995,
+        "ema50": 5.333958348858975,
+        "ema200": 5.223158810783066,
+        "volatility": 0.024230676035866417,
         "source": "TradingView"
       }
     },
@@ -865,24 +865,24 @@
         },
         {
           "date": "2026-11-16",
-          "value": 6.3771
+          "value": 6.3511
         }
       ],
-      "last": 6.3771,
+      "last": 6.3511,
       "lastDate": "2026-11-16",
-      "changeFirstRound": 8.6,
-      "changeSecondRound": 15.19,
-      "change30d": 12.24,
+      "changeFirstRound": 8.16,
+      "changeSecondRound": 14.72,
+      "change30d": 11.78,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
-        "rating": 0.5551948051948052,
-        "ratingMA": 0.9285714285714286,
-        "ratingOsc": 0.18181818181818182,
-        "rsi": 74.32804238728912,
-        "ema50": 5.977042396939504,
-        "ema200": 5.9723445578604855,
-        "volatility": 0.700846066422521,
+        "rating": 0.3474025974025974,
+        "ratingMA": 0.7857142857142857,
+        "ratingOsc": -0.09090909090909091,
+        "rsi": 72.73588645707936,
+        "ema50": 5.99093562089651,
+        "ema200": 5.975910362858879,
+        "volatility": 0.11182158944151321,
         "source": "TradingView"
       }
     },
@@ -894,10 +894,6 @@
       "board": "Wall Street · EUA",
       "boardEn": "Wall Street · US",
       "series": [
-        {
-          "date": "2026-08-17",
-          "value": 7745.0601
-        },
         {
           "date": "2026-08-18",
           "value": 7691.7598
@@ -1156,23 +1152,23 @@
         },
         {
           "date": "2026-11-17",
-          "value": 7334.71
+          "value": 7340.5298
         }
       ],
-      "last": 7334.71,
+      "last": 7340.5298,
       "lastDate": "2026-11-17",
-      "changeFirstRound": -5.02,
-      "changeSecondRound": -3.79,
-      "change30d": -4.24,
+      "changeFirstRound": -4.95,
+      "changeSecondRound": -3.71,
+      "change30d": -4.16,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
         "rating": -0.5575757575757576,
         "ratingMA": -0.9333333333333333,
         "ratingOsc": -0.18181818181818182,
-        "rsi": 36.26819153361082,
-        "ema50": 7614.48504793301,
-        "ema200": 7366.609971679471,
+        "rsi": 37.20942166083717,
+        "ema50": 7615.530930285951,
+        "ema200": 7366.8753448137995,
         "volatility": 1.7596599500023324,
         "source": "TradingView"
       }
@@ -1185,10 +1181,6 @@
       "board": "Tecnologia · EUA",
       "boardEn": "Tech · US",
       "series": [
-        {
-          "date": "2026-08-17",
-          "value": 26644.9102
-        },
         {
           "date": "2026-08-18",
           "value": 26289.7109
@@ -1447,23 +1439,23 @@
         },
         {
           "date": "2026-11-17",
-          "value": 24237.6543
+          "value": 24328.3828
         }
       ],
-      "last": 24237.6543,
+      "last": 24328.3828,
       "lastDate": "2026-11-17",
-      "changeFirstRound": -10.86,
-      "changeSecondRound": -6.62,
-      "change30d": -7.28,
+      "changeFirstRound": -10.53,
+      "changeSecondRound": -6.27,
+      "change30d": -6.93,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
         "rating": -0.6484848484848484,
         "ratingMA": -0.9333333333333333,
         "ratingOsc": -0.36363636363636365,
-        "rsi": 34.92866526949601,
-        "ema50": 28941.233455482747,
-        "ema200": 28101.615934485082,
+        "rsi": 36.33980810448241,
+        "ema50": 28950.73328293373,
+        "ema200": 28104.026338465184,
         "volatility": 2.5506375352343302,
         "source": "TradingView"
       }
@@ -1846,23 +1838,23 @@
         },
         {
           "date": "2026-11-16",
-          "value": 63877.7109
+          "value": 64862.4414
         }
       ],
-      "last": 63877.7109,
+      "last": 64862.4414,
       "lastDate": "2026-11-16",
-      "changeFirstRound": -25.54,
-      "changeSecondRound": -20.16,
-      "change30d": -21.96,
+      "changeFirstRound": -24.39,
+      "changeSecondRound": -18.93,
+      "change30d": -20.76,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
-        "rating": -0.4454545454545455,
+        "rating": -0.26363636363636367,
         "ratingMA": -0.8,
-        "ratingOsc": -0.09090909090909091,
-        "rsi": 22.85915067842859,
-        "ema50": 76111.114006976,
-        "ema200": 75802.19980006813,
+        "ratingOsc": 0.2727272727272727,
+        "rsi": 24.18531542622563,
+        "ema50": 76147.16851677992,
+        "ema200": 75811.34795927211,
         "volatility": 3.361759812193957,
         "source": "TradingView"
       }
@@ -2137,24 +2129,24 @@
         },
         {
           "date": "2026-11-17",
-          "value": 3866.8999
+          "value": 3850.0
         }
       ],
-      "last": 3866.8999,
+      "last": 3850.0,
       "lastDate": "2026-11-17",
-      "changeFirstRound": -7.1,
-      "changeSecondRound": -3.52,
-      "change30d": -7.51,
+      "changeFirstRound": -7.5,
+      "changeSecondRound": -3.94,
+      "change30d": -7.92,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
-        "rating": -0.3474025974025974,
+        "rating": -0.48376623376623373,
         "ratingMA": -0.7857142857142857,
-        "ratingOsc": 0.09090909090909091,
-        "rsi": 37.51488257678455,
-        "ema50": 4102.553503873558,
-        "ema200": 4235.288247409324,
-        "volatility": 1.4073307653414873,
+        "ratingOsc": -0.18181818181818182,
+        "rsi": 35.82172020106364,
+        "ema50": 4091.8260754248454,
+        "ema200": 4231.239440214983,
+        "volatility": 0.314167576845065,
         "source": "TradingView"
       }
     },
@@ -2428,24 +2420,24 @@
         },
         {
           "date": "2026-11-17",
-          "value": 86.56
+          "value": 85.88
         }
       ],
-      "last": 86.56,
+      "last": 85.88,
       "lastDate": "2026-11-17",
-      "changeFirstRound": -4.99,
-      "changeSecondRound": -16.18,
-      "change30d": -14.64,
+      "changeFirstRound": -5.74,
+      "changeSecondRound": -16.84,
+      "change30d": -15.31,
       "source": "Yahoo Finance",
       "status": "ok",
       "signals": {
-        "rating": -0.4,
-        "ratingMA": -0.8,
-        "ratingOsc": 0,
-        "rsi": 39.391001955933866,
-        "ema50": 92.22038947291325,
-        "ema200": 85.78124276148635,
-        "volatility": 3.1884742560226598,
+        "rating": -0.5575757575757576,
+        "ratingMA": -0.9333333333333333,
+        "ratingOsc": -0.18181818181818182,
+        "rsi": 36.185090147424766,
+        "ema50": 91.90045109296818,
+        "ema200": 85.76397240703677,
+        "volatility": 1.8593083846518326,
         "source": "TradingView"
       }
     }
