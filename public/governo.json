@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-19T21:47:00.755956+00:00",
+  "updatedAt": "2026-11-20T02:56:44.201995+00:00",
   "charts": [
     {
       "id": "selic",
@@ -1343,6 +1343,13 @@
       "value": "R$1,48 tri",
       "hint": "O que entra no caixa, sem juros",
       "hintEn": "What flows into the till, before interest"
+    },
+    {
+      "label": "Despesa primária total",
+      "labelEn": "Total primary spending",
+      "value": "R$1,56 tri",
+      "hint": "O que sai do caixa, sem juros",
+      "hintEn": "What flows out of the till, before interest"
     }
   ],
   "sources": [
