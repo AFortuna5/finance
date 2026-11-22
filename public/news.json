@@ -1,9 +1,218 @@
 {
-  "updatedAt": "2026-11-22T01:40:19.047749+00:00",
-  "editionId": "2026-11-21",
+  "updatedAt": "2026-11-22T08:53:05.855049+00:00",
+  "editionId": "2026-11-22",
   "failedFeeds": [],
-  "translationFailures": 3,
+  "translationFailures": 0,
   "articles": [
+    {
+      "title": "Novo teto do MEI pode gerar economia de R$ 9,5 mil por ano; entenda mudanças",
+      "titleOriginal": "Novo teto do MEI pode gerar economia de R$ 9,5 mil por ano; entenda mudanças",
+      "url": "https://www.infomoney.com.br/minhas-financas/novo-teto-do-mei-pode-gerar-economia-de-r-95-mil-por-ano-entenda-mudancas/",
+      "category": "Brasil",
+      "source": "InfoMoney",
+      "publishedAt": "2026-11-22T08:00:00+00:00",
+      "language": "pt",
+      "description": "Levantamento mostra como a lei que ampliou limite de faturamento para R$ 110 mil em 2027 e R$ 140 mil em 2028 pode permitir ganhos tributários",
+      "translationStatus": "original",
+      "summary": "Levantamento mostra como a lei que ampliou limite de faturamento para R$ 110 mil em 2027 e R$ 140 mil em 2028 pode permitir ganhos tributários",
+      "topic": "Fiscal e atividade",
+      "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
+      "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
+      "topicEn": "Fiscal and activity",
+      "contextEn": "Activity and public accounts influence tax revenue, credit demand and risk perception. Compare real and nominal values, the reference period and revisions before calling a trend.",
+      "questionEn": "Is the move a one-off or does it show up in a comparable data series?",
+      "score": 48.56
+    },
+    {
+      "title": "MP critica planos de registro de propriedade de empresas em Guernsey e Jersey",
+      "titleOriginal": "MP criticises Guernsey and Jersey company ownership register plans",
+      "url": "https://www.bbc.co.uk/news/articles/cqkgmy2nxy4lo",
+      "category": "Mundo",
+      "source": "BBC News",
+      "publishedAt": "2026-11-22T07:22:05+00:00",
+      "language": "en",
+      "description": "Sir Andrew Mitchell says access should be easier for people tackling financial crime.",
+      "summary": "Sir Andrew Mitchell afirma que o acesso deveria ser mais fácil para as pessoas que combatem o crime financeiro.",
+      "translationStatus": "translated",
+      "topic": "Fiscal e atividade",
+      "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
+      "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
+      "topicEn": "Fiscal and activity",
+      "contextEn": "Activity and public accounts influence tax revenue, credit demand and risk perception. Compare real and nominal values, the reference period and revisions before calling a trend.",
+      "questionEn": "Is the move a one-off or does it show up in a comparable data series?",
+      "score": 11.24
+    },
+    {
+      "title": "O joalheiro e empresário italiano Paolo Bulgari morre aos 89 anos",
+      "titleOriginal": "Italian jeweller and businessman Paolo Bulgari dies aged 89",
+      "url": "https://www.bbc.co.uk/news/articles/c8e39qk5vrpdo",
+      "category": "Mundo",
+      "source": "BBC News",
+      "publishedAt": "2026-11-22T07:12:41+00:00",
+      "language": "en",
+      "description": "In a statement to Italian media, his family remember him as \"the greatest jeweller of our time\".",
+      "summary": "Num comunicado à imprensa italiana, a sua família recorda-o como “o maior joalheiro do nosso tempo”.",
+      "translationStatus": "translated",
+      "topic": "Fiscal e atividade",
+      "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
+      "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
+      "topicEn": "Fiscal and activity",
+      "contextEn": "Activity and public accounts influence tax revenue, credit demand and risk perception. Compare real and nominal values, the reference period and revisions before calling a trend.",
+      "questionEn": "Is the move a one-off or does it show up in a comparable data series?",
+      "score": 11.16
+    },
+    {
+      "title": "Ovelhas entre painéis solares? Entenda a tendência que une geração de energia e criação de animais",
+      "titleOriginal": "Ovelhas entre painéis solares? Entenda a tendência que une geração de energia e criação de animais",
+      "url": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/22/ovelhas-entre-paineis-solares-entenda-a-tendencia-que-une-geracao-de-energia-e-criacao-de-animais.ghtml",
+      "category": "Brasil",
+      "source": "G1 Economia",
+      "publishedAt": "2026-11-22T07:00:01+00:00",
+      "language": "pt",
+      "description": "Ovelhas pastam sob painéis solares na província de Guizhou, no sudoeste da China, como parte de uma prática cada vez mais comum de combinar a pecuária com a produção de",
+      "translationStatus": "original",
+      "summary": "Ovelhas pastam sob painéis solares na província de Guizhou, no sudoeste da China, como parte de uma prática cada vez mais comum de combinar a pecuária com a produção de",
+      "topic": "Energia e commodities",
+      "context": "Energia e matérias-primas entram nos custos de transporte e produção. Choques de oferta podem afetar a inflação e a renda de países exportadores e importadores de maneiras diferentes.",
+      "question": "A mudança vem da oferta, da demanda ou do risco de interrupção?",
+      "topicEn": "Energy and commodities",
+      "contextEn": "Energy and raw materials feed into transport and production costs. Supply shocks can affect inflation and the income of exporters and importers in different ways.",
+      "questionEn": "Does the move come from supply, demand or disruption risk?",
+      "score": 48.06
+    },
+    {
+      "title": "A primeira recompensa no mundo real da computação quântica pode vir da energia, não da descoberta de medicamentos",
+      "titleOriginal": "Quantum computing’s first real-world payoff may come in energy, not drug discovery",
+      "url": "https://www.cnbc.com/2026/11/22/quantum-computing-energy-applications.html",
+      "category": "Mercados",
+      "source": "CNBC",
+      "publishedAt": "2026-11-22T06:00:01+00:00",
+      "language": "en",
+      "description": "Quantum computing firms are testing energy-grid optimization, solar materials and hydrogen catalysts as they pursue practical uses.",
+      "summary": "As empresas de computação quântica estão testando a otimização da rede energética, materiais solares e catalisadores de hidrogênio à medida que buscam usos práticos.",
+      "translationStatus": "translated",
+      "topic": "Energia e commodities",
+      "context": "Energia e matérias-primas entram nos custos de transporte e produção. Choques de oferta podem afetar a inflação e a renda de países exportadores e importadores de maneiras diferentes.",
+      "question": "A mudança vem da oferta, da demanda ou do risco de interrupção?",
+      "topicEn": "Energy and commodities",
+      "contextEn": "Energy and raw materials feed into transport and production costs. Supply shocks can affect inflation and the income of exporters and importers in different ways.",
+      "questionEn": "Does the move come from supply, demand or disruption risk?",
+      "score": 40.56
+    },
+    {
+      "title": "A falha crítica descoberta na linguagem de programação usada por 90% das grandes empresas do mundo",
+      "titleOriginal": "A falha crítica descoberta na linguagem de programação usada por 90% das grandes empresas do mundo",
+      "url": "https://g1.globo.com/tecnologia/ciberseguranca/noticia/2026/11/22/a-falha-critica-descoberta-na-linguagem-de-programacao-usada-por-90-das-grandes-empresas-do-mundo.ghtml",
+      "category": "Brasil",
+      "source": "G1 Economia",
+      "publishedAt": "2026-11-22T06:00:00+00:00",
+      "language": "pt",
+      "description": "Inteligência Artificial. Reprodução/Fantástico Uma empresa de cibersegurança utilizou inteligência artificial (IA) para descobrir uma vulnerabilidade crítica na popular linguagem de programação Java. A empresa emergente no setor de tecnologia Calif",
+      "translationStatus": "original",
+      "summary": "Inteligência Artificial. Reprodução/Fantástico Uma empresa de cibersegurança utilizou inteligência artificial (IA) para descobrir uma vulnerabilidade crítica na popular linguagem de programação Java. A empresa emergente no setor de tecnologia Calif",
+      "topic": "Empresas e mercados",
+      "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
+      "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
+      "topicEn": "Companies and markets",
+      "contextEn": "Earnings, funding conditions and expectations change how companies are valued. A stock rising does not prove structural improvement; check the headline against profits, debt and cash generation.",
+      "questionEn": "What changed in results or expectations, and over which horizon?",
+      "score": 47.56
+    },
+    {
+      "title": "13º salário na conta: como decidir entre pagar dívidas, investir ou aproveitar as compras",
+      "titleOriginal": "13º salário na conta: como decidir entre pagar dívidas, investir ou aproveitar as compras",
+      "url": "https://g1.globo.com/g1-explica/noticia/2026/11/22/13o-salario-na-conta-como-decidir-entre-pagar-dividas-investir-ou-aproveitar-as-compras.ghtml",
+      "category": "Brasil",
+      "source": "G1 Economia",
+      "publishedAt": "2026-11-22T05:00:00+00:00",
+      "language": "pt",
+      "description": "Décimo terceiro: gastar, pagar dívidas ou guardar dinheiro? O 13º salário chega no fim do ano e já tem muita gente de olho nesse dinheiro. Promoções, viagens e compras disputam",
+      "translationStatus": "original",
+      "summary": "Décimo terceiro: gastar, pagar dívidas ou guardar dinheiro? O 13º salário chega no fim do ano e já tem muita gente de olho nesse dinheiro. Promoções, viagens e compras disputam",
+      "topic": "Fiscal e atividade",
+      "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
+      "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
+      "topicEn": "Fiscal and activity",
+      "contextEn": "Activity and public accounts influence tax revenue, credit demand and risk perception. Compare real and nominal values, the reference period and revisions before calling a trend.",
+      "questionEn": "Is the move a one-off or does it show up in a comparable data series?",
+      "score": 47.06
+    },
+    {
+      "title": "Câmara deve votar projeto de ajuste fiscal nesta segunda",
+      "titleOriginal": "Câmara deve votar projeto de ajuste fiscal nesta segunda",
+      "url": "https://g1.globo.com/politica/noticia/2026/11/22/camara-deve-votar-projeto-de-ajuste-fiscal-nesta-segunda.ghtml",
+      "category": "Brasil",
+      "source": "G1 Economia",
+      "publishedAt": "2026-11-22T03:00:00+00:00",
+      "language": "pt",
+      "description": "Ajuste fiscal deve ser votado na segunda-feira A Câmara dos Deputados deve votar nesta segunda-feira (23) a proposta de ajuste fiscal do governo. O relator da proposta, deputado Mauro Benevides",
+      "translationStatus": "original",
+      "summary": "Ajuste fiscal deve ser votado na segunda-feira A Câmara dos Deputados deve votar nesta segunda-feira (23) a proposta de ajuste fiscal do governo. O relator da proposta, deputado Mauro Benevides",
+      "topic": "Eleições e política",
+      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
+      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
+      "topicEn": "Elections and politics",
+      "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
+      "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
+      "score": 46.06
+    },
+    {
+      "title": "PEC da Segurança: como uma guarda civil municipal pode virar polícia e o que muda para a população",
+      "titleOriginal": "PEC da Segurança: como uma guarda civil municipal pode virar polícia e o que muda para a população",
+      "url": "https://g1.globo.com/politica/noticia/2026/11/22/pec-da-seguranca-como-uma-guarda-civil-municipal-pode-virar-policia.ghtml",
+      "category": "Eleições",
+      "source": "G1 Política",
+      "publishedAt": "2026-11-22T03:00:00+00:00",
+      "language": "pt",
+      "description": "Guarda Municipal de Maceió Ascom Semsc A PEC da Segurança Pública, aprovada em definitivo pelo Congresso em 3 de novembro, permite que os prefeitos passem a contar com uma polícia",
+      "translationStatus": "original",
+      "summary": "Guarda Municipal de Maceió Ascom Semsc A PEC da Segurança Pública, aprovada em definitivo pelo Congresso em 3 de novembro, permite que os prefeitos passem a contar com uma polícia",
+      "topic": "Fiscal e atividade",
+      "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
+      "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
+      "topicEn": "Fiscal and activity",
+      "contextEn": "Activity and public accounts influence tax revenue, credit demand and risk perception. Compare real and nominal values, the reference period and revisions before calling a trend.",
+      "questionEn": "Is the move a one-off or does it show up in a comparable data series?",
+      "score": 9.06
+    },
+    {
+      "title": "Maioria das cidades terá dificuldade para criar polícia municipal, diz deputado",
+      "titleOriginal": "Maioria das cidades terá dificuldade para criar polícia municipal, diz deputado",
+      "url": "https://g1.globo.com/politica/noticia/2026/11/22/exigencias-policia-municipal-prefeituras.ghtml",
+      "category": "Eleições",
+      "source": "G1 Política",
+      "publishedAt": "2026-11-22T03:00:00+00:00",
+      "language": "pt",
+      "description": "Guarda Municipal Reprodução/Prefeitura de Porto Velho A PEC da Segurança Pública, aprovada em definitivo pelo Congresso em 3 de novembro, abriu caminho para que municípios criem suas próprias polícias. Mas",
+      "translationStatus": "original",
+      "summary": "Guarda Municipal Reprodução/Prefeitura de Porto Velho A PEC da Segurança Pública, aprovada em definitivo pelo Congresso em 3 de novembro, abriu caminho para que municípios criem suas próprias polícias. Mas",
+      "topic": "Fiscal e atividade",
+      "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
+      "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
+      "topicEn": "Fiscal and activity",
+      "contextEn": "Activity and public accounts influence tax revenue, credit demand and risk perception. Compare real and nominal values, the reference period and revisions before calling a trend.",
+      "questionEn": "Is the move a one-off or does it show up in a comparable data series?",
+      "score": 9.06
+    },
+    {
+      "title": "Sul terá temporais com rajadas de vento acima de 80 km/h no domingo",
+      "titleOriginal": "Sul terá temporais com rajadas de vento acima de 80 km/h no domingo",
+      "url": "https://www.poder360.com.br/poder-brasil/sul-tera-temporais-com-rajadas-de-vento-acima-de-80-km-h-no-domingo/",
+      "category": "Eleições",
+      "source": "Poder360",
+      "publishedAt": "2026-11-22T02:04:02+00:00",
+      "language": "pt",
+      "description": "Nova frente fria aumenta risco de vendavais e granizo; chuva pode atingir 120 mm em áreas do Rio Grande do Sul",
+      "translationStatus": "original",
+      "summary": "Nova frente fria aumenta risco de vendavais e granizo; chuva pode atingir 120 mm em áreas do Rio Grande do Sul",
+      "topic": "Fiscal e atividade",
+      "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
+      "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
+      "topicEn": "Fiscal and activity",
+      "contextEn": "Activity and public accounts influence tax revenue, credit demand and risk perception. Compare real and nominal values, the reference period and revisions before calling a trend.",
+      "questionEn": "Is the move a one-off or does it show up in a comparable data series?",
+      "score": 8.59
+    },
     {
       "title": "Veja imagens dos estragos causados por vendavais no Sul do Brasil",
       "titleOriginal": "Veja imagens dos estragos causados por vendavais no Sul do Brasil",
@@ -21,29 +230,29 @@
       "topicEn": "Fiscal and activity",
       "contextEn": "Activity and public accounts influence tax revenue, credit demand and risk perception. Compare real and nominal values, the reference period and revisions before calling a trend.",
       "questionEn": "Is the move a one-off or does it show up in a comparable data series?",
-      "score": 11.92
+      "score": 8.31
     },
     {
-      "title": "Após viagem, Michelle vai a hospital em que Bolsonaro está internado",
-      "titleOriginal": "Após viagem, Michelle vai a hospital em que Bolsonaro está internado",
-      "url": "https://www.poder360.com.br/poder-gente/apos-viagem-michelle-vai-a-hospital-em-que-bolsonaro-esta-internado/",
-      "category": "Eleições",
-      "source": "Poder360",
-      "publishedAt": "2026-11-22T01:13:12+00:00",
-      "language": "pt",
-      "description": "Senadora eleita e ex-primeira-dama retornou de viagem neste sábado; ela estava em Israel desde a semana passada",
-      "translationStatus": "original",
-      "summary": "Senadora eleita e ex-primeira-dama retornou de viagem neste sábado; ela estava em Israel desde a semana passada",
+      "title": "Os empregadores estão sendo solicitados a fornecer feedback nas entrevistas – eis o que os candidatos desejam",
+      "titleOriginal": "Employers are being asked to give interview feedback - here's what applicants want",
+      "url": "https://www.bbc.co.uk/news/articles/cm2d94le23xyo",
+      "category": "Mundo",
+      "source": "BBC News",
+      "publishedAt": "2026-11-22T00:04:07+00:00",
+      "language": "en",
+      "description": "People say they often hear nothing back after applying for jobs. But could employers be forced to respond to every applicant?",
+      "summary": "As pessoas dizem que muitas vezes não ouvem nada depois de se candidatarem a empregos. Mas poderiam os empregadores ser forçados a responder a todos os candidatos?",
+      "translationStatus": "translated",
       "topic": "Fiscal e atividade",
       "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
       "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
       "topicEn": "Fiscal and activity",
       "contextEn": "Activity and public accounts influence tax revenue, credit demand and risk perception. Compare real and nominal values, the reference period and revisions before calling a trend.",
       "questionEn": "Is the move a one-off or does it show up in a comparable data series?",
-      "score": 11.77
+      "score": 7.59
     },
     {
-      "title": "My wife is bankrolling her family’s trips to New York and it’s draining our savings. Should I ask her to stop?",
+      "title": "Minha esposa está financiando as viagens da família para Nova York e isso está esgotando nossas economias. Devo pedir a ela para parar?",
       "titleOriginal": "My wife is bankrolling her family’s trips to New York and it’s draining our savings. Should I ask her to stop?",
       "url": "https://www.marketwatch.com/story/my-wife-pays-thousands-of-dollars-for-her-family-to-visit-from-argentina-how-can-i-convince-her-to-stop-9381351c?mod=mw_rss_topstories",
       "category": "Mercados",
@@ -51,15 +260,15 @@
       "publishedAt": "2026-11-22T00:03:00+00:00",
       "language": "en",
       "description": "“Hotel rooms can cost as much as $400 per night.”",
-      "summary": "Tradução indisponível nesta coleta. Consulte a matéria original.",
-      "translationStatus": "unavailable",
+      "summary": "“Os quartos de hotel podem custar até US$ 400 por noite.”",
+      "translationStatus": "translated",
       "topic": "Empresas e mercados",
       "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
       "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
       "topicEn": "Companies and markets",
       "contextEn": "Earnings, funding conditions and expectations change how companies are valued. A stock rising does not prove structural improvement; check the headline against profits, debt and cash generation.",
       "questionEn": "What changed in results or expectations, and over which horizon?",
-      "score": 41.19
+      "score": 37.58
     },
     {
       "title": "Trump disse a líderes europeus que estavam gastando muito com Ucrânia, diz Zelensky",
@@ -78,29 +287,10 @@
       "topicEn": "Elections and politics",
       "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
       "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
-      "score": 47.6
+      "score": 43.99
     },
     {
-      "title": "Trump posa ao lado de Putin e o chama de “meu amigo” na China",
-      "titleOriginal": "Trump posa ao lado de Putin e o chama de “meu amigo” na China",
-      "url": "https://www.poder360.com.br/poder-internacional/trump-posa-ao-lado-de-putin-e-o-chama-de-meu-amigo-na-china/",
-      "category": "Eleições",
-      "source": "Poder360",
-      "publishedAt": "2026-11-21T22:07:17+00:00",
-      "language": "pt",
-      "description": "Presidente dos EUA elogiou relação com líder russo durante encontro na China; declaração provocou críticas na Europa",
-      "translationStatus": "original",
-      "summary": "Presidente dos EUA elogiou relação com líder russo durante encontro na China; declaração provocou críticas na Europa",
-      "topic": "Eleições e política",
-      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
-      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "topicEn": "Elections and politics",
-      "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
-      "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
-      "score": 40.23
-    },
-    {
-      "title": "Lock of former US President George Washington's hair sells for $4,000",
+      "title": "Mecha de cabelo do ex-presidente dos EUA George Washington é vendida por US$ 4 mil",
       "titleOriginal": "Lock of former US President George Washington's hair sells for $4,000",
       "url": "https://www.bbc.co.uk/news/articles/cwe9k23dpz0do",
       "category": "Geopolítica",
@@ -108,34 +298,15 @@
       "publishedAt": "2026-11-21T22:01:19+00:00",
       "language": "en",
       "description": "The hair was given as a sign of friendship shortly before Washington's death in 1799, according to a descendent of its former owner.",
-      "summary": "Tradução indisponível nesta coleta. Consulte a matéria original.",
-      "translationStatus": "unavailable",
+      "summary": "O cabelo foi dado como sinal de amizade pouco antes da morte de Washington em 1799, segundo um descendente de seu antigo proprietário.",
+      "translationStatus": "translated",
       "topic": "Fiscal e atividade",
       "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
       "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
       "topicEn": "Fiscal and activity",
       "contextEn": "Activity and public accounts influence tax revenue, credit demand and risk perception. Compare real and nominal values, the reference period and revisions before calling a trend.",
       "questionEn": "Is the move a one-off or does it show up in a comparable data series?",
-      "score": 10.18
-    },
-    {
-      "title": "Cúpula climática COP31 corre risco de fracassar, conforme negociações se estendem",
-      "titleOriginal": "Cúpula climática COP31 corre risco de fracassar, conforme negociações se estendem",
-      "url": "https://www.infomoney.com.br/mundo/cupula-climatica-cop31-corre-risco-de-fracassar-conforme-negociacoes-se-estendem/",
-      "category": "Brasil",
-      "source": "InfoMoney",
-      "publishedAt": "2026-11-21T20:42:02+00:00",
-      "language": "pt",
-      "description": "Negociadores de quase 200 países estão tendo dificuldades para superar as divergências sobre combustíveis fósseis e financiamento climático",
-      "translationStatus": "original",
-      "summary": "Negociadores de quase 200 países estão tendo dificuldades para superar as divergências sobre combustíveis fósseis e financiamento climático",
-      "topic": "Empresas e mercados",
-      "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
-      "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
-      "topicEn": "Companies and markets",
-      "contextEn": "Earnings, funding conditions and expectations change how companies are valued. A stock rising does not prove structural improvement; check the headline against profits, debt and cash generation.",
-      "questionEn": "What changed in results or expectations, and over which horizon?",
-      "score": 46.51
+      "score": 6.57
     },
     {
       "title": "‘É absolutamente sujo’: Meu irmão foi morar com nossa mãe doente e fechou sua conta bancária. O que posso fazer?",
@@ -154,26 +325,7 @@
       "topicEn": "Companies and markets",
       "contextEn": "Earnings, funding conditions and expectations change how companies are valued. A stock rising does not prove structural improvement; check the headline against profits, debt and cash generation.",
       "questionEn": "What changed in results or expectations, and over which horizon?",
-      "score": 39.29
-    },
-    {
-      "title": "IA, Ozempic e crises financeiras: os melhores livros de negócios de 2026, segundo FT",
-      "titleOriginal": "IA, Ozempic e crises financeiras: os melhores livros de negócios de 2026, segundo FT",
-      "url": "https://www.infomoney.com.br/negocios/ia-ozempic-e-crises-financeiras-os-melhores-livros-de-negocios-de-2026-segundo-ft/",
-      "category": "Brasil",
-      "source": "InfoMoney",
-      "publishedAt": "2026-11-21T19:42:00+00:00",
-      "language": "pt",
-      "description": "Jornal selecionou seis obras para disputar o prêmio de melhor livro de negócios do ano; vencedor será anunciado em dezembro",
-      "translationStatus": "original",
-      "summary": "Jornal selecionou seis obras para disputar o prêmio de melhor livro de negócios do ano; vencedor será anunciado em dezembro",
-      "topic": "Empresas e mercados",
-      "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
-      "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
-      "topicEn": "Companies and markets",
-      "contextEn": "Earnings, funding conditions and expectations change how companies are valued. A stock rising does not prove structural improvement; check the headline against profits, debt and cash generation.",
-      "questionEn": "What changed in results or expectations, and over which horizon?",
-      "score": 46.01
+      "score": 35.68
     },
     {
       "title": "Navio com destino à Rússia é atacado no Golfo da Finlândia",
@@ -192,7 +344,7 @@
       "topicEn": "Trade and geopolitics",
       "contextEn": "Conflicts and trade barriers can alter supply chains, freight and capital flows. A political risk only becomes an economic effect through its duration, scale and exposure.",
       "questionEn": "What is the concrete economic channel: energy, trade, currency or financing?",
-      "score": 38.83
+      "score": 35.23
     },
     {
       "title": "\"Nunca é tarde demais para começar\": conselhos práticos de investimento de algumas das principais mulheres do setor financeiro",
@@ -211,7 +363,7 @@
       "topicEn": "Companies and markets",
       "contextEn": "Earnings, funding conditions and expectations change how companies are valued. A stock rising does not prove structural improvement; check the headline against profits, debt and cash generation.",
       "questionEn": "What changed in results or expectations, and over which horizon?",
-      "score": 38.32
+      "score": 34.72
     },
     {
       "title": "Ex-presidente Jair Bolsonaro está internado em UTI no Distrito Federal",
@@ -230,7 +382,7 @@
       "topicEn": "Elections and politics",
       "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
       "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
-      "score": 38.12
+      "score": 34.52
     },
     {
       "title": "\"O sistema financeiro não vai me ensinar a dirigir o Brasil\", diz Lula",
@@ -249,7 +401,7 @@
       "topicEn": "Companies and markets",
       "contextEn": "Earnings, funding conditions and expectations change how companies are valued. A stock rising does not prove structural improvement; check the headline against profits, debt and cash generation.",
       "questionEn": "What changed in results or expectations, and over which horizon?",
-      "score": 37.76
+      "score": 34.16
     },
     {
       "title": "Trump diz que pode haver um ‘reviramento positivo’ do último hack ao banco de dados do FBI",
@@ -268,26 +420,7 @@
       "topicEn": "Elections and politics",
       "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
       "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
-      "score": 37.64
-    },
-    {
-      "title": "Escolha do orçamento da Marinha tem investimentos familiares em empreiteiro vinculado a Trump Jr",
-      "titleOriginal": "Navy budget pick has family investments in Trump Jr-linked contractor",
-      "url": "https://www.ft.com/content/145e6fab-d93a-412d-8670-0554064fdf98?syn-25a6b1a6=1",
-      "category": "Mercados",
-      "source": "Financial Times",
-      "publishedAt": "2026-11-21T16:19:19+00:00",
-      "language": "en",
-      "description": "Democrats have promised to raise alleged conflicts of interest concerning administration officials when they take over Congress",
-      "summary": "Os democratas prometeram levantar supostos conflitos de interesses relativos a funcionários do governo quando assumirem o Congresso",
-      "translationStatus": "translated",
-      "topic": "Eleições e política",
-      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
-      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "topicEn": "Elections and politics",
-      "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
-      "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
-      "score": 37.33
+      "score": 34.04
     },
     {
       "title": "Ajuste fiscal: Lula defende Moretti e critica ‘gritaria’ de parte da esquerda e de ‘yuppies da Faria Lima’",
@@ -306,7 +439,7 @@
       "topicEn": "Fiscal and activity",
       "contextEn": "Activity and public accounts influence tax revenue, credit demand and risk perception. Compare real and nominal values, the reference period and revisions before calling a trend.",
       "questionEn": "Is the move a one-off or does it show up in a comparable data series?",
-      "score": 43.76
+      "score": 40.15
     },
     {
       "title": "As interrupções tecnológicas estão alimentando uma nova economia do fim do mundo",
@@ -325,26 +458,7 @@
       "topicEn": "Fiscal and activity",
       "contextEn": "Activity and public accounts influence tax revenue, credit demand and risk perception. Compare real and nominal values, the reference period and revisions before calling a trend.",
       "questionEn": "Is the move a one-off or does it show up in a comparable data series?",
-      "score": 36.71
-    },
-    {
-      "title": "Os aposentados enfrentam um prazo iminente para os saques obrigatórios — não cumpri-lo pode resultar em uma multa fiscal",
-      "titleOriginal": "Retirees face a looming deadline for required withdrawals — missing it could trigger a tax penalty",
-      "url": "https://www.cnbc.com/2026/11/21/rmd-deadline-penalty-2026.html",
-      "category": "Mercados",
-      "source": "CNBC",
-      "publishedAt": "2026-11-21T14:30:02+00:00",
-      "language": "en",
-      "description": "The busy holiday season may lead retirees to miss a key deadline for retirement account withdrawals.",
-      "summary": "A movimentada temporada de férias pode fazer com que os aposentados percam um prazo importante para saques em contas de aposentadoria.",
-      "translationStatus": "translated",
-      "topic": "Fiscal e atividade",
-      "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
-      "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
-      "topicEn": "Fiscal and activity",
-      "contextEn": "Activity and public accounts influence tax revenue, credit demand and risk perception. Compare real and nominal values, the reference period and revisions before calling a trend.",
-      "questionEn": "Is the move a one-off or does it show up in a comparable data series?",
-      "score": 36.41
+      "score": 33.1
     },
     {
       "title": "Lula diz que projeto aprovado no Senado não é 'reforma fiscal', mas ajuste para Orçamento de 2027, e critica Faria Lima",
@@ -363,7 +477,7 @@
       "topicEn": "Elections and politics",
       "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
       "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
-      "score": 43.4
+      "score": 39.79
     },
     {
       "title": "Tarcísio, mudança no Ibovespa e BB rebaixado: o que bombou na semana no Money Times",
@@ -382,7 +496,7 @@
       "topicEn": "Companies and markets",
       "contextEn": "Earnings, funding conditions and expectations change how companies are valued. A stock rising does not prove structural improvement; check the headline against profits, debt and cash generation.",
       "questionEn": "What changed in results or expectations, and over which horizon?",
-      "score": 43.33
+      "score": 39.72
     },
     {
       "title": "Uma \"ilusão de brilho e glamour\": por dentro da corrida do ouro moderna da Califórnia, onde os garimpeiros podem ganhar milhões",
@@ -401,7 +515,7 @@
       "topicEn": "Energy and commodities",
       "contextEn": "Energy and raw materials feed into transport and production costs. Supply shocks can affect inflation and the income of exporters and importers in different ways.",
       "questionEn": "Does the move come from supply, demand or disruption risk?",
-      "score": 36.21
+      "score": 32.61
     },
     {
       "title": "Balanços do 3T26 superam expectativas, mas cenário macro limita reação das ações, diz Citi",
@@ -420,7 +534,7 @@
       "topicEn": "Companies and markets",
       "contextEn": "Earnings, funding conditions and expectations change how companies are valued. A stock rising does not prove structural improvement; check the headline against profits, debt and cash generation.",
       "questionEn": "What changed in results or expectations, and over which horizon?",
-      "score": 42.96
+      "score": 39.36
     },
     {
       "title": "A batalha estadual e federal sobre a regulamentação dos mercados de previsão esquenta após o semestre",
@@ -439,64 +553,7 @@
       "topicEn": "Elections and politics",
       "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
       "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
-      "score": 35.77
-    },
-    {
-      "title": "Banco do Brasil (BBAS3): Equipe econômica discute com Lula nomes para substituir Tarciana, diz jornal",
-      "titleOriginal": "Banco do Brasil (BBAS3): Equipe econômica discute com Lula nomes para substituir Tarciana, diz jornal",
-      "url": "https://www.moneytimes.com.br/banco-do-brasil-bbas3-equipe-economica-discute-com-lula-nomes-para-substituir-tarciana-diz-jornal/",
-      "category": "Brasil",
-      "source": "MoneyTimes",
-      "publishedAt": "2026-11-21T13:11:48+00:00",
-      "language": "pt",
-      "description": "Integrantes da equipe econômica do governo Lula começaram a discutir nomes para substituir Tarciana Medeiros na presidência do Banco do Brasil (BBAS3), em meio à deterioração dos resultados financeiros da",
-      "translationStatus": "original",
-      "summary": "Integrantes da equipe econômica do governo Lula começaram a discutir nomes para substituir Tarciana Medeiros na presidência do Banco do Brasil (BBAS3), em meio à deterioração dos resultados financeiros da",
-      "topic": "Empresas e mercados",
-      "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
-      "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
-      "topicEn": "Companies and markets",
-      "contextEn": "Earnings, funding conditions and expectations change how companies are valued. A stock rising does not prove structural improvement; check the headline against profits, debt and cash generation.",
-      "questionEn": "What changed in results or expectations, and over which horizon?",
-      "score": 42.76
-    },
-    {
-      "title": "Banco Master: Presidente do Supremo mantém prisão de Daniel Vorcaro",
-      "titleOriginal": "Banco Master: Presidente do Supremo mantém prisão de Daniel Vorcaro",
-      "url": "https://www.moneytimes.com.br/banco-master-presidente-do-supremo-mantem-prisao-de-daniel-vorcaro/",
-      "category": "Brasil",
-      "source": "MoneyTimes",
-      "publishedAt": "2026-11-21T11:28:25+00:00",
-      "language": "pt",
-      "description": "O presidente do Supremo Tribunal Federal (STF), Edson Fachin, decidiu nesta sexta-feira (20) manter a prisão do ex-banqueiro Daniel Vorcaro. Fachin rejeitou pedido de soltura protocolado pela defesa do ex-banqueiro,",
-      "translationStatus": "original",
-      "summary": "O presidente do Supremo Tribunal Federal (STF), Edson Fachin, decidiu nesta sexta-feira (20) manter a prisão do ex-banqueiro Daniel Vorcaro. Fachin rejeitou pedido de soltura protocolado pela defesa do ex-banqueiro,",
-      "topic": "Eleições e política",
-      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
-      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "topicEn": "Elections and politics",
-      "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
-      "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
-      "score": 41.9
-    },
-    {
-      "title": "União Europeia propõe taxar big techs para financiar orçamento até 2034",
-      "titleOriginal": "União Europeia propõe taxar big techs para financiar orçamento até 2034",
-      "url": "https://g1.globo.com/tecnologia/noticia/2026/11/21/uniao-europeia-propoe-taxar-big-techs-para-financiar-orcamento-ate-2034.ghtml",
-      "category": "Brasil",
-      "source": "G1 Economia",
-      "publishedAt": "2026-11-21T11:26:05+00:00",
-      "language": "pt",
-      "description": "Bandeiras da União Europeia Stephanie Lecocq/Reuters A União Europeia apresentou neste sábado (21) uma proposta para o orçamento de longo prazo do bloco, que valerá de 2028 a 2034. Entre",
-      "translationStatus": "original",
-      "summary": "Bandeiras da União Europeia Stephanie Lecocq/Reuters A União Europeia apresentou neste sábado (21) uma proposta para o orçamento de longo prazo do bloco, que valerá de 2028 a 2034. Entre",
-      "topic": "Fiscal e atividade",
-      "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
-      "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
-      "topicEn": "Fiscal and activity",
-      "contextEn": "Activity and public accounts influence tax revenue, credit demand and risk perception. Compare real and nominal values, the reference period and revisions before calling a trend.",
-      "questionEn": "Is the move a one-off or does it show up in a comparable data series?",
-      "score": 41.88
+      "score": 32.16
     },
     {
       "title": "Dinamarca acusa Rússia de conspirar para assassinar rapper americano-ucraniano",
@@ -515,26 +572,26 @@
       "topicEn": "Trade and geopolitics",
       "contextEn": "Conflicts and trade barriers can alter supply chains, freight and capital flows. A political risk only becomes an economic effect through its duration, scale and exposure.",
       "questionEn": "What is the concrete economic channel: energy, trade, currency or financing?",
-      "score": 34.39
+      "score": 30.78
     },
     {
-      "title": "The dead hand of history weighs on Deutsche Bank",
-      "titleOriginal": "The dead hand of history weighs on Deutsche Bank",
-      "url": "https://www.ft.com/content/bfa66957-73d4-44f1-bea5-6b141c197920",
+      "title": "Como a China está a utilizar as cimeiras para expandir a sua influência global",
+      "titleOriginal": "How China is using summits to expand its global influence",
+      "url": "https://www.cnbc.com/2026/11/21/china-xi-trump-putin-global-diplomacy-shenzhen.html",
       "category": "Mercados",
-      "source": "Financial Times",
-      "publishedAt": "2026-11-21T06:32:26+00:00",
+      "source": "CNBC",
+      "publishedAt": "2026-11-21T06:00:02+00:00",
       "language": "en",
-      "description": "Bankers might do well to remember from time to time that they are making decisions that will stick around",
-      "summary": "Tradução indisponível nesta coleta. Consulte a matéria original.",
-      "translationStatus": "unavailable",
-      "topic": "Empresas e mercados",
-      "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
-      "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
-      "topicEn": "Companies and markets",
-      "contextEn": "Earnings, funding conditions and expectations change how companies are valued. A stock rising does not prove structural improvement; check the headline against profits, debt and cash generation.",
-      "questionEn": "What changed in results or expectations, and over which horizon?",
-      "score": 32.43
+      "description": "Chinese President Xi Jinping has helped coordinate yet another photo-op of global significance.",
+      "summary": "O presidente chinês, Xi Jinping, ajudou a coordenar mais uma oportunidade fotográfica de importância global.",
+      "translationStatus": "translated",
+      "topic": "Comércio e geopolítica",
+      "context": "Conflitos e barreiras comerciais podem alterar cadeias de suprimentos, fretes e fluxos de capital. Um risco político só se traduz em efeito econômico conforme sua duração, escala e exposição dos países.",
+      "question": "Qual é o canal econômico concreto: energia, comércio, moeda ou financiamento?",
+      "topicEn": "Trade and geopolitics",
+      "contextEn": "Conflicts and trade barriers can alter supply chains, freight and capital flows. A political risk only becomes an economic effect through its duration, scale and exposure.",
+      "questionEn": "What is the concrete economic channel: energy, trade, currency or financing?",
+      "score": 30.0
     },
     {
       "title": "A um mês do recesso, Fachin tenta avançar com agenda de reformas no STF, mas enfrenta resistências",
@@ -553,18 +610,18 @@
       "topicEn": "Elections and politics",
       "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
       "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
-      "score": 30.66
+      "score": 30.0
     },
     {
-      "title": "As vendas de GTA 6 atingiram US$ 3,8 bilhões em um único dia – o maior lançamento de entretenimento da história",
-      "titleOriginal": "GTA 6 sales hit $3.8bn in a single day - the biggest entertainment launch in history",
-      "url": "https://www.bbc.co.uk/news/articles/c9zr5nyv5dj2o",
+      "title": "A IA pode realmente ajudar a identificar ofertas da Black Friday? Nós colocamos isso à prova",
+      "titleOriginal": "Can AI really help spot Black Friday deals? We put it to the test",
+      "url": "https://www.bbc.co.uk/news/articles/cw8dv4jmnle2o",
       "category": "Mundo",
       "source": "BBC News",
-      "publishedAt": "2026-11-20T22:53:24+00:00",
+      "publishedAt": "2026-11-21T00:06:11+00:00",
       "language": "en",
-      "description": "The mammoth figure surpasses every video game launch and single-day film box office record.",
-      "summary": "O número gigantesco supera todos os lançamentos de videogame e recordes de bilheteria de um único dia.",
+      "description": "We put four AI models to the test to see if they could save us money on a new TV.",
+      "summary": "Testamos quatro modelos de IA para ver se eles poderiam economizar dinheiro em uma nova TV.",
       "translationStatus": "translated",
       "topic": "Fiscal e atividade",
       "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
@@ -613,23 +670,23 @@
       "score": 30.0
     },
     {
-      "title": "Reino Unido explorará laços ainda mais estreitos com a UE após fechar acordo, diz Burnham",
-      "titleOriginal": "UK to explore even closer ties with EU after agreeing deal, says Burnham",
-      "url": "https://www.bbc.co.uk/news/articles/c6jreyqgw4e9o",
-      "category": "Mundo",
-      "source": "BBC News",
-      "publishedAt": "2026-11-20T17:49:48+00:00",
+      "title": "Jensen Huang testemunhará publicamente perante o painel bancário do Senado, disse o presidente Scott",
+      "titleOriginal": "Jensen Huang to testify publicly before Senate banking panel, Chairman Scott says",
+      "url": "https://www.cnbc.com/2026/11/20/jensen-huang-nvidia-senate-testimony.html",
+      "category": "Mercados",
+      "source": "CNBC",
+      "publishedAt": "2026-11-20T19:42:53+00:00",
       "language": "en",
-      "description": "The UK-EU deal agreed on Friday covers British food exports, emissions trading and a youth experience scheme.",
-      "summary": "O acordo Reino Unido-UE acordado na sexta-feira abrange as exportações britânicas de alimentos, o comércio de emissões e um esquema de experiência para jovens.",
+      "description": "Former Nvidia CEO Jensen Huang has faced a flurry of criticism on Capitol Hill in the wake of his involvement with a suspected Chinese spy.",
+      "summary": "O ex-CEO da Nvidia, Jensen Huang, enfrentou uma enxurrada de críticas no Capitólio após seu envolvimento com um suposto espião chinês.",
       "translationStatus": "translated",
-      "topic": "Fiscal e atividade",
-      "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
-      "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
-      "topicEn": "Fiscal and activity",
-      "contextEn": "Activity and public accounts influence tax revenue, credit demand and risk perception. Compare real and nominal values, the reference period and revisions before calling a trend.",
-      "questionEn": "Is the move a one-off or does it show up in a comparable data series?",
-      "score": 0.0
+      "topic": "Empresas e mercados",
+      "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
+      "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
+      "topicEn": "Companies and markets",
+      "contextEn": "Earnings, funding conditions and expectations change how companies are valued. A stock rising does not prove structural improvement; check the headline against profits, debt and cash generation.",
+      "questionEn": "What changed in results or expectations, and over which horizon?",
+      "score": 30.0
     },
     {
       "title": "Faisal Islam: Este acordo de redução de custos entre Reino Unido e UE não significa que preços mais baixos se seguirão",
@@ -649,63 +706,6 @@
       "contextEn": "Activity and public accounts influence tax revenue, credit demand and risk perception. Compare real and nominal values, the reference period and revisions before calling a trend.",
       "questionEn": "Is the move a one-off or does it show up in a comparable data series?",
       "score": 0.0
-    },
-    {
-      "title": "Dino e Moraes votam para tornar Van Hattem réu por calúnia e injúria contra delegado da PF; Zanin leva caso ao plenário físico do STF",
-      "titleOriginal": "Dino e Moraes votam para tornar Van Hattem réu por calúnia e injúria contra delegado da PF; Zanin leva caso ao plenário físico do STF",
-      "url": "https://g1.globo.com/politica/noticia/2026/11/20/dino-vota-para-tornar-van-hattem-reu-por-calunia-e-injuria-contra-delegado-da-policia-federal.ghtml",
-      "category": "Eleições",
-      "source": "G1 Política",
-      "publishedAt": "2026-11-20T14:21:48+00:00",
-      "language": "pt",
-      "description": "O ministro Flávio Dino, do Supremo Tribunal Federal (STF), votou pelo recebimento da denúncia apresentada pela Procuradoria-Geral da República (PGR) contra o deputado federal Marcel Van Hattem (Novo-RS) pelos crimes",
-      "translationStatus": "original",
-      "summary": "O ministro Flávio Dino, do Supremo Tribunal Federal (STF), votou pelo recebimento da denúncia apresentada pela Procuradoria-Geral da República (PGR) contra o deputado federal Marcel Van Hattem (Novo-RS) pelos crimes",
-      "topic": "Eleições e política",
-      "context": "Disputas e decisões políticas influenciam câmbio, juros futuros e apetite por risco. Sondagens medem intenção, não resultado; mercados reagem à diferença entre o esperado e o confirmado.",
-      "question": "O que já estava no preço e o que a notícia muda no cenário eleitoral ou na agenda do governo?",
-      "topicEn": "Elections and politics",
-      "contextEn": "Political disputes and decisions sway the exchange rate, future rates and risk appetite. Polls measure intent, not results; markets react to the gap between expected and confirmed.",
-      "questionEn": "What was already priced in and what does this story change in the electoral landscape or the government agenda?",
-      "score": 30.0
-    },
-    {
-      "title": "A IA deve avaliar nossa capacidade de crédito?",
-      "titleOriginal": "Should AI be judging our credit worthiness?",
-      "url": "https://www.bbc.co.uk/news/articles/c6d94pzk9vleo",
-      "category": "Mundo",
-      "source": "BBC News",
-      "publishedAt": "2026-11-20T07:32:19+00:00",
-      "language": "en",
-      "description": "Would AI be a good judge of whether you should get a mortgage, car loan or mobile phone contract?",
-      "summary": "A IA seria uma boa avaliadora para decidir se você deve fazer um financiamento imobiliário, um financiamento de carro ou um contrato de celular?",
-      "translationStatus": "translated",
-      "topic": "Fiscal e atividade",
-      "context": "Atividade e contas públicas influenciam arrecadação, demanda por crédito e percepção de risco. Compare valores reais e nominais, o período de referência e revisões antes de concluir uma tendência.",
-      "question": "O movimento é pontual ou aparece em uma série de dados comparáveis?",
-      "topicEn": "Fiscal and activity",
-      "contextEn": "Activity and public accounts influence tax revenue, credit demand and risk perception. Compare real and nominal values, the reference period and revisions before calling a trend.",
-      "questionEn": "Is the move a one-off or does it show up in a comparable data series?",
-      "score": 0.0
-    },
-    {
-      "title": "Anthropic se torna uma das empresas públicas mais valiosas do mundo em estreia no mercado de ações",
-      "titleOriginal": "Anthropic becomes one of world's most valuable public companies in stock market debut",
-      "url": "https://www.bbc.co.uk/news/articles/c3x29ggenz12o",
-      "category": "Mundo",
-      "source": "BBC News",
-      "publishedAt": "2026-11-19T23:33:51+00:00",
-      "language": "en",
-      "description": "Anthropic is the first purely AI company to be publicly listed, creating a test for the entire industry.",
-      "summary": "A Anthropic é a primeira empresa puramente de IA a ser listada publicamente, criando um teste para todo o setor.",
-      "translationStatus": "translated",
-      "topic": "Empresas e mercados",
-      "context": "Resultados, condições de financiamento e expectativas mudam a avaliação de empresas. Alta de uma ação não prova melhora estrutural; confronte a manchete com lucros, dívida e geração de caixa.",
-      "question": "O que mudou nos resultados ou nas expectativas, e em qual horizonte?",
-      "topicEn": "Companies and markets",
-      "contextEn": "Earnings, funding conditions and expectations change how companies are valued. A stock rising does not prove structural improvement; check the headline against profits, debt and cash generation.",
-      "questionEn": "What changed in results or expectations, and over which horizon?",
-      "score": 30.0
     },
     {
       "title": "Lula promete manter direitos e diz que controle fiscal é prioridade",
@@ -766,11 +766,11 @@
     }
   ],
   "briefing": [
-    "https://www.poder360.com.br/poder-brasil/veja-imagens-dos-estragos-causados-por-vendavais-no-sul-do-brasil/",
-    "https://www.marketwatch.com/story/my-wife-pays-thousands-of-dollars-for-her-family-to-visit-from-argentina-how-can-i-convince-her-to-stop-9381351c?mod=mw_rss_topstories",
-    "https://www.infomoney.com.br/mundo/trump-disse-a-lideres-europeus-que-estavam-gastando-muito-com-ucrania-diz-zelensky/",
-    "https://www.bbc.co.uk/news/articles/cj752ddve27ko",
-    "https://www.cnbc.com/make-it/2026/11/21/california-mining-modern-gold-rush.html"
+    "https://www.infomoney.com.br/minhas-financas/novo-teto-do-mei-pode-gerar-economia-de-r-95-mil-por-ano-entenda-mudancas/",
+    "https://g1.globo.com/economia/agronegocios/noticia/2026/11/22/ovelhas-entre-paineis-solares-entenda-a-tendencia-que-une-geracao-de-energia-e-criacao-de-animais.ghtml",
+    "https://g1.globo.com/tecnologia/ciberseguranca/noticia/2026/11/22/a-falha-critica-descoberta-na-linguagem-de-programacao-usada-por-90-das-grandes-empresas-do-mundo.ghtml",
+    "https://g1.globo.com/politica/noticia/2026/11/22/camara-deve-votar-projeto-de-ajuste-fiscal-nesta-segunda.ghtml",
+    "https://www.bbc.co.uk/news/articles/cj752ddve27ko"
   ],
   "indicators": [
     {
@@ -792,7 +792,7 @@
       "referenceDate": "19/11/2026",
       "source": "Banco Central · SGS",
       "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados/ultimos/10?formato=json",
-      "checkedAt": "2026-11-22T01:40:19.206125+00:00",
+      "checkedAt": "2026-11-22T08:53:06.624386+00:00",
       "status": "ok"
     },
     {
@@ -803,7 +803,7 @@
       "referenceDate": "01/10/2026",
       "source": "Banco Central · SGS",
       "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.433/dados/ultimos/10?formato=json",
-      "checkedAt": "2026-11-22T01:40:19.205005+00:00",
+      "checkedAt": "2026-11-22T08:53:06.734928+00:00",
       "status": "ok"
     },
     {
@@ -814,7 +814,7 @@
       "referenceDate": "01/10/2026",
       "source": "Banco Central · SGS",
       "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.13522/dados/ultimos/10?formato=json",
-      "checkedAt": "2026-11-22T01:40:19.207309+00:00",
+      "checkedAt": "2026-11-22T08:53:06.730507+00:00",
       "status": "ok"
     }
   ],
@@ -893,7 +893,7 @@
         "url": "https://www.bls.gov/schedule/"
       }
     ],
-    "checkedAt": "2026-11-22T01:40:19.264320+00:00"
+    "checkedAt": "2026-11-22T08:53:07.082145+00:00"
   },
   "method": "Seleção automática por atualidade, relevância temática e diversidade; resumo extraído da descrição RSS, com tradução automática quando disponível. Contexto educativo por tema, sem previsão de preços."
 }
