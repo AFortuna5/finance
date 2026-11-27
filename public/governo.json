@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T08:42:26.477167+00:00",
+  "updatedAt": "2026-11-27T18:30:39.684672+00:00",
   "charts": [
     {
       "id": "selic",
@@ -1134,10 +1134,6 @@
       "status": "ok",
       "series": [
         {
-          "date": "2022-10-01",
-          "value": 8.3
-        },
-        {
           "date": "2022-11-01",
           "value": 8.1
         },
@@ -1324,6 +1320,10 @@
         {
           "date": "2026-09-01",
           "value": 5.2
+        },
+        {
+          "date": "2026-10-01",
+          "value": 5.1
         }
       ],
       "source": "Banco Central · SGS"
@@ -1333,21 +1333,21 @@
     {
       "label": "Resultado primário acumulado",
       "labelEn": "Accumulated primary result",
-      "value": "R$-81 bi",
+      "value": "R$-38 bi",
       "hint": "Governo gasta acima do que arrecada quando negativo",
       "hintEn": "The government spends above revenue when negative"
     },
     {
       "label": "Receita primária líquida",
       "labelEn": "Net primary revenue",
-      "value": "R$1,48 tri",
+      "value": "R$2,13 tri",
       "hint": "O que entra no caixa, sem juros",
       "hintEn": "What flows into the till, before interest"
     },
     {
       "label": "Despesa primária total",
       "labelEn": "Total primary spending",
-      "value": "R$1,56 tri",
+      "value": "R$2,17 tri",
       "hint": "O que sai do caixa, sem juros",
       "hintEn": "What flows out of the till, before interest"
     }
